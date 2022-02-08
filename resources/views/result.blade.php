@@ -98,7 +98,7 @@
 
     <!-- Start of banner section
         ============================================= -->  
-        <section id="app-edu-banner" class="app-edu-banner-section" data-background="img/education/banner.png">
+        <section id="app-edu-banner" class="app-edu-banner-section" data-background="img/education/banner.png" hidden>
             <div class="container">
                 <div class="app-edu-banner-content position-relative">
                     <div class="app-edu-banner-text app-edu-headline pera-content wow fadeFromLeft" data-wow-delay="0ms" data-wow-duration="1500ms">

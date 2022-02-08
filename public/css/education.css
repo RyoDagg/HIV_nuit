@@ -580,10 +580,10 @@ select:visited {
   padding-top: 90px;
 }
 .app-edu-intro-content .col-lg-4:nth-child(2) .app-edu-intro-innerbox .app-edu-intro-icon {
-  background: linear-gradient(-45deg, #fc409a 0%, #ff8917 100%);
+  background: transparent;
 }
 .app-edu-intro-content .col-lg-4:nth-child(3) .app-edu-intro-innerbox .app-edu-intro-icon {
-  background: linear-gradient(-45deg, #1053fa 0%, #7197ec 100%);
+  background: transparent;
 }
 
 .app-edu-intro-innerbox .app-edu-intro-icon {
@@ -594,7 +594,7 @@ select:visited {
   border-radius: 100%;
   margin-bottom: 45px;
   transition: 0.6s cubic-bezier(0.24, 0.74, 0.58, 1);
-  background: linear-gradient(-45deg, #aa00f1 0%, #6722d6 100%);
+  background: transparent;
 }
 .app-edu-intro-innerbox .app-edu-intro-icon i {
   color: #fff;

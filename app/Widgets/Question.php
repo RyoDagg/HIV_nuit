@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
 
-class Body extends BaseDimmer
+class Question extends BaseDimmer
 {
     /**
      * The configuration array.
@@ -25,14 +25,14 @@ class Body extends BaseDimmer
         $string = trans_choice('voyager::dimmer.post', $count);
 
         return view('voyager::dimmer', array_merge($this->config, [
-            'icon'   => 'voyager-news',
+            'icon'   => 'voyager-question',
             'title'  => "{$count} {$string}",
             'text'   => __('voyager::dimmer.post_text', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
                 'text' => __('voyager::dimmer.post_link_text'),
                 'link' => route('voyager.posts.index'),
             ],
-            'image' =>'earth.png',
+            'image' =>'qdm.jpg',
         ]));
     }
 

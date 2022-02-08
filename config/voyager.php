@@ -146,10 +146,10 @@ return [
         ],
 
         'widgets' => [
-            'App\\Widgets\\Mind',
-            'App\\Widgets\\Soul',
-            'App\\Widgets\\Heart',
-            'App\\Widgets\\Body',
+            'App\\Widgets\\Question',
+            'App\\Widgets\\User',
+            'App\\Widgets\\Post',
+            
 
         ],
 

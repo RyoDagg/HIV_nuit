@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
 
-class Heart extends BaseDimmer
+class Post extends BaseDimmer
 {
     /**
      * The configuration array.
@@ -32,7 +32,7 @@ class Heart extends BaseDimmer
                 'text' => __('voyager::dimmer.post_link_text'),
                 'link' => route('voyager.posts.index'),
             ],
-            'image' => 'fire.png',
+            'image' => 'postdm.jpg',
         ]));
     }
 
