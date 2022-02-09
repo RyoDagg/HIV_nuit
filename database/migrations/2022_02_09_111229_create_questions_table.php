@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBodiesTable extends Migration
+class CreateQuestionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateBodiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('bodies', function (Blueprint $table) {
+        Schema::create('questions', function (Blueprint $table) {
             $table->id();
-            $table->string('Question');
-            $table->string('FavorableAnswer');
-            $table->string('Answer');
+            $table->string('question');
+            $table->string('favorableAnswer');
+            $table->string('type');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateBodiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bodies');
+        Schema::dropIfExists('questions');
     }
 }
