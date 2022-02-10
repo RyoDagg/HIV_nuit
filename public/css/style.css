@@ -2486,7 +2486,7 @@ Sticky Menu
 
 .ei-footer-widget h4 {
   width: 45%;
-  float: left;
+  /*float: left;*/
   font-size: 14px;
   font-weight: 700;
   padding-left: 28px;
@@ -3858,7 +3858,7 @@ Sticky Menu
 .appseo-main-header .header-button {
   height: 58px;
   width: 185px;
-  float: right;
+  /*float: right;*/
   line-height: 58px;
   margin-left: 13px;
   border-radius: 32px;
@@ -6450,7 +6450,7 @@ Sticky Menu
 
 .line_animation .line_area {
   width: 20%;
-  float: left;
+ /* float: left;*/
   height: 100%;
   position: relative;
   display: inline-block;
@@ -8670,7 +8670,7 @@ Sticky Menu
 .saas_two_feature_section .s2-feature_text .saas_btn a i,
 .s2-pricing_section .s2-pricing_item .s2-pricing_btn a i {
   background: linear-gradient(-45deg, #6b2c94 32%, #fc01fd 100%);
-  -webkit-background-clip: text;
+  /*-webkit-background-clip: text;*/
   -webkit-text-fill-color: transparent;
 }
 
@@ -12433,7 +12433,7 @@ Sticky Menu
   font-size: 15px;
   transition: 0.3s all ease-in-out;
   background-image: linear-gradient(125deg, #6407c1 0%, #324add 49%, #008df9 100%);
-  -webkit-background-clip: text;
+  /*-webkit-background-clip: text;*/
   -webkit-text-fill-color: transparent;
 }
 
@@ -12897,7 +12897,7 @@ Sticky Menu
 .str-footer-area .footer-content .str-footer-widget .str-office-widget .str-office-icon-text .str-office-icon i {
   text-shadow: -1.045px 9.945px 16px rgba(68, 46, 200, 0.4);
   background-image: linear-gradient(125deg, #6407c1 0%, #324add 49%, #008df9 100%);
-  -webkit-background-clip: text;
+ /* -webkit-background-clip: text;*/
   -webkit-text-fill-color: transparent;
 }
 
@@ -13384,7 +13384,7 @@ Sticky Menu
 .dia-banner-section .dia-banner-content .dia-banner-tag {
   font-weight: 700;
   background-image: linear-gradient(81deg, #ff6600 0%, #ff9903 75%, #ffcb05 100%);
-  -webkit-background-clip: text;
+  /*-webkit-background-clip: text;*/
   -webkit-text-fill-color: transparent;
 }
 
@@ -15169,7 +15169,7 @@ div#preloader {
 
 .dia-footer-widget h4 {
   width: 45%;
-  float: left;
+ /* float: left;*/
   font-size: 14px;
   font-weight: 700;
   padding-left: 24px;
@@ -15928,7 +15928,7 @@ div#preloader {
   font-weight: 600;
   padding: 10px 15px;
   margin: 3px;
-  float: left;
+  /*float: left;*/
   display: inline-block;
   background-color: #6c2b95;
 }

@@ -32,7 +32,7 @@ class Question extends BaseDimmer
                 'text' => __('voyager::dimmer.post_link_text'),
                 'link' => route('voyager.posts.index'),
             ],
-            'image' =>'qdm.jpg',
+            'image' =>'5159502.jpg',
         ]));
     }
 

@@ -32,7 +32,7 @@ class User extends BaseDimmer
                 'text' => __('voyager::dimmer.user_link_text'),
                 'link' => route('voyager.users.index'),
             ],
-            'image' => 'usdm.jpg',
+            'image' => 'pccc.jpg',
         ]));
     }
 

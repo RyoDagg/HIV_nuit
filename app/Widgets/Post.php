@@ -32,7 +32,7 @@ class Post extends BaseDimmer
                 'text' => __('voyager::dimmer.post_link_text'),
                 'link' => route('voyager.posts.index'),
             ],
-            'image' => 'postdm.jpg',
+            'image' => '19199603.jpg',
         ]));
     }
 
