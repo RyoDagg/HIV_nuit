@@ -18,6 +18,7 @@ class CreateQuestionsTable extends Migration
             $table->string('question');
             $table->string('favorableAnswer');
             $table->string('type');
+            $table->string('Emoji');
             $table->timestamps();
         });
     }
