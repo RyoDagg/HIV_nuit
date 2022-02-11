@@ -15,10 +15,13 @@ class CreateAnswersTable extends Migration
     {
         Schema::create('answers', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
+            $table->integer('question_id');    
+            $table->string('textAnsr');
             $table->timestamps();
         });
     }
-
+    
     /**
      * Reverse the migrations.
      *

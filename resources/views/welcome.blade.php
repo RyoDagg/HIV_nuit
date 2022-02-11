@@ -217,11 +217,11 @@
         opacity: 0.4;
     }
 
-    .submit__container {
+    .pichpich__container {
         margin-top: 25px;
     }
 
-    .submit {
+    .pichpich {
         background-color: #5861af;
         line-height: 50px;
         display: inline-block;
@@ -1053,7 +1053,10 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content clearfix">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            @if (Route::has('login'))
             <div class="modal-body">
+                @auth
+
                 <div class="LuciferWasHere">
 
 
@@ -1062,38 +1065,41 @@
 
                     <div class="containerDegla">
 
-                        <form class="quiz">
+                        <form class="quiz" action="{{ route('answer.store') }}" method="post">
+                            {{csrf_field()}}
                             <div class="quiz__inner">
                                 <?php
                                 $i = 0;
                                 ?>
+                                <input type="hidden" name="uid" value="{{$user}}" />
                                 @foreach ($question as $question)
 
-                                    <?php
-                                    $i++;
-                                    ?>
-                                    <div data-question="{{$i}}" class="quiz__step--{{$i}} {{$i == 1 ? 'quiz__step--current': ''}} quiz__step">
-                                        <div class="question__emoji">{{ $question->Emoji }}	</div>
-                                        <h1 class="quiz__question">{{ $question->question }}</h1>
-                                        <div class="answer">
-                                            <input data-char="65" class="answer__input" type="radio" id="question{{$i}}_yes" name="question{{$i}}" value="Yes">
-                                            <label class="answer__label" for="question{{$i}}_yes">Yes</label>
-                                        </div>
-                                        <div class="answer">
-                                            <input data-char="66" class="answer__input" type="radio" id="question{{$i}}_no" name="question{{$i}}" value="No">
-                                            <label class="answer__label" for="question{{$i}}_no">No</label>
-                                        </div>
+                                <?php
+                                $i++;
+                                ?>
+                                <div data-question="{{$i}}" class="quiz__step--{{$i}} {{$i == 1 ? 'quiz__step--current': ''}} quiz__step">
+                                    <div class="question__emoji">{{ $question->Emoji }} </div>
+                                    <h1 class="quiz__question">{{ $question->question }}</h1>
+                                    <div class="answer">
+                                        <input data-char="65" class="answer__input" type="radio" id="question{{$i}}_yes" name="{{$question->id}}" value="Yes">
+                                        <label class="answer__label" for="question{{$i}}_yes">Yes</label>
                                     </div>
-                                    @endforeach
-
-                                    <div data-question="{{$i+1}}" class="quiz__step--{{$i+1}} quiz__step quiz__summary">
-
-                                        <h1 class="quiz__question">Summary</h1>
-                                        <div id="summary"></div>
-                                        <div class="submit__container">
-                                            <a href="#" class="submit">Submit</a>
-                                        </div>
+                                    <div class="answer">
+                                        <input data-char="66" class="answer__input" type="radio" id="question{{$i}}_no" name="{{$question->id}}" value="No">
+                                        <label class="answer__label" for="question{{$i}}_no">No</label>
                                     </div>
+                                </div>
+                                @endforeach
+
+                                <div data-question="{{$i+1}}" class="quiz__step--{{$i+1}} quiz__step quiz__summary">
+
+                                    <h1 class="quiz__question">Summary</h1>
+                                    <div id="summary"></div>
+                                    <div class="submit__container">
+                                        <input type="submit" value="Submit" class="pichpich" />
+
+                                    </div>
+                                </div>
                         </form>
                     </div>
 
@@ -1116,6 +1122,89 @@
 
 
                 </div>
+                @else
+
+                <div class="LuciferWasHere">
+
+
+
+
+
+                    <div class="container">
+
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
+
+                        <div class="row mb-3">
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('Remember Me') }}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Login') }}
+                                </button>
+
+                                @if (Route::has('password.request'))
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                                @endif
+                            </div>
+                        </div>
+                    </form>
+
+
+                    </div>
+
+                   
+
+
+
+                </div>
+
+                @endauth
+
+                @endif
+
+
+
 
             </div>
         </div>
