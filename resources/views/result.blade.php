@@ -1,838 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Education - Onepage</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/fontawesome-all.css">
-    <link rel="stylesheet" href="css/flaticon-6.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/odometer-theme-default.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/education.css">
-</head>
-<body class="app-edu" data-spy="scroll" data-target=".app-edu-main-navigation" data-offset="80">
-    <!-- preloader - start -->
-    <div id="app-edu-preloader"></div>
-    <div class="up">
-        <a href="#" class="app-edu-scrollup text-center"><i class="fas fa-angle-up"></i></a>
-    </div>
-    <!-- Start of header section
-        ============================================= -->
-        <header id="app-edu-main-header" class="app-edu-header-main">
-            <div class="container">
-                <div class="app-edu-logo float-left">
-                    <a href="#"><img src="img/education/logo/logo1.png" alt=""></a>
-                </div>
-                <div class="app-edu-main-header-menu clearfix">
-                    <div class="header-dia-cta-btn text-center float-right">
-                        <a href="#">Take Quizz</a>
-                    </div>
-                    <nav class="app-edu-main-navigation float-right clearfix ul-li">
-                        <ul id="app-edu-main-nav" class="nav navbar-nav clearfix">
-                            <li><a class="nav-link" href="#app-edu-banner">Home</a></li>
-                            <li><a class="nav-link" href="#app-edu-about">About</a></li>
-                            <li><a class="nav-link" href="#app-edu-course">Course</a></li>
-                            <li><a class="nav-link" href="#app-edu-category">Category</a></li>
-                            <li><a class="nav-link" href="#app-edu-testimonial">Testimonial</a></li>
-                            <li><a class="nav-link" href="#app-edu-blog">Blog</a></li>
-                           
-            @if (Route::has('login'))
-                <li class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/myresults') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">My Results</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-                    @endauth
-</li>
-            @endif
-                        </ul>
-                    </nav>
-                </div>
-                <div class="app-edu-mobile_menu position-relative">
-                    <div class="app-edu-mobile_menu_button app-edu-open_mobile_menu">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                    <div class="app-edu-mobile_menu_wrap">
-                        <div class="mobile_menu_overlay app-edu-open_mobile_menu"></div>
-                        <div class="app-edu-mobile_menu_content">
-                            <div class="app-edu-mobile_menu_close app-edu-open_mobile_menu">
-                                <i class="fas fa-times"></i>
-                            </div>
-                            <div class="m-brand-logo text-center">
-                                <a href="!#"><img src="img/education/logo/logo1.png" alt=""></a>
-                            </div>
-                            <nav class="app-edu-mobile-main-navigation  clearfix ul-li">
-                             <ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
-                                <li class="dropdown">
-                                    <a href="#">Home</a>
-                                    <ul class="dropdown-menu clearfix">
-                                        <li><a href="#">DropDown 1</a></li>
-                                        <li><a href="#">DropDown 2</a></li>
-                                        <li><a href="#">DropDown 3</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#">Features</a>
-                                    <ul class="dropdown-menu clearfix">
-                                        <li><a href="#">DropDown 1</a></li>
-                                        <li><a href="#">DropDown 2</a></li>
-                                        <li><a href="#">DropDown 3</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Pages</a></li>
-                                <li><a href="#">Pricing </a></li>
-                                <li><a href="#">Support</a></li>
-                                <li><a href="#">Login</a> </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <!-- /Mobile-Menu -->
-            </div>
-        </header>
-     <!-- End of header section
-        ============================================= -->  
+@extends('layouts.master')
 
-    <!-- Start of banner section
-        ============================================= -->  
-        <section id="app-edu-banner" class="app-edu-banner-section" data-background="img/education/banner.png" hidden>
-            <div class="container">
-                <div class="app-edu-banner-content position-relative">
-                    <div class="app-edu-banner-text app-edu-headline pera-content wow fadeFromLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <h1>Build your skill on Anything Today</h1>
-                        <p>Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehen</p>
-                        <a class="banner-btn text-center" href="#">Learn More</a>
+@section('content')
+
+    <section id="saasio-breadcurmb" class="saasio-breadcurmb-section" style="background: rgb(79,163,163);
+        background: radial-gradient(circle, rgba(79,163,163,1) 0%, rgba(164,220,215,1) 35%, rgba(204,242,215,1) 100%);">
+        <div class="container">
+            <div class="breadcurmb-title text-center">
+                <h2>Service</h2>
+            </div>
+            <div class="breadcurmb-item-list text-center ul-li">
+                <ul class="saasio-page-breadcurmb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- End of breadcurmb section
+        ============================================= -->
+
+    <!-- Start of Service page section
+        ============================================= -->
+    <section id="saas_two_service" class="saas_two_service_section">
+        <div class="container">
+            <div class="saas_two_section_title saas2-headline text-center">
+                <span class="title_tag">Our awesome services</span>
+                <h2>We give <span>best facilites
+                    </span> </h2>
+            </div>
+            <!-- /section title -->
+            <div class="service_content">
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-4 col-md-6  wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="service_content_box relative-position">
+                            <div class="app-edu-testimonial-img float-left">
+                                <img src="heart.png" alt="" style="height: 70px; width: 70px;">
+                            </div>
+                            <div class="service_icon_box relative-position">
+
+                            </div>
+                            <div class="service_text_box saas2-headline pera-content">
+                                <h3><br><br><br>Faster docs. Faster deals</h3>
+                                <p>Get your documents out the door fast to keep deals with automatic notifications, on-the-fly editing, and integrated.</p>
+                            </div>
+                            <div class="progress" style="margin-top: 10%;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="app-edu-banner-img">
-                        <img src="yoga.png" alt="" width="669" height="651">
+
+
+                    <!-- /service-content -->
+                    <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="service_content_box relative-position">
+                            <div class="app-edu-testimonial-img float-left">
+                                <img src="heart.png" alt="" style="height: 70px; width: 70px;">
+                            </div>
+                            <div class="service_icon_box relative-position">
+
+                            </div>
+                            <div class="service_text_box saas2-headline pera-content">
+                                <h3><br><br><br>Customise your workflow</h3>
+                                <p>Choose from hundreds of plugins and integrations that let you do everything from animating interactions.</p>
+                            </div>
+                            <div class="progress" style="margin-top: 10%;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- /service-content -->
+                    <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                        <div class="service_content_box relative-position">
+                            <div class="app-edu-testimonial-img float-left">
+                                <img src="heart.png" alt="" style="height: 70px; width: 70px;">
+                            </div>
+                            <div class="service_icon_box relative-position">
+
+                            </div>
+                            <div class="service_text_box saas2-headline pera-content">
+                                <h3><br><br><br>Faster docs. Faster deals</h3>
+                                <p>Whether you have a team of 2 or 200, the Mailboxes keep everyone the same page. Leverage automation to move fast.</p>
+                            </div>
+                            <div class="progress" style="margin-top: 10%;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /service-content -->
+                    <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <div class="service_content_box relative-position">
+                            <div class="app-edu-testimonial-img float-left">
+                                <img src="heart.png" alt="" style="height: 70px; width: 70px;">
+                            </div>
+                            <div class="service_icon_box relative-position">
+
+                            </div>
+                            <div class="service_text_box saas2-headline pera-content">
+                                <h3><br><br><br>Faster docs. Faster deals</h3>
+                                <p>Whether you have a team of 2 or 200, the Mailboxes keep everyone the same page. Leverage automation to move fast.</p>
+                            </div>
+                            <div class="progress" style="margin-top: 10%;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /service-content -->
                 </div>
             </div>
-        </section>
-    <!-- End of banner section
-        ============================================= -->
-
-    <!-- Start of intro section
-        ============================================= -->            
-        <section id="app-edu-intro" class="app-edu-intro-section">
-            <div class="container">
-                <div class="app-edu-intro-content">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-3 col-md-6 wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="app-edu-intro-innerbox text-center">
-                                <div class="app-edu-intro-icon">
-                                    <img src="wind.png" alt="">
-                                </div>
-                                <div class="app-edu-intro-text app-edu-headline pera-content">
-                                    <h3><a href="#">Awesome Interface</a></h3>
-                                    <p>Aliquip ex ea commo ute irure dolor in repre henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 wow fadeFromUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="app-edu-intro-innerbox text-center">
-                                <div class="app-edu-intro-icon">
-                                <img src="fire.png" alt="">
-                                </div>
-                                <div class="app-edu-intro-text app-edu-headline pera-content">
-                                    <h3><a href="#">Easy Customization</a></h3>
-                                    <p>Aliquip ex ea commo ute irure dolor in repre henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 wow fadeFromUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <div class="app-edu-intro-innerbox text-center">
-                                <div class="app-edu-intro-icon">
-                                <img src="earth.png" alt="">
-                                </div>
-                                <div class="app-edu-intro-text app-edu-headline pera-content">
-                                    <h3><a href="#">Moduler Codebase</a></h3>
-                                    <p>Aliquip ex ea commo ute irure dolor in repre henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                                </div>
-                            </div>
-                        </div>  <div class="col-lg-3 col-md-6 wow fadeFromUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <div class="app-edu-intro-innerbox text-center">
-                                <div class="app-edu-intro-icon">
-                                <img src="water.png" alt="">
-                                </div>
-                                <div class="app-edu-intro-text app-edu-headline pera-content">
-                                    <h3><a href="#">Moduler Codebase</a></h3>
-                                    <p>Aliquip ex ea commo ute irure dolor in repre henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="service_read_more text-center">
+                <a href="!#">Want to download this app? </a>
             </div>
-
-        </section>
-    <!-- End of in
-    tro section
+        </div>
+    </section>
+    <!-- End of Service section
         ============================================= -->
 
-    <!-- Start of about section
+    <!-- Start of App Download  section
         ============================================= -->
-        <section id="app-edu-about" class="app-edu-about-section position-relative">
-            <span class="app-edu-about-shape position-absolute"><img src="img/education/ab-shape1.png" alt=""></span>
-            <span class="app-edu-about-shape2 position-absolute"><img src="img/education/ab-shape2.png" alt=""></span>
-            <div class="container">
-                <div class="app-edu-about-content">
-                    <div class="row">
-                        <div class="col-lg-7">
-                            <div class="app-edu-about-img">
-                                <img src="img/education/ab-v.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="app-edu-about-text">
-                                <div class="app-edu-section-title app-edu-headline pera-content wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                    <span>Learn anything you want</span>
-                                    <h2>Learn your desired skill now  anytime from anywhere</h2>
-                                    <p>Aliquip ex ea commo ute irure dolor in repre henderit in velit esse cillumdatat non proident, sunt in culpa qui officia  dolore eu fugiat nulla pariatur.</p>
-                                </div>
-                                <div class="app-edu-about-list ul-li-block wow fadeFromUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                                    <ul>
-                                        <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </li>
-                                        <li>Excepteur sint occaecat cupidatat non proident</li>
-                                        <li>Sed ut perspiciatis unde omnis iste natus sit</li>
-                                        <li>Luptatem accusantium dolore quasi architecto</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <!-- End of about section
-        ============================================= --> 
-
-    <!-- Start of course section
-        ============================================= -->        
-        <section id="app-edu-course" class="app-edu-course-section">
-            <div class="container">
-                <div class="app-edu-section-title app-edu-headline text-center center-align pera-content">
-                    <span>Learn anything you want</span>
-                    <h2>Popular Course</h2>
-                    <p>Aliquip ex ea commo ute irure dolor in repre henderit in velit esse cillumdatat non proident</p>
-                </div>
-                <div class="app-edu-course-content">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="app-edu-course-innerbox">
-                                <div class="app-edu-course-img">
-                                    <img src="img/education/course/crs1.png" alt="">
-                                </div>
-                                <div class="app-edu-course-text text-center app-edu-headline position-relative">
-                                    <span class="course-cat text-uppercase"><a href="#">Graphic Design</a></span>
-                                    <h3><a href="#">Didunt ut labore et dolore magna aliqua strud</a></h3>
-                                    <div class="app-edu-course-rate-price  clearfix">
-                                        <div class="app-edu-course-rate float-left d-flex ul-li pera-content">
-                                            <ul>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                            <p>5.0 <span>(100 Review)</span></p>
-                                        </div>
-                                        <div class="app-edu-course-price float-right">
-                                            <span>$20</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <div class="app-edu-course-innerbox">
-                                <div class="app-edu-course-img">
-                                    <img src="img/education/course/crs2.png" alt="">
-                                </div>
-                                <div class="app-edu-course-text text-center app-edu-headline position-relative">
-                                    <span class="course-cat text-uppercase"><a href="#">Graphic Design</a></span>
-                                    <h3><a href="#">Didunt ut labore et dolore magna aliqua strud</a></h3>
-                                    <div class="app-edu-course-rate-price  clearfix">
-                                        <div class="app-edu-course-rate float-left d-flex ul-li pera-content">
-                                            <ul>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                            <p>5.0 <span>(100 Review)</span></p>
-                                        </div>
-                                        <div class="app-edu-course-price float-right">
-                                            <span>$20</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                            <div class="app-edu-course-innerbox">
-                                <div class="app-edu-course-img">
-                                    <img src="img/education/course/crs3.png" alt="">
-                                </div>
-                                <div class="app-edu-course-text text-center app-edu-headline position-relative">
-                                    <span class="course-cat text-uppercase"><a href="#">Graphic Design</a></span>
-                                    <h3><a href="#">Didunt ut labore et dolore magna aliqua strud</a></h3>
-                                    <div class="app-edu-course-rate-price  clearfix">
-                                        <div class="app-edu-course-rate float-left d-flex ul-li pera-content">
-                                            <ul>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                            <p>5.0 <span>(100 Review)</span></p>
-                                        </div>
-                                        <div class="app-edu-course-price float-right">
-                                            <span>$20</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <div class="app-edu-course-innerbox">
-                                <div class="app-edu-course-img">
-                                    <img src="img/education/course/crs4.png" alt="">
-                                </div>
-                                <div class="app-edu-course-text text-center app-edu-headline position-relative">
-                                    <span class="course-cat text-uppercase"><a href="#">Graphic Design</a></span>
-                                    <h3><a href="#">Didunt ut labore et dolore magna aliqua strud</a></h3>
-                                    <div class="app-edu-course-rate-price  clearfix">
-                                        <div class="app-edu-course-rate float-left d-flex ul-li pera-content">
-                                            <ul>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                            <p>5.0 <span>(100 Review)</span></p>
-                                        </div>
-                                        <div class="app-edu-course-price float-right">
-                                            <span>$20</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="800ms" data-wow-duration="1500ms">
-                            <div class="app-edu-course-innerbox">
-                                <div class="app-edu-course-img">
-                                    <img src="img/education/course/crs5.png" alt="">
-                                </div>
-                                <div class="app-edu-course-text text-center app-edu-headline position-relative">
-                                    <span class="course-cat text-uppercase"><a href="#">Graphic Design</a></span>
-                                    <h3><a href="#">Didunt ut labore et dolore magna aliqua strud</a></h3>
-                                    <div class="app-edu-course-rate-price  clearfix">
-                                        <div class="app-edu-course-rate float-left d-flex ul-li pera-content">
-                                            <ul>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                            <p>5.0 <span>(100 Review)</span></p>
-                                        </div>
-                                        <div class="app-edu-course-price float-right">
-                                            <span>$20</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="1000ms" data-wow-duration="1500ms">
-                            <div class="app-edu-course-innerbox">
-                                <div class="app-edu-course-img">
-                                    <img src="img/education/course/crs6.png" alt="">
-                                </div>
-                                <div class="app-edu-course-text text-center app-edu-headline position-relative">
-                                    <span class="course-cat text-uppercase"><a href="#">Graphic Design</a></span>
-                                    <h3><a href="#">Didunt ut labore et dolore magna aliqua strud</a></h3>
-                                    <div class="app-edu-course-rate-price  clearfix">
-                                        <div class="app-edu-course-rate float-left d-flex ul-li pera-content">
-                                            <ul>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                            <p>5.0 <span>(100 Review)</span></p>
-                                        </div>
-                                        <div class="app-edu-course-price float-right">
-                                            <span>$20</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <!-- End of course section
-        ============================================= -->
-
-    <!-- Start of category section
-        ============================================= -->      
-        <section id="app-edu-category" class="app-edu-category-section" data-background="img/education/ct-bg.jpg">
-            <div class="container">
-                <div class="app-edu-section-title app-edu-headline text-center center-align pera-content">
-                    <span>Learn anything you want</span>
-                    <h2>Browse By Category</h2>
-                    <p>Aliquip ex ea commo ute irure dolor in repre henderit in velit esse cillumdatat non proident</p>
-                </div>
-                <div class="app-edu-category-content">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 wow fadeFromLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="app-edu-category-innerbox position-relative text-center">
-                                <div class="app-edu-category-icon">
-                                    <i class="flaticon-143-physics"></i>
-                                </div>
-                                <div class="app-edu-category-text app-edu-headline">
-                                    <h3><a href="#">Science</a></h3>
-                                    <span>48 Courses</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 wow fadeFromLeft" data-wow-delay="100ms" data-wow-duration="1500ms">
-                            <div class="app-edu-category-innerbox position-relative text-center">
-                                <div class="app-edu-category-icon">
-                                    <i class="flaticon-223-video-camera"></i>
-                                </div>
-                                <div class="app-edu-category-text app-edu-headline">
-                                    <h3><a href="#">Arts & Media</a></h3>
-                                    <span>48 Courses</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 wow fadeFromLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <div class="app-edu-category-innerbox position-relative text-center">
-                                <div class="app-edu-category-icon">
-                                    <i class="flaticon-163-monitor-2"></i>
-                                </div>
-                                <div class="app-edu-category-text app-edu-headline">
-                                    <h3><a href="#">Programming</a></h3>
-                                    <span>48 Courses</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 wow fadeFromLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="app-edu-category-innerbox position-relative text-center">
-                                <div class="app-edu-category-icon">
-                                    <i class="flaticon-101-gym"></i>
-                                </div>
-                                <div class="app-edu-category-text app-edu-headline">
-                                    <h3><a href="#">Health & Fitness</a></h3>
-                                    <span>48 Courses</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 wow fadeFromLeft" data-wow-delay="400ms" data-wow-duration="1500ms">
-                            <div class="app-edu-category-innerbox position-relative text-center">
-                                <div class="app-edu-category-icon">
-                                    <i class="flaticon-232-web"></i>
-                                </div>
-                                <div class="app-edu-category-text app-edu-headline">
-                                    <h3><a href="#">Web Design</a></h3>
-                                    <span>48 Courses</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 wow fadeFromLeft" data-wow-delay="500ms" data-wow-duration="1500ms">
-                            <div class="app-edu-category-innerbox position-relative text-center">
-                                <div class="app-edu-category-icon">
-                                    <i class="flaticon-025-briefcase"></i>
-                                </div>
-                                <div class="app-edu-category-text app-edu-headline">
-                                    <h3><a href="#">Business</a></h3>
-                                    <span>48 Courses</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 wow fadeFromLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <div class="app-edu-category-innerbox position-relative text-center">
-                                <div class="app-edu-category-icon">
-                                    <i class="flaticon-136-organization"></i>
-                                </div>
-                                <div class="app-edu-category-text app-edu-headline">
-                                    <h3><a href="#">Graphics</a></h3>
-                                    <span>48 Courses</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 wow fadeFromLeft" data-wow-delay="700ms" data-wow-duration="1500ms">
-                            <div class="app-edu-category-innerbox position-relative text-center">
-                                <div class="app-edu-category-icon">
-                                    <i class="flaticon-165-rulers"></i>
-                                </div>
-                                <div class="app-edu-category-text app-edu-headline">
-                                    <h3><a href="#">Mathematics</a></h3>
-                                    <span>48 Courses</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <!-- End of category section
-        ============================================= -->
-
-    <!-- Start of testimonial section
-        ============================================= --> 
-        <section id="app-edu-testimonial" class="app-edu-testimonial-section position-relative">
-            <span class="app-edu-testimonial-shape position-absolute"><img src="img/education/ts1.png" alt=""></span>
-            <div class="container">
-                <div class="app-edu-section-title app-edu-headline text-center center-align pera-content">
-                    <span>Learn anything you want</span>
-                    <h2>Popular Course</h2>
-                    <p>Aliquip ex ea commo ute irure dolor in repre henderit in velit esse cillumdatat non proident</p>
-                </div>
-                <div class="app-edu-testimonial-content">
-                    <div class="row">
-                        <div class="col-lg-6 wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="app-edu-testimonial-innerbox">
-                                <div class="app-edu-testimonial-author clearfix">
-                                    <div class="app-edu-testimonial-img float-left">
-                                        <img src="img/education/tst2.jpg" alt="">
-                                    </div>
-                                    <div class="app-edu-testimonial-author-text app-edu-headline">
-                                        <h3><a href="#">Robert Williums</a></h3>
-                                        <span>Web Developer</span>
-                                    </div>
-                                </div>
-                                <div class="app-edu-testimonial-text pera-content">
-                                    <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo do con sequat. Duis aute irure dolor in repr ehenderit in volu veniam.</p>
-                                    <div class="app-edu-testimonial-rate d-flex ul-li ">
-                                        <ul>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                        </ul>
-                                        <span>5.0</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 wow fadeFromUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="app-edu-testimonial-innerbox">
-                                <div class="app-edu-testimonial-author clearfix">
-                                    <div class="app-edu-testimonial-img float-left">
-                                        <img src="img/education/tst3.jpg" alt="">
-                                    </div>
-                                    <div class="app-edu-testimonial-author-text app-edu-headline">
-                                        <h3><a href="#">Paul Harrion</a></h3>
-                                        <span>Web Developer</span>
-                                    </div>
-                                </div>
-                                <div class="app-edu-testimonial-text pera-content">
-                                    <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo do con sequat. Duis aute irure dolor in repr ehenderit in volu veniam.</p>
-                                    <div class="app-edu-testimonial-rate d-flex ul-li ">
-                                        <ul>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                        </ul>
-                                        <span>5.0</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 wow fadeFromUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <div class="app-edu-testimonial-innerbox">
-                                <div class="app-edu-testimonial-author clearfix">
-                                    <div class="app-edu-testimonial-img float-left">
-                                        <img src="img/education/tst4.jpg" alt="">
-                                    </div>
-                                    <div class="app-edu-testimonial-author-text app-edu-headline">
-                                        <h3><a href="#">Rebecca Palmar</a></h3>
-                                        <span>Web Developer</span>
-                                    </div>
-                                </div>
-                                <div class="app-edu-testimonial-text pera-content">
-                                    <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo do con sequat. Duis aute irure dolor in repr ehenderit in volu veniam.</p>
-                                    <div class="app-edu-testimonial-rate d-flex ul-li ">
-                                        <ul>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                        </ul>
-                                        <span>5.0</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 wow fadeFromUp" data-wow-delay="900ms" data-wow-duration="1500ms">
-                            <div class="app-edu-testimonial-innerbox">
-                                <div class="app-edu-testimonial-author clearfix">
-                                    <div class="app-edu-testimonial-img float-left">
-                                        <img src="img/education/tst1.jpg" alt="">
-                                    </div>
-                                    <div class="app-edu-testimonial-author-text app-edu-headline">
-                                        <h3><a href="#">Sarah Jessica</a></h3>
-                                        <span>Web Developer</span>
-                                    </div>
-                                </div>
-                                <div class="app-edu-testimonial-text pera-content">
-                                    <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo do con sequat. Duis aute irure dolor in repr ehenderit in volu veniam.</p>
-                                    <div class="app-edu-testimonial-rate d-flex ul-li ">
-                                        <ul>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                            <li><i class="fas fa-star"></i></li>
-                                        </ul>
-                                        <span>5.0</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="app-edu-testimonial-btn text-center">
-                        <a href="#">View All</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <!-- End of testimonial section
-        ============================================= -->
-
-    <!-- Start of counter section
-        ============================================= -->
-        <section id="app-edu-counter" class="app-edu-counter-section">
-            <div class="app-edu-counter-content">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="app-edu-counter-innerbox d-flex justify-content-center position-relative">
-                            <div class="app-edu-counter-icon">
-                                <i class="flaticon-213-user-12"></i>
-                            </div>
-                            <div class="app-edu-counter-text align-items-center d-flex app-edu-headline">
-                                <h3 class="odometer" data-count="30"></h3>
-                                <h4>Total 
-                                Instructors</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="app-edu-counter-innerbox d-flex justify-content-center position-relative">
-                            <div class="app-edu-counter-icon">
-                                <i class="flaticon-210-contact-information"></i>
-                            </div>
-                            <div class="app-edu-counter-text align-items-center d-flex app-edu-headline">
-                                <h3 class="odometer" data-count="200"></h3>
-                                <h4>Awesome
-                                Courses</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="app-edu-counter-innerbox d-flex justify-content-center position-relative">
-                            <div class="app-edu-counter-icon">
-                                <i class="flaticon-218-user-16"></i>
-                            </div>
-                            <div class="app-edu-counter-text align-items-center d-flex app-edu-headline">
-                                <h3 class="odometer" data-count="500"></h3>
-                                <h4>Total 
-                                Studetns</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>      
-    <!-- End of counter section
-        ============================================= -->
-
-    <!-- Start of blog section
-        ============================================= -->         
-        <section id="app-edu-blog" class="app-edu-blog-section position-relative">
-            <span class="app-edu-blog-vector position-absolute"><img src="img/education/blg-v.png" alt=""></span>
-            <div class="container">
+    <section id="ei-appdownload" class="ei-appdownload-section position-relative" data-background="img/app-landing/background/appbg1.png">
+        <div class="container">
+            <div class="ei-appdownload-content">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="app-edu-section-title app-edu-headline pera-content">
-                            <span>Learn anything you want</span>
-                            <h2>Latest News</h2>
-                            <p>Aliquip ex ea commo ute irure dolor in repre henderit in velit esse cillumdatat non proident, sunt in culpa qui officia.</p>
+                        <div class="ei-app-mockup-img  wow fadeFromRight" data-wow-delay="300ms" data-wow-duration="1500ms">
+                            <img src="img/app-landing/mockup/amu1.png" alt="">
                         </div>
-                        <div class="app-edu-blog-content">
-                            <div class="app-edu-blog-innerbox position-relative wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                <div class="app-edu-blog-img position-absolute">
-                                    <img src="img/education/blg1.jpg" alt="">
-                                </div>
-                                <div class="app-edu-blog-text app-edu-headline">
-                                    <div class="app-edu-blog-meta">
-                                        <span class="blog-ath text-uppercase"><a href="#">Johnson Doe  </a></span>
-                                        <span class="blog-date"><a href="#">Feb 24, 2021</a></span>
-                                    </div>
-                                    <h3><a href="#">Didunt ut labore et dolore magna aliqua strud when the music</a></h3>
-                                </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ei-app-down-text wow fadeFromLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+                            <div class="eight-section-title appeight-headline pera-content text-left">
+                                <span class="eg-title-tag">
+                                    App Download<i class="square-shape"><i></i><i></i><i></i><i></i></i>
+                                </span>
+                                <h2>This app is available for
+                                    <span>your smart phone.</span>
+                                </h2>
+                                <p>As a SAAS web crawler expert, I help organizations adjust to the expanding significance of internet promoting.</p>
                             </div>
-                            <div class="app-edu-blog-innerbox position-relative wow fadeFromUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                                <div class="app-edu-blog-img position-absolute">
-                                    <img src="img/education/blg1.jpg" alt="">
-                                </div>
-                                <div class="app-edu-blog-text app-edu-headline">
-                                    <div class="app-edu-blog-meta">
-                                        <span class="blog-ath text-uppercase"><a href="#">Johnson Doe  </a></span>
-                                        <span class="blog-date"><a href="#">Feb 24, 2021</a></span>
-                                    </div>
-                                    <h3><a href="#">Didunt ut labore et dolore magna aliqua strud when the music</a></h3>
-                                </div>
+                            <!-- /title -->
+                            <div class="app-down-btn">
+                                <a href="#"><img src="img/app-landing/shape/btn1.png" alt=""></a>
+                                <a href="#"><img src="img/app-landing/shape/btn2.png" alt=""></a>
                             </div>
-                        </div>
-                        <div class="app-edu-blog-btn">
-                            <a href="#">Go To Blog</a>
+                            <div class="ei-download-btn pera-content">
+                                <div class="download-icon float-left"><i class="flaticon-idea"></i></div>
+                                <p>Are you interested for this app?</p>
+                                <a href="#">Learn More </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    <!-- End of blog section
+        </div>
+        <div class="ei-appdownloaad-shape app-shape1" data-parallax='{"y" : -100}'><img src="img/app-landing/background/apps1.png" alt=""></div>
+        <div class="ei-appdownloaad-shape app-shape2" data-parallax='{"x" : -120}'><img src="img/app-landing/background/apps2.png" alt=""></div>
+        <div class="ei-appdownloaad-shape app-shape3" data-parallax='{"y" : -100}'><img src="img/app-landing/background/apps3.png" alt=""></div>
+    </section>
+    <!-- End of App Download section
         ============================================= -->
 
-    <!-- Start of footer section
-        ============================================= -->         
-        <section id="app-edu-footer" class="app-edu-footer-section" data-background="img/education/f-bg.png">
-            <div class="container">
-                <div class="app-edu-footer-newslatter">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="app-edu-section-title app-edu-headline pera-content">
-                                <span>Subscribe Now</span>
-                                <h2>Get Our Newsletter</h2>
-                                <p>Aliquip ex ea commo ute irure dolor in repre henderit in velit esse cillumdatat non proident, sunt in culpa qui officia.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="app-edu-newslatter-form position-relative">
-                                <input type="text" placeholder="Your email address">
-                                <button>Subscribe</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="app-edu-footer-widget-area">
-                    <div class="row">
-                        <div class="col-lg-5 col-md-6">
-                            <div class="app-edu-footer-widget  app-edu-headline pera-content ul-li-block">
-                                <div class="app-edu-logo-widget">
-                                    <div class="app-edu-footer-logo">
-                                        <a href="#"><img src="img/education/logo/logo1.png" alt=""></a>
-                                    </div>
-                                    <p>Hedatat non proident, sunt in culpa qui offic ia  dolore eu fugiat nul lamco laboris nisi ut aliq uip ex ea commodo consequat. Duis aute irure dolor in reprehe  fugiat </p>
-                                    <div class="app-edu-footer-social">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-youtube"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-3">
-                            <div class="app-edu-footer-widget app-edu-headline pera-content ul-li-block">
-                                <div class="app-edu-footer-menu">
-                                    <h3 class="widget-title">Company</h3>
-                                    <ul>
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Our Story</a></li>
-                                        <li><a href="#">Career</a></li>
-                                        <li><a href="#">Special Offers</a></li>
-                                        <li><a href="#">Team Members</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-3">
-                            <div class="app-edu-footer-widget app-edu-headline pera-content ul-li-block">
-                                <div class="app-edu-footer-menu">
-                                    <h3 class="widget-title">Useful Links</h3>
-                                    <ul>
-                                        <li><a href="#">Popular Courses</a></li>
-                                        <li><a href="#">Discounts</a></li>
-                                        <li><a href="#">Legal Advice</a></li>
-                                        <li><a href="#">Refunds</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="app-edu-footer-widget app-edu-headline pera-content ul-li-block">
-                                <div class="app-edu-twitter">
-                                    <h3 class="widget-title">Recent Tweets</h3>
-                                    <div class="app-edu-twitter-area">
-                                        <div class="app-edu-twitter-content">
-                                            <div class="app-edu-twitter-icon float-left">
-                                                <i class="fab fa-twitter"></i>
-                                            </div>
-                                            <div class="app-edu-twitter-text">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit <a href="#">bit.ly/43Esd</a></p>
-                                            </div>
-                                        </div>
-                                        <div class="app-edu-twitter-content">
-                                            <div class="app-edu-twitter-icon float-left">
-                                                <i class="fab fa-twitter"></i>
-                                            </div>
-                                            <div class="app-edu-twitter-text">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit <a href="#">bit.ly/43Esd</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="app-edu-footer-copyright clearfix">
-                    <div class="copyright-text float-left">
-                        <p>All rights reserved © 2021  <a href="#">ThemeXriver</a></p>
-                    </div>
-                    <div class="copyright-menu float-right ul-li">
-                        <ul>
-                            <li><a href="#">Terms & Condition </a></li>
-                            <li><a href="#">Privacy Policy </a></li>
-                            <li><a href="#">Affiliated </a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <!-- End of footer section
-        ============================================= -->     
 
-        <!-- JS library -->
-        <script src="js/jquery.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/appear.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/jquery.fancybox.js"></script>
-        <script src="js/tilt.jquery.min.js"></script>
-        <script src="js/owl.js"></script>
-        <script src="js/typer-new.js"></script>
-        <script src="js/odometer.js"></script>
-        <script src="js/parallax-scroll.js"></script>
-        <script src="js/education.js"></script>
-    </body>
-    </html>                    
+
