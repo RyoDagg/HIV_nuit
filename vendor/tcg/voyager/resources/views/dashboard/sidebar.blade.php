@@ -32,8 +32,8 @@
         <div id="adminmenu">
             <admin-menu :items="{{ menu('admin', '_json') }}"></admin-menu>
         </div>
-        <div id="pichpawpaw" style="    margin-left: 10%; margin-top: 13%;">
-        <img src="/pichpawpaw.png" alt="elements Logo" width="170" height="170">
+        <div id="pichpawpaw" style="    margin-left: 3%; margin-top: 13%;">
+        <img src="/logowhite.png" alt="elements Logo" width="210" height="220">
         </div>
     </nav>
 </div>

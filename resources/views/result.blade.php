@@ -167,8 +167,10 @@
                     </div>
                 </div>
             </div>
+
         </section>
-    <!-- End of intro section
+    <!-- End of in
+    tro section
         ============================================= -->
 
     <!-- Start of about section

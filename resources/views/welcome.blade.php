@@ -1072,23 +1072,33 @@
                                 $i = 0;
                                 ?>
                                 <input type="hidden" name="uid" value="{{$user}}" />
+                                {{--<input name="favorableAnswer" value="{{$question->favorableAnswer}}" type="hidden" />
+                                <input name="secondPossibility" value="{{$question->secondPossibility}}" type="hidden" />--}}
+
                                 @foreach ($question as $question)
 
                                 <?php
                                 $i++;
                                 ?>
                                 <div data-question="{{$i}}" class="quiz__step--{{$i}} {{$i == 1 ? 'quiz__step--current': ''}} quiz__step">
+                                    <input name="favorableAnswer[]" value="{{$question->favorableAnswer}}" type="hidden" />
+                                    <input name="secondPossibility[]" value="{{$question->secondPossibility}}" type="hidden" />
                                     <div class="question__emoji">{{ $question->Emoji }} </div>
                                     <h1 class="quiz__question">{{ $question->question }}</h1>
                                     <div class="answer">
-                                        <input data-char="65" class="answer__input" type="radio" id="question{{$i}}_yes" name="{{$question->id}}" value="Yes">
-                                        <label class="answer__label" for="question{{$i}}_yes">Yes</label>
+                                        <input data-char="65" class="answer__input" type="radio" id="question{{$i}}_first" name="{{$question->id}}" value="{{ $question->firstPossibility }}">
+                                        <label class="answer__label" for="question{{$i}}_first">{{ $question->firstPossibility }}</label>
                                     </div>
                                     <div class="answer">
-                                        <input data-char="66" class="answer__input" type="radio" id="question{{$i}}_no" name="{{$question->id}}" value="No">
-                                        <label class="answer__label" for="question{{$i}}_no">No</label>
+                                        <input data-char="66" class="answer__input" type="radio" id="question{{$i}}_second" name="{{$question->id}}" value="{{ $question->secondPossibility }}">
+                                        <label class="answer__label" for="question{{$i}}_second">{{ $question->secondPossibility }}</label>
+                                    </div>
+                                    <div class="answer">
+                                        <input data-char="66" class="answer__input" type="radio" id="question{{$i}}_third" name="{{$question->id}}" value="{{ $question->thirdPossibility }}">
+                                        <label class="answer__label" for="question{{$i}}_third">{{ $question->thirdPossibility }}</label>
                                     </div>
                                 </div>
+
                                 @endforeach
 
                                 <div data-question="{{$i+1}}" class="quiz__step--{{$i+1}} quiz__step quiz__summary">
@@ -1131,69 +1141,18 @@
 
 
                     <div class="container">
-
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+                        <div class="app-edu-banner-text app-edu-headline pera-content wow fadeFromLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <center>
+                                <h3 style="color: black; font-family:Arial, Helvetica, sans-serif"> You have to <a style="color: blue;" href="{{ route('login') }}">login 👤</a> in order to take the quizz </h3>
+                            </center>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
+                        <img src="sad.gif" alt="">
 
 
                     </div>
 
-                   
+
 
 
 

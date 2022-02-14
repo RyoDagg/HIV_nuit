@@ -18,6 +18,8 @@ class CreateAnswersTable extends Migration
             $table->integer('user_id');
             $table->integer('question_id');    
             $table->string('textAnsr');
+            $table->string('favAnsr');
+            $table->string('lessFavAnsr');
             $table->timestamps();
         });
     }

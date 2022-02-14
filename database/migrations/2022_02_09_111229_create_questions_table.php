@@ -17,6 +17,9 @@ class CreateQuestionsTable extends Migration
             $table->id();
             $table->string('question');
             $table->string('favorableAnswer');
+            $table->string('firstPossibility');
+            $table->string('secondPossibility');
+            $table->string('thirdPossibility');
             $table->string('type');
             $table->string('Emoji');
             $table->timestamps();
