@@ -24,6 +24,7 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
 Route::post('/answer', [App\Http\Controllers\AnswerController::class, 'store'])->name('answer.store');
 
+Route::get('/quiz', [App\Http\Controllers\QuizController::class, 'index'])->name('quiz');
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

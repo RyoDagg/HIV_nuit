@@ -279,8 +279,15 @@
             </div>
             <div class="app-edu-main-header-menu clearfix">
                 <div class="header-dia-cta-btn text-center float-right">
-                    <a href="#" class="show-modal" data-toggle="modal" data-target="#myModal">Take Quizz</a>
-
+                  
+                    @if (Route::has('login'))
+                            @auth
+                            <a href="{{ route('quiz') }}" class="show-modal">Take Quizz</a>
+                            @else
+                            <a href="#" class="show-modal" data-toggle="modal" data-target="#myModal">Take Quizz</a>
+                            @endauth
+                        </li>
+                        @endif
                 </div>
                 <nav class="app-edu-main-navigation float-right clearfix ul-li">
                     <ul id="app-edu-main-nav" class="nav navbar-nav clearfix">

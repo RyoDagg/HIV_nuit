@@ -1,354 +1,395 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>4Elements - Results</title>
+    <title>Four Elements</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/fv.png" type="image/x-icon">
-    <link rel="icon" href="img/fv.png" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/flaticon-3.css">
     <link rel="stylesheet" href="css/fontawesome-all.css">
+    <link rel="stylesheet" href="css/flaticon-6.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/odometer-theme-default.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/side-demo.css">
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/education.css">
     <link rel="icon" type="image/x-icon" href="greenlogo.png">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
 
-    <!-- Start of breadcurmb section
-        ============================================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+
 </head>
 
-<body class="saas-classic">
-    <!-- preloader - start -->
-    <div id="preloader" class="saas-classic-preloader"></div>
-    <div class="up">
-        <a href="#" id="scrollup" class="saas-classic-scrollup text-center"><i class="fas fa-angle-up"></i></a>
-    </div>
 
+
+
+
+<body class="app-edu" data-spy="scroll" data-target=".app-edu-main-navigation" data-offset="80">
+    <!-- preloader - start -->
+    <div id="app-edu-preloader"></div>
+    <div class="up">
+        <a href="#" class="app-edu-scrollup text-center"><i class="fas fa-angle-up"></i></a>
+    </div>
     <!-- Start of header section
         ============================================= -->
-    <header id="header_main" class="saas_two_main_header">
-        <div class="container">
-            <div class="s_main_menu">
-                <div class="row">
-                    <div class="col-md-2">
-                        <div class="brand_logo">
-                            <a href="!#"><img src="ktiba.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-md-10">
-                        <div class="main_menu_list clearfix float-right">
+    <header id="app-edu-main-header" class="app-edu-header-main" >
+        <div class="container"  >
+            <div class="app-edu-logo float-left">
+                <a href="#"><img src="logowhite.png" alt="" style="height: 100px; width: 150px;"></a>
+            </div>
+            <div class="app-edu-main-header-menu clearfix">
+                <div class="header-dia-cta-btn text-center float-right">
+                @if (Route::has('login'))
+                            @auth
+                            <a href="{{ route('welcome') }}" class="show-modal">Home</a>
+                            @else
+                            <a href="#" class="show-modal" data-toggle="modal" data-target="#myModal">Take Quizz</a>
+                            @endauth
+                        </li>
+                        @endif
+                </div>
+                <nav class="app-edu-main-navigation float-right clearfix ul-li" style="display: hidden;">
+                    <ul id="app-edu-main-nav" class="nav navbar-nav clearfix">
+                        <li><a class="nav-link" href="{{ route('welcome') }}">Home</a></li>
+                        <li><a class="nav-link" href="#app-edu-course">Detailed Results</a></li>
+                        <li><a class="nav-link" href="#app-edu-category">Global Results</a></li>
+                        <li><a class="nav-link" href="#">Blog</a></li>
 
-                            <div class="saas_sign_up_btn text-center">
-                                <a href="#!"> Home </a>
-                            </div>
+                        @if (Route::has('login'))
+                        <li class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                            @auth
+                            <a href="{{ url('/myresults') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">My Results</a>
+                            @else
+                            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                            @endauth
+                        </li>
+                        @endif
+                    </ul>
+                </nav>
+            </div>
+            <div class="app-edu-mobile_menu position-relative">
+                <div class="app-edu-mobile_menu_button app-edu-open_mobile_menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="app-edu-mobile_menu_wrap">
+                    <div class="mobile_menu_overlay app-edu-open_mobile_menu"></div>
+                    <div class="app-edu-mobile_menu_content">
+                        <div class="app-edu-mobile_menu_close app-edu-open_mobile_menu">
+                            <i class="fas fa-times"></i>
                         </div>
+                        <div class="m-brand-logo text-center">
+                            <a href="!#"><img src="logo.png" alt=""></a>
+                        </div>
+                        
                     </div>
                 </div>
+                <!-- /Mobile-Menu -->
             </div>
-            <!-- //desktop menu -->
-
-        </div>
     </header>
     <!-- End of header section
         ============================================= -->
 
-
-<section id="saasio-breadcurmb" class="saasio-breadcurmb-section" style="background: rgb(79,163,163);
-        background: radial-gradient(circle, rgba(79,163,163,1) 0%, rgba(164,220,215,1) 35%, rgba(204,242,215,1) 100%);">
-    <div class="container">
-        <div class="breadcurmb-title text-center">
-            <h2>Results</h2>
-        </div>
-        <div class="breadcurmb-item-list text-center ul-li">
-            <ul class="saasio-page-breadcurmb">
-                <li><a href="{{route('welcome')}}">Home</a></li>
-                <li><a href="#">Results</a></li>
-            </ul>
-        </div>
-    </div>
-</section>
-<!-- End of breadcurmb section
+    <!-- Start of banner section
         ============================================= -->
-
-<!-- Start of Service page section
-        ============================================= -->
-<section id="saas_two_service" class="saas_two_service_section">
-    <div class="container">
-        <div class="saas_two_section_title saas2-headline text-wcenter">
-            <span class="title_tag">Results Are Here</span>
-            <h2>Find,<span>  Your Goal </span> </h2>
-        </div>
-        <!-- /section title -->
-        <div class="service_content">
-            <div class="row justify-content-md-center">
-                <div class="col-lg-4 col-md-6  wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    <div class="service_content_box relative-position">
-                        <div class="app-edu-testimonial-img float-left">
-                            <img src="heart.png" alt="" style="height: 70px; width: 70px;">
-                        </div>
-                        <div class="service_icon_box relative-position">
-
-                        </div>
-                        <div class="service_text_box saas2-headline pera-content">
-                            <h3><br><br><br>Heart</h3>
-                            <p>Get your documents out the door fast to keep deals with automatic notifications, on-the-fly editing, and integrated.</p>
-                        </div>
-                        <div class="progress" style="margin-top: 10%;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- /service-content -->
-                <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    <div class="service_content_box relative-position">
-                        <div class="app-edu-testimonial-img float-left">
-                            <img src="idea.png" alt="" style="height: 70px; width: 70px;">
-                        </div>
-                        <div class="service_icon_box relative-position">
-
-                        </div>
-                        <div class="service_text_box saas2-headline pera-content">
-                            <h3><br><br><br>Mind</h3>
-                            <p>Choose from hundreds of plugins and integrations that let you do everything from animating interactions.</p>
-                        </div>
-                        <div class="progress" style="margin-top: 10%;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /service-content -->
-                <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                    <div class="service_content_box relative-position">
-                        <div class="app-edu-testimonial-img float-left">
-                            <img src="lotus-position.png" alt="" style="height: 70px; width: 70px;">
-                        </div>
-                        <div class="service_icon_box relative-position">
-
-                        </div>
-                        <div class="service_text_box saas2-headline pera-content">
-                            <h3><br><br><br>Soul</h3>
-                            <p>Whether you have a team of 2 or 200, the Mailboxes keep everyone the same page. Leverage automation to move fast.</p>
-                        </div>
-                        <div class="progress" style="margin-top: 10%;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /service-content -->
-                <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                    <div class="service_content_box relative-position">
-                        <div class="app-edu-testimonial-img float-left">
-                            <img src="squats.png" alt="" style="height: 70px; width: 70px;">
-                        </div>
-                        <div class="service_icon_box relative-position">
-
-                        </div>
-                        <div class="service_text_box saas2-headline pera-content">
-                            <h3><br><br><br>Body</h3>
-                            <p>Whether you have a team of 2 or 200, the Mailboxes keep everyone the same page. Leverage automation to move fast.</p>
-                        </div>
-                        <div class="progress" style="margin-top: 10%;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /service-content -->
+    <section style="background: rgb(95,190,193);
+background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27%, rgba(108,198,189,1) 66%, rgba(124,212,178,1) 100%); height: 150px; margin-bottom: 50px;  " >
+            <div class="app-edu-logo float-left">
+        <div class="container">
+            <div class="app-edu-banner-content position-relative">
+             
             </div>
         </div>
-        <div class="service_read_more text-center">
-            <a href="!#">Want to download this app? </a>
-        </div>
-    </div>
-</section>
-<!-- End of Service section
+    </section>
+    <!-- End of banner section
         ============================================= -->
 
-<!-- Start of App Download  section
+
+
+
+
+
+    <section id="app-edu-course" class="app-edu-course-section">
+        <div class="container">
+            <div class="app-edu-section-title app-edu-headline text-center center-align pera-content">
+                <span>Results Are Here</span>
+                <h2>Detailed Results</h2>
+                <p>A goal is not always meant to be reached, it often serves simply as something to aim at.</p>
+            </div>
+            <div class="app-edu-course-content">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="app-edu-course-innerbox">
+                            <div class="app-edu-course-img">
+                                <center><img src="water.png" alt="" style="width: 200px; height: 234px"></center>
+                            </div>
+                            <div class="app-edu-course-text text-center app-edu-headline position-relative">
+                                <span class="course-cat text-uppercase"><a href="#">Heart</a></span>
+                                <h3><a href="#">Didunt ut labore et dolore magna aliqua strud</a></h3>
+                                <div class="app-edu-course-rate-price  clearfix">
+                                    <div class="progress" style="margin-top: 10%;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                                    </div>
+                                    <div class="app-edu-course-price float-right">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                        <div class="app-edu-course-innerbox">
+                            <div class="app-edu-course-img">
+                                <center><img src="wind.png" alt="" style="width: 200px; height: 234px"></center>
+                            </div>
+                            <div class="app-edu-course-text text-center app-edu-headline position-relative">
+                                <span class="course-cat text-uppercase"><a href="#">Mind</a></span>
+                                <h3><a href="#">Didunt ut labore et dolore magna aliqua strud</a></h3>
+                                <div class="app-edu-course-rate-price  clearfix">
+                                    <div class="progress" style="margin-top: 10%;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                                    </div>
+                                    <div class="app-edu-course-price float-right">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                        <div class="app-edu-course-innerbox">
+                            <div class="app-edu-course-img">
+                                <center><img src="earth.png" alt="" style="width: 200px; height: 234px"></center>
+                            </div>
+                            <div class="app-edu-course-text text-center app-edu-headline position-relative">
+                                <span class="course-cat text-uppercase"><a href="#">Body</a></span>
+                                <h3><a href="#">Didunt ut labore et dolore magna aliqua strud</a></h3>
+                                <div class="app-edu-course-rate-price  clearfix">
+                                    <div class="progress" style="margin-top: 10%;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                                    </div>
+                                    <div class="app-edu-course-price float-right">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeFromUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <div class="app-edu-course-innerbox">
+                            <div class="app-edu-course-img">
+                                <center><img src="fire.png" alt="" style="width: 200px; height: 234px"></center>
+                            </div>
+                            <div class="app-edu-course-text text-center app-edu-headline position-relative">
+                                <span class="course-cat text-uppercase"><a href="#">Soul</a></span>
+                                <h3><a href="#">Didunt ut labore et dolore magna aliqua strud</a></h3>
+                                <div class="app-edu-course-rate-price  clearfix">
+                                    <div class="progress" style="margin-top: 10%;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                                    </div>
+                                    <div class="app-edu-course-price float-right">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Start of category section
         ============================================= -->
-<section id="ei-appdownload" class="ei-appdownload-section position-relative" data-background="img/app-landing/background/appbg1.png">
-    <div class="container">
-        <div class="ei-appdownload-content">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="ei-app-mockup-img  wow fadeFromRight" data-wow-delay="300ms" data-wow-duration="1500ms">
+    <section id="app-edu-category" class="app-edu-category-section" data-background="img/education/ct-bg.jpg">
+        <div class="container">
+            <div class="app-edu-section-title app-edu-headline text-center center-align pera-content">
+                <span>Learn anything you want</span>
+                <h2>Browse By Category</h2>
+                <p>Aliquip ex ea commo ute irure dolor in repre henderit in velit esse cillumdatat non proident</p>
+            </div>
+            <div class="app-edu-category-content">
+                <div style="width: 500px; height:500px;">
+                    <div>
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+                
+                <div style="width: 500px; height:500px; position:relative; margin-left: 65%; margin-top: -40%">
+                <div class="ei-app-mockup-img  wow fadeFromRight" data-wow-delay="300ms" data-wow-duration="1500ms">
                         <img src="4elogo.png" alt="">
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="ei-app-down-text wow fadeFromLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
-                        <div class="eight-section-title appeight-headline pera-content text-left">
-                            <div>
-                                <canvas id="myChart"></canvas>
-                            </div>
-                            <script>
-                                var data = {
-                                    labels: [
-                                        'Red',
-                                        'Blue',
-                                        'Yellow'
-                                    ],
-                                    datasets: [{
-                                        label: 'My First Dataset',
-                                        data: [300, 50, 100],
-                                        backgroundColor: [
-                                            'rgb(255, 99, 132)',
-                                            'rgb(54, 162, 235)',
-                                            'rgb(255, 205, 86)'
-                                        ],
-                                        hoverOffset: 4
-                                    }]
-                                };
-                                var config = {
-                                    type: 'pie',
-                                    data: data,
-                                };
-                                window.onload = () => {
-                                    var myChart = new Chart(
-                                        document.getElementById('myChart'),
-                                        config
-                                    );
-                                };
-                            </script>
-                            <!-- /title -->
-                            <div class="app-down-btn" hidden>
-                                <a href="#"><img src="img/app-landing/shape/btn1.png" alt=""></a>
-                                <a href="#"><img src="img/app-landing/shape/btn2.png" alt=""></a>
-                            </div>
-                            <div class="ei-download-btn pera-content"hidden>
-                                <div class="download-icon float-left"><i class="flaticon-idea"></i></div>
-                                <p>Are you interested for this app?</p>
-                                <a href="#">Learn More </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                <script>
+                    var data = {
+                        labels: [
+                            'Heart',
+                            'Body',
+                            'Mind',
+                            'Soul'
+                        ],
+                        datasets: [{
+                            label: 'My First Dataset',
+                            data: [50, 75, 25, 90],
+                            backgroundColor: [
+                                'rgb(255, 99, 132)',
+                                'rgb(54, 162, 235)',
+                                'rgb(255, 205, 86)',
+                                'green'
+                            ],
+                            hoverOffset: 4
+                        }]
+                    };
+                    var config = {
+                        type: 'pie',
+                        data: data,
+                    };
+                    window.onload = () => {
+                        var myChart = new Chart(
+                            document.getElementById('myChart'),
+                            config
+                        );
+                    };
+                </script>
+
+
             </div>
         </div>
-        <div class="ei-appdownloaad-shape app-shape1" data-parallax='{"y" : -100}'><img src="img/app-landing/background/apps1.png" alt=""></div>
-        <div class="ei-appdownloaad-shape app-shape2" data-parallax='{"x" : -120}'><img src="img/app-landing/background/apps2.png" alt=""></div>
-        <div class="ei-appdownloaad-shape app-shape3" data-parallax='{"y" : -100}'><img src="img/app-landing/background/apps3.png" alt=""></div>
-</section>
-<!-- End of App Download section
+    </section>
+    <!-- End of category section
         ============================================= -->
-        
-            <!-- Start of footer section
+
+
+
+
+
+
+    <!-- Start of footer section
         ============================================= -->
-    <footer id="saas_two_footer" class="saas_two_footer_section relative-position">
-        <div class="s2-newslatter_section relative-position">
-            <div class="container">
-                <div class="s2-newslatter_content relative-position">
-                    <div class="s2-newslatter_title  text-center saas2-headline pera-content">
-                        <h2>Subscribe now!</h2>
-                        <p>Get the latest update.</p>
-                    </div>
-                    <div class="s2-newslatter-form  relative-position">
-                        <form action="#" class="position-relative">
-                            <input class="email" name="email" type="email" placeholder="Enter your email address">
-                            <div class="nws-button position-absolute text-capitalize">
-                                <button class="hover-btn" type="submit" value="Submit"> Subscribe</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="newsletter_pattern_1"><img src="img/saas-c/banner/nb.png" alt=""></div>
-                <div class="cloud_anim newsletter_pattern_2" style="background-image: url(https://old3.commonsupport.com/emu/wp-content/uploads/2021/02/cloud-2.png);"></div>
-                <div class="cloud_anim newsletter_pattern_3" style="background-image: url(https://old3.commonsupport.com/emu/wp-content/uploads/2021/02/cloud-5.png);"></div>
-                <div class="newsletter_pattern_4 " style="background-image: url(img/saas-c/banner/ns.png);"></div>
-                <div class="newsletter_pattern_5 " style="background-image: url(img/saas-c/banner/ns2.png);"></div>
-            </div>
-        </div>
-        <div class="footer_content pera-content">
-            <div class="container">
+    <section id="app-edu-footer" class="app-edu-footer-section" data-background="img/education/f-bg.png">
+        <div class="container">
+            <div class="app-edu-footer-newslatter">
                 <div class="row">
-                    <div class="col-lg-4 col-md-12">
-                        <div class="s2_footer_widget clearfix ul-li-block  saas2-headline">
-                            <div class="s2_footer_about">
-                                <div class="s2-footer_logo">
-                                    <img src="img/saas-c/logo/f-logo.png" alt="">
+                    <div class="col-lg-6">
+                        <div class="app-edu-section-title app-edu-headline pera-content">
+                            <span>Subscribe Now</span>
+                            <h2>Get Our Newsletter</h2>
+                            <p>Aliquip ex ea commo ute irure dolor in repre henderit in velit esse cillumdatat non proident, sunt in culpa qui officia.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="app-edu-newslatter-form position-relative">
+                            <input type="text" placeholder="Your email address">
+                            <button>Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-edu-footer-widget-area">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="app-edu-footer-widget  app-edu-headline pera-content ul-li-block">
+                            <div class="app-edu-logo-widget">
+                                <div class="app-edu-footer-logo">
+                                    <a href="#"><img src="logowhite.png" alt=""></a>
                                 </div>
-                                <div class="footer_about">
-                                    30 Commercial Road Fratton
-                                    PORTSMOUTH Hampshire PO1 1AA
-                                    UNITED KINGDOM
+                                <p>Hedatat non proident, sunt in culpa qui offic ia dolore eu fugiat nul lamco laboris nisi ut aliq uip ex ea commodo consequat. Duis aute irure dolor in reprehe fugiat </p>
+                                <div class="app-edu-footer-social">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                                 </div>
-                                <span>Open Hours: </span>
-                                <p>Mon - Sat: 8 am - 5 pm,
-                                    Sunday: CLOSED</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="s2_footer_widget clearfix ul-li-block saas2-headline">
-                            <div class="s2_footer_menu">
-                                <h3 class="s2_widget_title">
-                                    <span>Links</span>
-                                    <i></i>
-                                </h3>
+                    <div class="col-lg-2 col-md-3">
+                        <div class="app-edu-footer-widget app-edu-headline pera-content ul-li-block">
+                            <div class="app-edu-footer-menu">
+                                <h3 class="widget-title">Company</h3>
                                 <ul>
-                                    <li><a href="#"> Home</a></li>
-                                    <li><a href="#"> Team</a></li>
-                                    <li><a href="#"> FAQ</a></li>
-                                    <li><a href="#"> Services</a></li>
-                                    <li><a href="#"> Gallery</a></li>
-                                    <li><a href="#"> About us</a></li>
-                                    <li><a href="#"> Contact</a></li>
-                                    <li><a href="#"> Testimonials</a></li>
-                                    <li><a href="#"> News</a></li>
-                                    <li><a href="#"> Portfolio</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Our Story</a></li>
+                                    <li><a href="#">Career</a></li>
+                                    <li><a href="#">Special Offers</a></li>
+                                    <li><a href="#">Team Members</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="s2_footer_widget clearfix ul-li-block saas2-headline">
-                            <div class="s2_footer_social">
-                                <h3 class="s2_widget_title">
-                                    <span>Newsletter</span>
-                                    <i></i>
-                                </h3>
-                                <p>Send us a newsletter to get update</p>
-                                <form action="#">
-                                    <input name="email" type="email" placeholder="Enter your email address">
-                                    <button type="submit" value="Submit"> <i class="fas fa-paper-plane"></i></button>
-                                </form>
-                                <a href="#"><i class="fb-bg fab fa-facebook-f "></i></a>
-                                <a href="#"><i class="bh-bg fab fa-behance"></i></a>
-                                <a href="#"><i class="tw-bg fab fa-twitter"></i></a>
-                                <a href="#"><i class="dr-bg fab fa-dribbble"></i></a>
+                    <div class="col-lg-2 col-md-3">
+                        <div class="app-edu-footer-widget app-edu-headline pera-content ul-li-block">
+                            <div class="app-edu-footer-menu">
+                                <h3 class="widget-title">Useful Links</h3>
+                                <ul>
+                                    <li><a href="#">Popular Courses</a></li>
+                                    <li><a href="#">Discounts</a></li>
+                                    <li><a href="#">Legal Advice</a></li>
+                                    <li><a href="#">Refunds</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="app-edu-footer-widget app-edu-headline pera-content ul-li-block">
+                            <div class="app-edu-twitter">
+                                <h3 class="widget-title">Recent Tweets</h3>
+                                <div class="app-edu-twitter-area">
+                                    <div class="app-edu-twitter-content">
+                                        <div class="app-edu-twitter-icon float-left">
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+                                        <div class="app-edu-twitter-text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit <a href="#">bit.ly/43Esd</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="app-edu-twitter-content">
+                                        <div class="app-edu-twitter-icon float-left">
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+                                        <div class="app-edu-twitter-text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit <a href="#">bit.ly/43Esd</a></p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="app-edu-footer-copyright clearfix">
+                <div class="copyright-text float-left">
+                    <p>Developped By © 2022 <a href="https://www.mih.tn" target="_blank">MAKE IT HAPPEN</a></p>
+                </div>
+                <div class="copyright-menu float-right ul-li">
+                    <ul>
+                        <li><a href="#">Terms & Condition </a></li>
+                        <li><a href="#">Privacy Policy </a></li>
+                        <li><a href="#">Affiliated </a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </footer>
-    <div class="s2-copyright text-center">2021 © All rights reserved by <a href="#">Themexriver</a></div>
-    <!-- End of footer section 
+    </section>
+    <!-- End of footer section
         ============================================= -->
 
+    <!-- JS library -->
     <script src="js/jquery.js"></script>
     <script src="js/popper.min.js"></script>
+    <script src="js/appear.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
     <script src="js/tilt.jquery.min.js"></script>
     <script src="js/owl.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/slick.js"></script>
-    <script src="js/jquery.barfiller.js"></script>
+    <script src="js/typer-new.js"></script>
+    <script src="js/odometer.js"></script>
     <script src="js/parallax-scroll.js"></script>
-    <script src="js/jquery.paroller.min.js"></script>
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/side-demo.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/education.js"></script>
 </body>
+
+
+
 
 </html>

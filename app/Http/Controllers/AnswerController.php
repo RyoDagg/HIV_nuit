@@ -22,10 +22,14 @@ class AnswerController extends Controller
             unset($data['_token']);
             $favorableAnswer = $request->input("favorableAnswer");
             $secondPossibility = $request->input("secondPossibility");
+            $qtype = $request->input("qtype");
+            unset($data['qtype']);
             unset($data['favorableAnswer']);
             unset($data['secondPossibility']);
             $i = 0;
             foreach ($data as $key => $value) {
+
+
 
                 Answers::create([
                     "user_id" => $uid,
@@ -33,7 +37,9 @@ class AnswerController extends Controller
                     "textAnsr" => $value,
                     "favAnsr" => $favorableAnswer[$i],
                     "lessFavAnsr" => $secondPossibility[$i],
+                    "qtype" => $qtype[$i],
                 ]);
+                
                 $i++;
             }
         }
