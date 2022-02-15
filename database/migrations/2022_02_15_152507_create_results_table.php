@@ -15,15 +15,15 @@ class CreateResultsTable extends Migration
     {
         Schema::create('results', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
+            $table->string('user_id');
             $table->integer('hTotal');    
-            $table->string('mTotal');
-            $table->string('sTotal');
-            $table->string('bTotal');
+            $table->integer('mTotal');
+            $table->integer('sTotal');
+            $table->integer('bTotal');
             $table->integer('hearts');    
-            $table->string('minds');
-            $table->string('souls');
-            $table->string('bodies');
+            $table->integer('minds');
+            $table->integer('souls');
+            $table->integer('bodies');
             $table->timestamps();
         });
     }

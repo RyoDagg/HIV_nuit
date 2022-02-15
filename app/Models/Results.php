@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Results extends Model
 {
+    protected $fillable = [
+        'user_id', 'hTotal', 'mTotal', 'sTotal','bTotal','hearts','minds','souls','bodies'
+    ];
     use HasFactory;
 }
