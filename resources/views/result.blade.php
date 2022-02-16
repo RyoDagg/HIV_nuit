@@ -30,6 +30,11 @@
     <div class="up">
         <a href="#" class="app-edu-scrollup text-center"><i class="fas fa-angle-up"></i></a>
     </div>
+
+          
+
+
+
     <!-- Start of header section
         ============================================= -->
     <header id="app-edu-main-header" class="app-edu-header-main" >
@@ -107,6 +112,74 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
 
 
 
+        @foreach ($result as $result)
+
+        <?php 
+        
+        $hProgress =  ($result->hearts) / ($result->hTotal) * 100 ; 
+        $mProgress =  ($result->minds) / ($result->mTotal) * 100 ; 
+        $sProgress =  ($result->souls) / ($result->sTotal) * 100 ; 
+        $bProgress =  ($result->bodies) / ($result->bTotal) * 100 ; 
+        $bProgress = round( $bProgress);
+        $hProgress = round( $hProgress);
+        $mProgress = round( $mProgress);
+        $sProgress = round( $sProgress);
+
+        $bgProgHeart = 'bg-info';
+        $bgProgBody = 'bg-info';
+        $bgProgMind = 'bg-info';
+        $bgProgSoul = 'bg-info';
+
+        //progress bar color for body
+        
+            if($bProgress>= 0 && $bProgress< 25)
+                $bgProgBody = 'bg-danger';
+            elseif($bProgress>= 25 && $bProgress< 50)
+            $bgProgBody = 'bg-warning';
+            elseif($bProgress>= 50 && $bProgress< 75)
+            $bgProgBody = 'bg-success';
+            elseif($bProgress>= 75 )
+            $bgProgBody = 'bg-primary';
+
+            //progress bar color for heart
+
+            if($hProgress>= 0 && $hProgress< 25)
+                $bgProgHeart = 'bg-danger';
+            elseif($hProgress>= 25 && $hProgress< 50)
+            $bgProgHeart = 'bg-warning';
+            elseif($hProgress>= 50 && $hProgress< 75)
+            $bgProgHeart = 'bg-success';
+            elseif($hProgress>= 75 )
+            $bgProgHeart = 'bg-primary';
+
+                        //progress bar color for Soul
+
+            
+            if($sProgress>= 0 && $sProgress< 25)
+                $bgProgSoul = 'bg-danger';
+            elseif($sProgress>= 25 && $sProgress< 50)
+            $bgProgSoul = 'bg-warning';
+            elseif($sProgress>= 50 && $sProgress< 75)
+            $bgProgSoul = 'bg-success';
+            elseif($sProgress>= 75 )
+            $bgProgSoul = 'bg-primary';
+
+                        //progress bar color for Mind
+
+            
+            if($mProgress>= 0 && $mProgress< 25)
+                $bgProgMind = 'bg-danger';
+            elseif($mProgress>= 25 && $mProgress< 50)
+            $bgProgMind = 'bg-warning';
+            elseif($mProgress>= 50 && $mProgress< 75)
+            $bgProgMind = 'bg-success';
+            elseif($mProgress>= 75 )
+            $bgProgMind = 'bg-primary';
+            
+        
+        ?>
+
+
 
     <section id="app-edu-course" class="app-edu-course-section">
         <div class="container">
@@ -124,10 +197,10 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                             </div>
                             <div class="app-edu-course-text text-center app-edu-headline position-relative">
                                 <span class="course-cat text-uppercase"><a href="#">Heart</a></span>
-                                <h3><a href="#">Didunt ut labore et dolore magna aliqua strud</a></h3>
+                                <h3><a href="#">You Mark is {{ $result->hearts }} / {{$result->hTotal}}</a></h3>
                                 <div class="app-edu-course-rate-price  clearfix">
                                     <div class="progress" style="margin-top: 10%;">
-                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated {{ $bgProgHeart }}" role="progressbar" aria-valuenow="{{$result->hearts}}" aria-valuemin="0" aria-valuemax="{{$result->hTotal}}" style="width: {{ $hProgress }}%"></div>
                                     </div>
                                     <div class="app-edu-course-price float-right">
 
@@ -143,10 +216,10 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                             </div>
                             <div class="app-edu-course-text text-center app-edu-headline position-relative">
                                 <span class="course-cat text-uppercase"><a href="#">Mind</a></span>
-                                <h3><a href="#">Didunt ut labore et dolore magna aliqua strud</a></h3>
+                                <h3><a href="#">You Mark is {{ $result->minds }} / {{$result->mTotal}}</a></h3>
                                 <div class="app-edu-course-rate-price  clearfix">
                                     <div class="progress" style="margin-top: 10%;">
-                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated {{ $bgProgMind }}" role="progressbar" aria-valuenow="{{$result->minds}}" aria-valuemin="0" aria-valuemax="{{$result->mTotal}}" style="width: {{ $mProgress }}%"></div>
                                     </div>
                                     <div class="app-edu-course-price float-right">
                                     </div>
@@ -161,10 +234,10 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                             </div>
                             <div class="app-edu-course-text text-center app-edu-headline position-relative">
                                 <span class="course-cat text-uppercase"><a href="#">Body</a></span>
-                                <h3><a href="#">Didunt ut labore et dolore magna aliqua strud</a></h3>
+                                <h3><a href="#"> Your Body Result is  {{ $bProgress }}%</a></h3>
                                 <div class="app-edu-course-rate-price  clearfix">
                                     <div class="progress" style="margin-top: 10%;">
-                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated {{ $bgProgBody }}" role="progressbar" aria-valuenow="{{$result->bodies}}" aria-valuemin="0" aria-valuemax="{{$result->bTotal}}" style="width: {{ $bProgress }}%"></div>
                                     </div>
                                     <div class="app-edu-course-price float-right">
                                     </div>
@@ -179,10 +252,10 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                             </div>
                             <div class="app-edu-course-text text-center app-edu-headline position-relative">
                                 <span class="course-cat text-uppercase"><a href="#">Soul</a></span>
-                                <h3><a href="#">Didunt ut labore et dolore magna aliqua strud</a></h3>
+                                <h3><a href="#">You Mark is {{ $result->souls }} / {{$result->sTotal}}</a></h3>
                                 <div class="app-edu-course-rate-price  clearfix">
                                     <div class="progress" style="margin-top: 10%;">
-                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated {{ $bgProgSoul }}" role="progressbar" aria-valuenow="{{$result->souls}}" aria-valuemin="0" aria-valuemax="{{$result->sTotal}}" style="width: {{ $sProgress }}%"></div>
                                     </div>
                                     <div class="app-edu-course-price float-right">
                                     </div>
@@ -195,7 +268,6 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
             </div>
         </div>
     </section>
-
 
 
     <!-- Start of category section
@@ -230,7 +302,7 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                         ],
                         datasets: [{
                             label: 'My First Dataset',
-                            data: [50, 75, 25, 90],
+                            data: [{{ $hProgress }}, {{ $bProgress }},{{ $mProgress }}, {{ $sProgress }}],
                             backgroundColor: [
                                 'rgb(255, 99, 132)',
                                 'rgb(54, 162, 235)',
@@ -261,6 +333,7 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
 
 
 
+        @endforeach
 
 
 

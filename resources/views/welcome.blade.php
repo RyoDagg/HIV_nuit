@@ -279,23 +279,21 @@
             </div>
             <div class="app-edu-main-header-menu clearfix">
                 <div class="header-dia-cta-btn text-center float-right">
-                  
+
                     @if (Route::has('login'))
-                            @auth
-                            <a href="{{ route('quiz') }}" class="show-modal">Take Quizz</a>
-                            @else
-                            <a href="#" class="show-modal" data-toggle="modal" data-target="#myModal">Take Quizz</a>
-                            @endauth
-                        </li>
-                        @endif
+                    @auth
+                    <a href="{{ route('quiz') }}" class="show-modal">Take Quizz</a>
+                    @else
+                    <a href="#" class="show-modal" data-toggle="modal" data-target="#myModal">Take Quizz</a>
+                    @endauth
+                    </li>
+                    @endif
                 </div>
                 <nav class="app-edu-main-navigation float-right clearfix ul-li">
                     <ul id="app-edu-main-nav" class="nav navbar-nav clearfix">
                         <li><a class="nav-link" href="#app-edu-banner">Home</a></li>
                         <li><a class="nav-link" href="#app-edu-about">About</a></li>
-                        <li><a class="nav-link" href="#app-edu-course">Course</a></li>
-                        <li><a class="nav-link" href="#app-edu-category">Category</a></li>
-                        <li><a class="nav-link" href="#app-edu-testimonial">Testimonial</a></li>
+                        <li><a class="nav-link" href="#app-edu-testimonial">4 Elements</a></li>
                         <li><a class="nav-link" href="#app-edu-blog">Blog</a></li>
 
                         @if (Route::has('login'))
@@ -327,24 +325,14 @@
                             <ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
                                 <li class="dropdown">
                                     <a href="#">Home</a>
-                                    <ul class="dropdown-menu clearfix">
-                                        <li><a href="#">DropDown 1</a></li>
-                                        <li><a href="#">DropDown 2</a></li>
-                                        <li><a href="#">DropDown 3</a></li>
-                                    </ul>
+
                                 </li>
-                                <li class="dropdown">
-                                    <a href="#">Features</a>
-                                    <ul class="dropdown-menu clearfix">
-                                        <li><a href="#">DropDown 1</a></li>
-                                        <li><a href="#">DropDown 2</a></li>
-                                        <li><a href="#">DropDown 3</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Pages</a></li>
-                                <li><a href="#">Pricing </a></li>
-                                <li><a href="#">Support</a></li>
-                                <li><a href="#">Login</a> </li>
+
+                                <li><a class="nav-link" href="#app-edu-about">About</a></li>
+                                <li><a class="nav-link" href="#app-edu-testimonial">4 Elements</a></li>
+                                <li><a class="nav-link" href="#app-edu-blog">Blog</a></li>
+
+                                <li><a href="{{ route('login') }}">Login</a> </li>
                             </ul>
                         </nav>
                     </div>
@@ -835,7 +823,6 @@
     </section>
     <!-- End of testimonial section
         ============================================= -->
-
     <!-- Start of counter section
         ============================================= -->
     <section id="app-edu-counter" class="app-edu-counter-section">
@@ -847,33 +834,33 @@
                             <i class="flaticon-213-user-12"></i>
                         </div>
                         <div class="app-edu-counter-text align-items-center d-flex app-edu-headline">
-                            <h3 class="odometer" data-count="30"></h3>
+                            <h3 class="odometer" data-count="15"></h3>
                             <h4>Total
-                                Instructors</h4>
+                                questions</h4>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="app-edu-counter-innerbox d-flex justify-content-center position-relative">
                         <div class="app-edu-counter-icon">
-                            <i class="flaticon-210-contact-information"></i>
+                        <img src="elementsIcon.png" alt="" style="width: 70px; height:70px;">
+
                         </div>
                         <div class="app-edu-counter-text align-items-center d-flex app-edu-headline">
-                            <h3 class="odometer" data-count="200"></h3>
-                            <h4>Awesome
-                                Courses</h4>
+                            <h3 class="odometer" data-count="4"></h3>
+                            <h4>Elements</h4>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="app-edu-counter-innerbox d-flex justify-content-center position-relative">
                         <div class="app-edu-counter-icon">
-                            <i class="flaticon-218-user-16"></i>
+                        <i class="flaticon-210-contact-information"></i>
                         </div>
                         <div class="app-edu-counter-text align-items-center d-flex app-edu-headline">
                             <h3 class="odometer" data-count="500"></h3>
                             <h4>Total
-                                Studetns</h4>
+                                Posts</h4>
                         </div>
                     </div>
                 </div>
@@ -883,10 +870,11 @@
     <!-- End of counter section
         ============================================= -->
 
+
     <!-- Start of blog section
         ============================================= -->
     <section id="app-edu-blog" class="app-edu-blog-section position-relative">
-        <span class="app-edu-blog-vector position-absolute"><img src="img/education/blg-v.png" alt=""></span>
+        <span class="app-edu-blog-vector position-absolute"><img src="blog.png" alt="" style="margin-bottom: 400px;"></span>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">

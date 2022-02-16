@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Answers;
 use App\Models\Results;
-use App\Http\Controllers\Auth;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
 use LDAP\Result;
@@ -66,11 +66,11 @@ class AnswerController extends Controller
                 }
 
                 if ($qtype[$i] == 'Mind') {
-                    $sq = $sq + 10;
+                    $mq = $mq + 10;
                     if ($value ==  $favorableAnswer[$i])
-                        $s = $s + 10;
+                        $m = $m + 10;
                     elseif ($value ==  $secondPossibility[$i])
-                        $s = $s + 5;
+                        $m = $m + 5;
                 }
 
            
@@ -99,11 +99,8 @@ class AnswerController extends Controller
             "bodies" => $b
         ]);
 
-        $results = Results::inRandomOrder()->take(6)->get();
-
-        $user = $uid();
-
-        return redirect()->route('result')->with(['result'=>$results, 'user' => $user]);;
-        // return $favorableAnswer;
+        $user = Auth::id();
+        $result = Results::inRandomOrder()->take(1)->where('user_id',$user)->get();
+        return redirect()->route('result')->with(['result'=>$result, 'user' => $user]);
     }
 }

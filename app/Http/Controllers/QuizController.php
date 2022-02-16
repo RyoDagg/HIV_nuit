@@ -10,7 +10,7 @@ class QuizController extends Controller
 {
     public function index()
     {
-        $question = Questions::inRandomOrder()->take(6)->get();
+        $question = Questions::inRandomOrder()->get();
       $user = Auth::id();
 
         return view('quizz')->with(['question'=>$question, 'user' => $user]);

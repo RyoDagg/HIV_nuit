@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Results;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ResultsController extends Controller
 {
@@ -22,7 +23,15 @@ class ResultsController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {
-        return view('result');
+    { 
+       // $user = Auth::id();
+      //  $result = Results::inRandomOrder()->take(1)->where('user_id','$uid')->first();
+      //  return view('result')->with(['result'=>$result, 'user' => $user]);
+
+      $user = Auth::id();
+      $result = Results::inRandomOrder()->take(1)->where('user_id',$user)->get();
+      return view('result')->with(['result'=>$result, 'user' => $user]);
+
+
     }
 }
