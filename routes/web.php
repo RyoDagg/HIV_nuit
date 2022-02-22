@@ -25,7 +25,8 @@ Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name(
 Route::post('/answer', [App\Http\Controllers\AnswerController::class, 'store'])->name('answer.store');
 
 Route::get('/quiz', [App\Http\Controllers\QuizController::class, 'index'])->name('quiz');
-
+Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{slug}', [App\Http\Controllers\BlogController::class, 'show'])->name('blog.show');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/myresults', [App\Http\Controllers\ResultsController::class, 'index'])->name('result');

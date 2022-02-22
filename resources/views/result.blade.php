@@ -197,7 +197,7 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                             </div>
                             <div class="app-edu-course-text text-center app-edu-headline position-relative">
                                 <span class="course-cat text-uppercase"><a href="#">Heart</a></span>
-                                <h3><a href="#">You Mark is {{ $result->hearts }} / {{$result->hTotal}}</a></h3>
+                                <h3><a href="#"> Your Heart Result is  {{ $hProgress }}%</a></h3>
                                 <div class="app-edu-course-rate-price  clearfix">
                                     <div class="progress" style="margin-top: 10%;">
                                         <div class="progress-bar progress-bar-striped progress-bar-animated {{ $bgProgHeart }}" role="progressbar" aria-valuenow="{{$result->hearts}}" aria-valuemin="0" aria-valuemax="{{$result->hTotal}}" style="width: {{ $hProgress }}%"></div>
@@ -216,7 +216,7 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                             </div>
                             <div class="app-edu-course-text text-center app-edu-headline position-relative">
                                 <span class="course-cat text-uppercase"><a href="#">Mind</a></span>
-                                <h3><a href="#">You Mark is {{ $result->minds }} / {{$result->mTotal}}</a></h3>
+                                <h3><a href="#"> Your Mind Result is  {{ $mProgress }}%</a></h3>
                                 <div class="app-edu-course-rate-price  clearfix">
                                     <div class="progress" style="margin-top: 10%;">
                                     <div class="progress-bar progress-bar-striped progress-bar-animated {{ $bgProgMind }}" role="progressbar" aria-valuenow="{{$result->minds}}" aria-valuemin="0" aria-valuemax="{{$result->mTotal}}" style="width: {{ $mProgress }}%"></div>
@@ -252,7 +252,7 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                             </div>
                             <div class="app-edu-course-text text-center app-edu-headline position-relative">
                                 <span class="course-cat text-uppercase"><a href="#">Soul</a></span>
-                                <h3><a href="#">You Mark is {{ $result->souls }} / {{$result->sTotal}}</a></h3>
+                                <h3><a href="#"> Your Soul Result is  {{ $sProgress }}%</a></h3>
                                 <div class="app-edu-course-rate-price  clearfix">
                                     <div class="progress" style="margin-top: 10%;">
                                     <div class="progress-bar progress-bar-striped progress-bar-animated {{ $bgProgSoul }}" role="progressbar" aria-valuenow="{{$result->souls}}" aria-valuemin="0" aria-valuemax="{{$result->sTotal}}" style="width: {{ $sProgress }}%"></div>

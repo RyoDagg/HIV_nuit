@@ -883,34 +883,26 @@
                         <h2>Latest News</h2>
                         <p>Aliquip ex ea commo ute irure dolor in repre henderit in velit esse cillumdatat non proident, sunt in culpa qui officia.</p>
                     </div>
+                    <?php $i = 0; ?>
+      @foreach ($post as $posts)
                     <div class="app-edu-blog-content">
                         <div class="app-edu-blog-innerbox position-relative wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
                             <div class="app-edu-blog-img position-absolute">
-                                <img src="img/education/blg1.jpg" alt="">
+                                <img src="{{ asset('storage/' . $post[$i]->image) }}" alt="">
                             </div>
                             <div class="app-edu-blog-text app-edu-headline">
                                 <div class="app-edu-blog-meta">
-                                    <span class="blog-ath text-uppercase"><a href="#">Johnson Doe </a></span>
-                                    <span class="blog-date"><a href="#">Feb 24, 2021</a></span>
+                                    <span class="blog-ath text-uppercase"><a href="{{ route('blog.show', $post[$i]->slug) }}">{{$post[$i]->title}} </a></span>
+                                    <span class="blog-date"><a href="{{ route('blog.show', $post[$i]->slug) }}">{{$post[$i]->created_at}}</a></span>
                                 </div>
-                                <h3><a href="#">Didunt ut labore et dolore magna aliqua strud when the music</a></h3>
+                                <h3><a href="{{ route('blog.show', $post[$i]->slug) }}">{{$post[$i]->excerpt }}</a></h3>
                             </div>
                         </div>
-                        <div class="app-edu-blog-innerbox position-relative wow fadeFromUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <div class="app-edu-blog-img position-absolute">
-                                <img src="img/education/blg1.jpg" alt="">
-                            </div>
-                            <div class="app-edu-blog-text app-edu-headline">
-                                <div class="app-edu-blog-meta">
-                                    <span class="blog-ath text-uppercase"><a href="#">Johnson Doe </a></span>
-                                    <span class="blog-date"><a href="#">Feb 24, 2021</a></span>
-                                </div>
-                                <h3><a href="#">Didunt ut labore et dolore magna aliqua strud when the music</a></h3>
-                            </div>
-                        </div>
+                        <?php $i++; ?>
+                    @endforeach  
                     </div>
                     <div class="app-edu-blog-btn">
-                        <a href="#">Go To Blog</a>
+                        <a href="{{route('blog.index')}}">Go To Blog</a>
                     </div>
                 </div>
             </div>

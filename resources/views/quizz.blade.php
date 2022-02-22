@@ -275,20 +275,21 @@
     </div>
     <!-- Start of header section
         ============================================= -->
-    <header id="app-edu-main-header" class="app-edu-header-main" >
-        <div class="container"  >
+    <header id="app-edu-main-header" class="app-edu-header-main">
+        <div class="container">
             <div class="app-edu-logo float-left">
                 <a href="#"><img src="logowhite.png" alt="" style="height: 100px; width: 150px;"></a>
             </div>
             <div class="app-edu-main-header-menu clearfix">
-              
+
                 <nav class="app-edu-main-navigation float-right clearfix ul-li" style="display: hidden;">
                     <ul id="app-edu-main-nav" class="nav navbar-nav clearfix">
-                        <li><a class="nav-link" href="{{ route('welcome') }}">Home</a></li>
-                      
-                        <li><a class="nav-link" href="#">Blog</a></li>
+                        <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-banner">Home</a></li>
+                        <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
+                        <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
+                        <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-blog">Blog</a></li>
 
-             
+
                     </ul>
                 </nav>
             </div>
@@ -305,7 +306,16 @@
                         <div class="m-brand-logo text-center">
                             <a href="!#"><img src="logo.png" alt=""></a>
                         </div>
-                        
+                        <nav class="app-edu-mobile-main-navigation  clearfix ul-li">
+                            <ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
+                             
+
+                                <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-banner">Home</a></li>
+                                <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
+                                <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
+                                <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-blog">Blog</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
                 <!-- /Mobile-Menu -->
@@ -317,13 +327,13 @@
     <!-- Start of banner section
         ============================================= -->
     <section style="background: rgb(95,190,193);
-background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27%, rgba(108,198,189,1) 66%, rgba(124,212,178,1) 100%); height: 150px; margin-bottom: 50px;  " >
-            <div class="app-edu-logo float-left">
-        <div class="container">
-            <div class="app-edu-banner-content position-relative">
-             
+background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27%, rgba(108,198,189,1) 66%, rgba(124,212,178,1) 100%); height: 150px; margin-bottom: 50px;  ">
+        <div class="app-edu-logo float-left">
+            <div class="container">
+                <div class="app-edu-banner-content position-relative">
+
+                </div>
             </div>
-        </div>
     </section>
     <!-- End of banner section
         ============================================= -->
