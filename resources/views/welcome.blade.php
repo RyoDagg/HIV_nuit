@@ -14,253 +14,6 @@
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/education.css">
     <link rel="icon" type="image/x-icon" href="greenlogo.png">
-</head>
-<style>
-    @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700,800');
-
-    .LuciferWasHere {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        color: #14152C;
-        font-family: 'Raleway', sans-serif;
-        background-color: #f7f8fc;
-        box-sizing: border-box
-    }
-
-
-    .bottom {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        padding: 15px 10px;
-        box-shadow: 0px -2px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .bottom__container {
-        max-width: 1200px;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .progress {
-        width: 40%;
-        height: 10px;
-        position: relative;
-        border-radius: 5px;
-        overflow: hidden;
-        background-color: #ecedf5;
-    }
-
-    .progress__inner {
-        position: absolute;
-        top: 0;
-        border-radius: 5px;
-        height: 100%;
-        left: 0;
-        width: 0%;
-        background-color: #5861af;
-        transition: .4s width linear
-    }
-
-    .navigation__btn path {
-        fill: #A7AACB
-    }
-
-    .navigation {
-        display: flex;
-        align-items: center;
-    }
-
-    .navigation__btn {
-        display: flex;
-        align-items: center;
-        width: 44px;
-        border: 1px solid #A7AACB;
-        justify-content: center;
-        height: 44px;
-    }
-
-    .navigation__btn--left {
-        border-top-left-radius: 6px;
-        border-bottom-left-radius: 6px
-    }
-
-    .navigation__btn--right {
-        border-top-right-radius: 6px;
-        border-bottom-right-radius: 6px
-    }
-
-    .quiz__question {
-        font-weight: 900;
-        letter-spacing: 1px;
-        margin-top: 0;
-        font-size: 34px;
-        margin-bottom: 50px;
-    }
-
-    .containerDegla {
-        display: flex;
-        height: calc(100% - 74px);
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        padding: 15px 10px;
-        margin-bottom: 50px;
-    }
-
-    .answer:first-of-type {
-        margin-right: 15px;
-    }
-
-    .answer__input {
-        appearance: none;
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        width: 1px;
-        height: 1px;
-        position: absolute;
-        outline: none !important;
-    }
-
-    .answer__label {
-        width: 140px;
-        border: 1px solid #A7AACB;
-        display: inline-block;
-        border-radius: 6px;
-        padding: 0px 15px;
-        padding-left: 55px;
-        line-height: 56px;
-        font-size: 15px;
-        color: #A7AACB;
-        text-align: left;
-        font-weight: 600;
-    }
-
-    .answer {
-        display: inline-block;
-        margin-right: 10px;
-    }
-
-
-
-    .quiz__step {
-        text-align: center;
-    }
-
-    .answer__input:checked+.answer__label {
-        border-color: #5861af;
-        color: #14152C;
-        box-shadow: 0px 0px 1px 4px rgba(88, 97, 175, 0.2)
-    }
-
-    .answer__input:checked+.answer__label .answer__tick {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .answer__char {
-        line-height: 24px;
-        display: inline-block;
-        width: 26px;
-        text-align: center;
-        font-size: 13px;
-        border-radius: 4px;
-        color: #c8cae0;
-        border: 1px solid #c8cae0;
-        font-weight: 600;
-        vertical-align: middle;
-        margin-right: 15px;
-    }
-
-    .answer__tick {
-        display: inline-block;
-        vertical-align: middle;
-        background-color: #5861af;
-        margin-left: 20px;
-        line-height: 14px;
-        border-radius: 50%;
-        padding: 4px;
-        opacity: 0;
-        visible: hidden;
-    }
-
-    .answer__tick path {
-        fill: #fff
-    }
-
-    .quiz__inner {
-        max-width: 800px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .quiz__step:not(.quiz__step--current) {
-        visibility: hidden;
-        opacity: 0;
-        display: none;
-    }
-
-    .question__emoji {
-        font-size: 45px;
-        margin-bottom: 15px;
-        display: inline-block;
-        margin-right: 15px;
-    }
-
-    .navigation__btn--disabled {
-        opacity: 0.4;
-    }
-
-    .pichpich__container {
-        margin-top: 25px;
-    }
-
-    .pichpich {
-        background-color: #5861af;
-        line-height: 50px;
-        display: inline-block;
-        border-radius: 25px;
-        padding: 0 15px;
-        font-size: 13px;
-        text-decoration: none;
-        color: #fff;
-        letter-spacing: 1px;
-        box-shadow: 0px 6px 11px rgba(88, 97, 175, 0.6);
-        min-width: 130px;
-        font-weight: 700;
-        text-transform: uppercase;
-    }
-
-    .thanks__tick {
-        line-height: 50px;
-        width: 50px;
-        font-size: 25px;
-        color: #fff;
-        background-color: #5861af;
-        border-radius: 50%;
-        display: inline-block;
-        text-align: center;
-    }
-
-    .thanks__title {
-        font-weight: 900;
-        letter-spacing: 1px;
-        margin-top: 15px;
-        text-align: center;
-        font-size: 40px;
-    }
-
-    .thanks {
-        text-align: center;
-    }
-</style>
-
 
 </head>
 
@@ -300,45 +53,79 @@
                         <li class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                             @auth
                             <a href="{{ url('/myresults') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">My Results</a>
-                            @else
-                            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
                             @endauth
                         </li>
                         @endif
-                    </ul>
-                </nav>
-            </div>
-            <div class="app-edu-mobile_menu position-relative">
-                <div class="app-edu-mobile_menu_button app-edu-open_mobile_menu">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <div class="app-edu-mobile_menu_wrap">
-                    <div class="mobile_menu_overlay app-edu-open_mobile_menu"></div>
-                    <div class="app-edu-mobile_menu_content">
-                        <div class="app-edu-mobile_menu_close app-edu-open_mobile_menu">
-                            <i class="fas fa-times"></i>
-                        </div>
-                        <div class="m-brand-logo text-center">
-                            <a href="!#"><img src="logo.png" alt=""></a>
-                        </div>
-                        <nav class="app-edu-mobile-main-navigation  clearfix ul-li">
-                            <ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
-                                <li class="dropdown">
-                                    <a href="#">Home</a>
 
-                                </li>
+                        @guest
+                        @if (Route::has('login'))
 
-                                <li><a class="nav-link" href="#app-edu-about">About</a></li>
-                                <li><a class="nav-link" href="#app-edu-testimonial">4 Elements</a></li>
-                                <li><a class="nav-link" href="#app-edu-blog">Blog</a></li>
+                        <li class="dropdown">🔒</a>
+                            <ul class="dropdown-menu clearfix">
+                                <li> <a class="nav-link show-modal" data-toggle="modal" data-target="#authModal" href="#">{{ __('Login') }}</a></li>
+                                @endif
 
-                                <li><a href="{{ route('login') }}">Login</a> </li>
+                                @if (Route::has('register'))
+
+                                <li><a  class="nav-link show-modal" data-toggle="modal" data-target="#regModal" href="#">{{ __('Register') }}</a></li>
                             </ul>
-                        </nav>
-                    </div>
-                </div>
-                <!-- /Mobile-Menu -->
+                        </li>
+
+                        @endif
+                        @else
+                        <li class="dropdown">
+                            <a href="#">
+                                {{ Auth::user()->name }}
+                            </a>
+                            <ul class="dropdown-menu clearfix">
+                                <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a></li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+
+                                <li><a target="_blank" href="{{ url('/myresults') }}">My Results</a></li>
+                            </ul>
+
             </div>
+            @endguest
+
+            </ul>
+            </nav>
+        </div>
+        <div class="app-edu-mobile_menu position-relative">
+            <div class="app-edu-mobile_menu_button app-edu-open_mobile_menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="app-edu-mobile_menu_wrap">
+                <div class="mobile_menu_overlay app-edu-open_mobile_menu"></div>
+                <div class="app-edu-mobile_menu_content">
+                    <div class="app-edu-mobile_menu_close app-edu-open_mobile_menu">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="m-brand-logo text-center">
+                        <a href="!#"><img src="logo.png" alt=""></a>
+                    </div>
+                    <nav class="app-edu-mobile-main-navigation  clearfix ul-li">
+                        <ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
+                            <li class="dropdown">
+                                <a href="#">Home</a>
+
+                            </li>
+
+                            <li><a class="nav-link" href="#app-edu-about">About</a></li>
+                            <li><a class="nav-link" href="#app-edu-testimonial">4 Elements</a></li>
+                            <li><a class="nav-link" href="#app-edu-blog">Blog</a></li>
+
+                            <li><a href="{{ route('login') }}">Login</a> </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /Mobile-Menu -->
+        </div>
     </header>
     <!-- End of header section
         ============================================= -->
@@ -843,7 +630,7 @@
                 <div class="col-lg-4">
                     <div class="app-edu-counter-innerbox d-flex justify-content-center position-relative">
                         <div class="app-edu-counter-icon">
-                        <img src="elementsIcon.png" alt="" style="width: 70px; height:70px;">
+                            <img src="elementsIcon.png" alt="" style="width: 70px; height:70px;">
 
                         </div>
                         <div class="app-edu-counter-text align-items-center d-flex app-edu-headline">
@@ -855,7 +642,7 @@
                 <div class="col-lg-4">
                     <div class="app-edu-counter-innerbox d-flex justify-content-center position-relative">
                         <div class="app-edu-counter-icon">
-                        <i class="flaticon-210-contact-information"></i>
+                            <i class="flaticon-210-contact-information"></i>
                         </div>
                         <div class="app-edu-counter-text align-items-center d-flex app-edu-headline">
                             <h3 class="odometer" data-count="500"></h3>
@@ -884,7 +671,7 @@
                         <p>Aliquip ex ea commo ute irure dolor in repre henderit in velit esse cillumdatat non proident, sunt in culpa qui officia.</p>
                     </div>
                     <?php $i = 0; ?>
-      @foreach ($post as $posts)
+                    @foreach ($post as $posts)
                     <div class="app-edu-blog-content">
                         <div class="app-edu-blog-innerbox position-relative wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
                             <div class="app-edu-blog-img position-absolute">
@@ -899,7 +686,7 @@
                             </div>
                         </div>
                         <?php $i++; ?>
-                    @endforeach  
+                        @endforeach
                     </div>
                     <div class="app-edu-blog-btn">
                         <a href="{{route('blog.index')}}">Go To Blog</a>
@@ -1156,106 +943,203 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="authModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="padding: 10px 50px 20px;">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content clearfix">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="modal-body">
+
+
+                <div class="LuciferWasHere">
+
+
+
+
+
+                    <div class="container">
+
+                        <div class="card-body">
+                            <form method="POST" action="{{ route('login') }}">
+                                @csrf
+
+                                <div class="row mb-3">
+                                    <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+
+                                        @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                                        @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-6 offset-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                            <label class="form-check-label" for="remember">
+                                                {{ __('Remember Me') }}
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-0">
+                                    <div class="col-md-8 offset-md-4">
+                                        <button type="submit" class="btn btn-primary">
+                                            {{ __('Login') }}
+                                        </button>
+
+                                        @if (Route::has('password.request'))
+                                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                                            {{ __('Forgot Your Password?') }}
+                                        </a>
+                                        @endif
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="regModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="padding: 10px 50px 20px;">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content clearfix">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="modal-body">
+
+
+                <div class="LuciferWasHere">
+
+
+
+
+
+                    <div class="container">
+
+                    <div class="card-body">
+                    <form method="POST" action="{{ route('register') }}">
+                        @csrf
+
+                        <div class="row mb-3">
+                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
+
+                        <div class="row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Register') }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
-    const numberSteps = $('.quiz__step').length - 1;
-    let disableButtons = false;
-    const tick = '<div class="answer__tick"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></div>';
-    let thanks = '<div class="thanks"><div class="thanks__tick">✔ </div><h1 class="thanks__title">Thank you!</h1></div>';
 
-    $('.answer__input').on('change', function(e) {
-
-        if ($(this).next().children('.answer__tick').length > 0) {
-            return false
-        }
-        $(this).next().append(tick)
-    });
-
-
-    $('.navigation__btn--right').click(function(e) {
-        let currentIndex = Number($('.quiz__step--current').attr('data-question'));
-        if ($('.quiz__step--current input:checked').length == 0) {
-            //console.log('input empty');
-            return false;
-        }
-        //console.log({'currentIndex': currentIndex, 'numberSteps': numberSteps-1})
-        if (currentIndex == numberSteps + 1 || disableButtons == true) {
-            //console.log('last')
-            return false;
-        }
-        if (currentIndex + 1 == numberSteps + 1) {
-            $(this).addClass('navigation__btn--disabled');
-        }
-        if (currentIndex == numberSteps) {
-            $('.summary__item').remove();
-            $('.quiz__step:not(.quiz__summary)').each(function(index, item) {
-                console.log(item)
-                let icon = $(item).children('.question__emoji').text()
-                let answer = $(item).children('.answer').find('input:checked').val();
-                let node = '<div class="summary__item"><div class="question__emoji">' + icon + '</div>' + answer + '</div>'
-                $('#summary').append(node)
-            })
-        }
-        const percentage = (currentIndex * 100) / numberSteps;
-        $('.progress__inner').width(percentage + '%');
-        console.log('input ok')
-        $('.quiz__step--current').hide('300');
-        $('.quiz__step--current').removeClass('quiz__step--current');
-        $('.quiz__step--' + (currentIndex + 1)).show('300').addClass('quiz__step--current');
-        currentIndex = Number($('.quiz__step--current').attr('data-question'));
-        if (currentIndex > 1) {
-            $('.navigation__btn--left').removeClass('navigation__btn--disabled');
-        }
-    });
-    /*
-    function keypressEvent(e){
-        let key = e.which || e.keyCode;
-
-      if(key==65 || key==66){
-        $('.quiz__step--current input[data-char="'+key+'"]').prop('checked', true).change();
-        console.log($('.quiz__step--current input[data-char="'+key+'"]'))
-       // $('.quiz__step--current input[data-char="'+key+'"] + .answer__label').change();
-      }
-    }
-    */
-
-
-
-    $('.navigation__btn--left').click(function(e) {
-        let currentIndex = Number($('.quiz__step--current').attr('data-question'));
-
-        console.log({
-            'currentIndex': currentIndex,
-            'numberSteps': numberSteps - 1
-        })
-        if (currentIndex == 1 || disableButtons == true) {
-            console.log('first')
-            $(this).addClass('navigation__btn--disabled');
-            return false;
-        }
-
-
-        $('.navigation__btn--right').removeClass('navigation__btn--disabled')
-
-        console.log('input ok')
-        $('.quiz__step--current').hide('300');
-        $('.quiz__step--current').removeClass('quiz__step--current');
-        $('.quiz__step--' + (currentIndex - 1)).show('300').addClass('quiz__step--current');
-        currentIndex = Number($('.quiz__step--current').attr('data-question'));
-        if (currentIndex == 1) {
-            $(this).addClass('navigation__btn--disabled');
-        }
-        const percentage = ((currentIndex - 1) * 100) / numberSteps + 1;
-        $('.progress__inner').width(percentage + '%');
-        $('.quiz__step--current').keyup(keypressEvent);
-    });
-    $('.submit').click(function(e) {
-        e.preventDefault();
-        $('.quiz').remove();
-        $(thanks).appendTo('.containerDegla');
-        disableButtons = true;
-        $('.navigation__btn').addClass('navigation__btn--disabled')
-    })
 </script>
 
 </html>
