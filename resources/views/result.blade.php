@@ -55,16 +55,20 @@
                 </div>
                 <nav class="app-edu-main-navigation float-right clearfix ul-li" style="display: hidden;">
                     <ul id="app-edu-main-nav" class="nav navbar-nav clearfix">
-                        <li><a class="nav-link" href="{{ route('welcome') }}">Home</a></li>
-                        <li><a class="nav-link" href="#app-edu-course">Detailed Results</a></li>
-                        <li><a class="nav-link" href="#app-edu-category">Global Results</a></li>
-                        <li><a class="nav-link" href="#">Blog</a></li>
-
-                        @if (Route::has('login'))
+                    <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-banner">Home</a></li>
+                    <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
+                    <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
+                    <li><a class="nav-link" href="{{ route('blog.index') }}">Blog</a></li>
+                       @if (Route::has('login'))
                         <li class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                             @auth
-                            <a href="{{ url('/myresults') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">My Results</a>
-                            @else
+                            <li class="dropdown">
+                                    <a href="#">My Results</a>
+                                    <ul class="dropdown-menu clearfix">
+                                        <li><a  href="#app-edu-course">Detailed Results</a></li>
+                                        <li><a href="#app-edu-category">Global Results</a></li>
+                                    </ul>
+                                </li>                            @else
                             <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
                             @endauth
                         </li>

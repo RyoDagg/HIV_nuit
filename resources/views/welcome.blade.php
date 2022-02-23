@@ -49,13 +49,6 @@
                         <li><a class="nav-link" href="#app-edu-testimonial">4 Elements</a></li>
                         <li><a class="nav-link" href="#app-edu-blog">Blog</a></li>
 
-                        @if (Route::has('login'))
-                        <li class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                            @auth
-                            <a href="{{ url('/myresults') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">My Results</a>
-                            @endauth
-                        </li>
-                        @endif
 
                         @guest
                         @if (Route::has('login'))
@@ -78,6 +71,7 @@
                                 {{ Auth::user()->name }}
                             </a>
                             <ul class="dropdown-menu clearfix">
+                            <li><a target="_blank" href="{{ url('/myresults') }}">My Results</a></li>
                                 <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
@@ -86,7 +80,7 @@
                                     @csrf
                                 </form>
 
-                                <li><a target="_blank" href="{{ url('/myresults') }}">My Results</a></li>
+                                
                             </ul>
 
             </div>
