@@ -59,6 +59,8 @@
                   <input type="text" name="search" placeholder="Search Here">
                   <button type="submit"><i class="fas fa-search"></i></button>
                 </form>
+
+
               </div>
             </div>
             <div class="side-bar-widget">

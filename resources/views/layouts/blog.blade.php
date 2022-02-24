@@ -44,7 +44,6 @@
                                      <li><a class="nav-link" href="#">Blog</a></li>
                                  </ul>
                              </nav>
-
                          </div>
                      </div>
                  </div>
@@ -54,7 +53,7 @@
                  <div class="s2-mobile_menu_button s2-open_mobile_menu">
                      <i class="fas fa-bars"></i>
                  </div>
-                 <div class="s2-mobile_menu_wrap">
+                 <div class="s2-mobile_menu_wrap" >
                      <div class="mobile_menu_overlay s2-open_mobile_menu"></div>
                      <div class="s2-mobile_menu_content">
                          <div class="s2-mobile_menu_close s2-open_mobile_menu">

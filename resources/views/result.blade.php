@@ -339,6 +339,13 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
 
         @endforeach
 
+        @if($result->count() == 0)
+
+                        hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+
+
+        @endif
+
 
 
     <!-- Start of footer section

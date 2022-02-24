@@ -23,6 +23,7 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
 Route::post('/answer', [App\Http\Controllers\AnswerController::class, 'store'])->name('answer.store');
+Route::post('/newsletter', [App\Http\Controllers\MailListController::class, 'store'])->name('newsletter.store');
 
 Route::get('/quiz', [App\Http\Controllers\QuizController::class, 'index'])->name('quiz');
 Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog.index');
