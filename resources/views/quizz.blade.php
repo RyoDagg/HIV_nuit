@@ -396,9 +396,10 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                         </div>
                     </div>
             </form>
+           
         </div>
     </div>
-
+    
     <footer class="bottom">
         <section class="bottom__container">
             <div class="progress">
@@ -415,13 +416,13 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
         </section>
     </footer>
 
+  <!--   <img src="bgggggg.svg" alt="" style="position: absolute; left: 150px; bottom: 24px; height: 40%; width: 45%;">
 
 
 
 
 
-
-
+-->
 
 
 

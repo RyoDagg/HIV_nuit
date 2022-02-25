@@ -341,7 +341,14 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
 
         @if($result->count() == 0)
 
-                        hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+
+        <center> 
+        <div class="app-edu-banner-content position-relative">
+                <div class="app-edu-banner-text app-edu-headline pera-content wow fadeFromLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+               <img src="takequiz.gif" href="{{ route('quiz') }}" alt=""> <br> 
+            <a class="banner-btn text-center" href="{{ route('quiz') }}">Take the Quiz First</a> 
+                </div>
+                </center>
 
 
         @endif

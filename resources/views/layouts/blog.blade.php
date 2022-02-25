@@ -31,7 +31,7 @@
                  <div class="row">
                      <div class="col-md-2">
                          <div class="brand_logo">
-                             <a href="!#"><img src="widelogo.png" alt=""></a>
+                             <a href="{{ route('welcome') }}"><img src="widelogo.png" alt=""></a>
                          </div>
                      </div>
                      <div class="col-md-10">
@@ -41,7 +41,7 @@
                                      <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-banner">Home</a></li>
                                      <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
                                      <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
-                                     <li><a class="nav-link" href="#">Blog</a></li>
+                                     <li><a class="nav-link" href="{{ route('blog.index') }}">Blog</a></li>
                                  </ul>
                              </nav>
                          </div>
@@ -96,7 +96,15 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
      </section>
      <!-- End of breadcurmb section
         ============================================= -->
-
+        @if (count($errors) > 0)
+      <div class="alert alert-danger">
+        <ul class="mb-0 mt-0">
+          @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+  @endif
 
      @yield('content')
 

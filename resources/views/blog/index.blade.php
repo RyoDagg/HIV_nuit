@@ -55,8 +55,9 @@
             <div class="side-bar-widget">
               <div class="search-widget dia-headline">
                 <h3 class="widget-title-2">Search</h3>
-                <form action="" class="relative-position">
-                  <input type="text" name="search" placeholder="Search Here">
+
+                <form action="{{ route('blog.search') }}" class="relative-position">
+                  <input type="text"  placeholder="Search Here" name="q"value="{{ request()->q ?? '' }}">
                   <button type="submit"><i class="fas fa-search"></i></button>
                 </form>
 
@@ -64,7 +65,7 @@
               </div>
             </div>
             <div class="side-bar-widget">
-              <div class="category-widget dia-headline ul-li-block">
+              <div class="category-widget dia-headline ul-li-block" hidden>
                 <h3 class="widget-title-2">Category</h3>
                 <ul>
                 <?php $i = 0; ?>

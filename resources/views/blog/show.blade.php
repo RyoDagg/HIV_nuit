@@ -30,20 +30,20 @@
                 <div class="row">
                     <div class="col-md-2">
                         <div class="brand_logo">
-                            <a href="!#"><img src="../widelogo.png" alt=""></a>
+                            <a href="{{ route('welcome') }}"><img src="../widelogo.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-md-10">
                         <div class="main_menu_list clearfix float-right">
                             <nav class="s2-main-navigation  clearfix ul-li">
                                 <ul id="main-nav" class="navbar-nav text-capitalize clearfix">
-                                <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-banner">Home</a></li>
-                                     <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
-                                     <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
-                                     <li><a class="nav-link" href="{{ route('blog.index') }}">Blog</a></li>
+                                    <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-banner">Home</a></li>
+                                    <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
+                                    <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
+                                    <li><a class="nav-link" href="{{ route('blog.index') }}">Blog</a></li>
                                 </ul>
                             </nav>
-                        
+
                         </div>
                     </div>
                 </div>
@@ -60,17 +60,17 @@
                             <i class="far fa-times-circle"></i>
                         </div>
                         <div class="m-brand-logo text-center">
-                        <a href="{{ route('welcome') }}"><img src="../widelogo.png" alt=""></a>
-                         </div>
-                         <nav class="s2-mobile-main-navigation  clearfix ul-li">
-                             <ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
-                                 <li><a href="{{ route('welcome') }}#app-edu-banner">Home</a></li>
-                                 <li><a href="{{ route('welcome') }}#app-edu-about">About</a></li>
-                                 <li><a href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
-                                 <li><a href="{{ route('blog.index') }}">Blog</a></li>
-                                
-                             </ul>
-                         </nav>
+                            <a href="{{ route('welcome') }}"><img src="../widelogo.png" alt=""></a>
+                        </div>
+                        <nav class="s2-mobile-main-navigation  clearfix ul-li">
+                            <ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
+                                <li><a href="{{ route('welcome') }}#app-edu-banner">Home</a></li>
+                                <li><a href="{{ route('welcome') }}#app-edu-about">About</a></li>
+                                <li><a href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
+                                <li><a href="{{ route('blog.index') }}">Blog</a></li>
+
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -97,6 +97,7 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
     </section>
     <!-- End of breadcurmb section
         ============================================= -->
+
 
     <!-- Start of blog page section
         ============================================= -->
@@ -157,14 +158,14 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                             <div class="side-bar-widget">
                                 <div class="search-widget dia-headline">
                                     <h3 class="widget-title-2">Search</h3>
-                                    <form action="" class="relative-position">
-                                        <input type="text" name="search" placeholder="Search Here">
+                                    <form action="{{ route('blog.search') }}" class="relative-position">
+                                        <input type="text" placeholder="Search Here" name="q" value="{{ request()->q ?? '' }}">
                                         <button type="submit"><i class="fas fa-search"></i></button>
                                     </form>
                                 </div>
                             </div>
                             <div class="side-bar-widget">
-                                <div class="category-widget dia-headline ul-li-block">
+                                <div class="category-widget dia-headline ul-li-block" hidden>
                                     <h3 class="widget-title-2">Category</h3>
                                     <ul>
                                         <?php $i = 0; ?>
@@ -197,7 +198,7 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                                 </div>
                             </div>
                             <div class="side-bar-widget">
-                           
+
                             </div>
                         </div>
                     </div>
@@ -212,7 +213,7 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
 
     <!-- Start of footer section
         ============================================= -->
-        <div class="s2-copyright text-center">2021 © All rights reserved by <a href="#">Make IT HAPPEN</a></div>
+    <div class="s2-copyright text-center">2021 © All rights reserved by <a href="#">Make IT HAPPEN</a></div>
     <!-- End of footer section 
         ============================================= -->
 
