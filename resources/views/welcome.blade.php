@@ -53,7 +53,7 @@
                         @guest
                         @if (Route::has('login'))
 
-                        <li class="dropdown">🔒</a>
+                        <li class="dropdown"><i class="fas fa-lock" style="color: white;"></i></a>
                             <ul class="dropdown-menu clearfix">
                                 <li> <a class="nav-link show-modal" data-toggle="modal" data-target="#authModal" href="#">{{ __('Login') }}</a></li>
                                 @endif
@@ -744,7 +744,7 @@
                     </div>
                     <div class="col-lg-2 col-md-3">
                         <div class="app-edu-footer-widget app-edu-headline pera-content ul-li-block">
-                            <div class="app-edu-footer-menu">
+                            <div class="app-edu-footer-menu" hidden>
                                 <h3 class="widget-title">Company</h3>
                                 <ul>
                                     <li><a href="#">About Us</a></li>
@@ -761,10 +761,9 @@
                             <div class="app-edu-footer-menu">
                                 <h3 class="widget-title">Useful Links</h3>
                                 <ul>
-                                    <li><a href="#">Popular Courses</a></li>
-                                    <li><a href="#">Discounts</a></li>
-                                    <li><a href="#">Legal Advice</a></li>
-                                    <li><a href="#">Refunds</a></li>
+                                    <li><a href="{{ route('quiz') }}">Take Quiz</a></li>
+                                    <li><a href="{{ route('result')}}">Check Results</a></li>
+                                    <li><a href="{{route('blog.index')}}">Blog</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -772,24 +771,21 @@
                     <div class="col-lg-3">
                         <div class="app-edu-footer-widget app-edu-headline pera-content ul-li-block">
                             <div class="app-edu-twitter">
-                                <h3 class="widget-title">Recent Tweets</h3>
+                                <h3 class="widget-title">Recent Blogs</h3>
                                 <div class="app-edu-twitter-area">
+                                <?php $i = 0; ?>
+                                 @foreach ($post as $posts)
                                     <div class="app-edu-twitter-content">
                                         <div class="app-edu-twitter-icon float-left">
-                                            <i class="fab fa-twitter"></i>
+                                            <i class="far fa-paper-plane"></i>
+                                          
                                         </div>
                                         <div class="app-edu-twitter-text">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit <a href="#">bit.ly/43Esd</a></p>
+                                            <p>{{$post[$i]->title}} <a href="{{ route('blog.show', $post[$i]->slug) }}">{{ route('blog.show', $post[$i]->slug) }}</a></p>
                                         </div>
                                     </div>
-                                    <div class="app-edu-twitter-content">
-                                        <div class="app-edu-twitter-icon float-left">
-                                            <i class="fab fa-twitter"></i>
-                                        </div>
-                                        <div class="app-edu-twitter-text">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit <a href="#">bit.ly/43Esd</a></p>
-                                        </div>
-                                    </div>
+                                    <?php $i++; ?>
+                                 @endforeach
                                 </div>
                             </div>
                         </div>
@@ -802,9 +798,8 @@
                 </div>
                 <div class="copyright-menu float-right ul-li">
                     <ul>
-                        <li><a href="#">Terms & Condition </a></li>
-                        <li><a href="#">Privacy Policy </a></li>
-                        <li><a href="#">Affiliated </a></li>
+                        <li><a href="{{ route('terms')}}">Terms & Condition </a></li>
+                        <li><a href="{{ route('privacy')}}">Privacy Policy </a></li>
                     </ul>
                 </div>
             </div>

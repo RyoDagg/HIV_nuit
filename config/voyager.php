@@ -101,7 +101,7 @@ return [
         /*
          * Set whether or not the multilingual is supported by the BREAD input.
          */
-        'enabled' => false,
+        'enabled' => true,
 
         /*
          * Select default language
@@ -113,6 +113,8 @@ return [
          */
         'locales' => [
             'en',
+            'fr',
+            'ar',
             //'pt',
         ],
     ],
@@ -149,6 +151,7 @@ return [
             'App\\Widgets\\Question',
             'App\\Widgets\\User',
             'App\\Widgets\\Post',
+            'App\\Widgets\\Answer',
             
 
         ],
@@ -189,7 +192,7 @@ return [
 
     'primary_color' => '#69cdad',
 
-    'show_dev_tips' => true, // Show development tip "How To Use:" in Menu and Settings
+    'show_dev_tips' => false, // Show development tip "How To Use:" in Menu and Settings
 
     // Here you can specify additional assets you would like to be included in the master.blade
     'additional_css' => [

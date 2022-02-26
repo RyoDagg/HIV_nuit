@@ -18,6 +18,20 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
 
+
+<style>
+.s2-copyright {
+  color: #fff;
+  padding: 18px 0px;
+  font-size: 14px;
+  font-family: "Poppins";
+  background-color: #000000;
+}
+
+.s2-copyright a {
+  color: #d772fe;
+}</style>
+
 </head>
 
 
@@ -357,111 +371,10 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
 
     <!-- Start of footer section
         ============================================= -->
-    <section id="app-edu-footer" class="app-edu-footer-section" data-background="img/education/f-bg.png">
-        <div class="container">
-            <div class="app-edu-footer-newslatter">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="app-edu-section-title app-edu-headline pera-content">
-                            <span>Subscribe Now</span>
-                            <h2>Get Our Newsletter</h2>
-                            <p>Aliquip ex ea commo ute irure dolor in repre henderit in velit esse cillumdatat non proident, sunt in culpa qui officia.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="app-edu-newslatter-form position-relative">
-                            <input type="text" placeholder="Your email address">
-                            <button>Subscribe</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="app-edu-footer-widget-area">
-                <div class="row">
-                    <div class="col-lg-5 col-md-6">
-                        <div class="app-edu-footer-widget  app-edu-headline pera-content ul-li-block">
-                            <div class="app-edu-logo-widget">
-                                <div class="app-edu-footer-logo">
-                                    <a href="#"><img src="logowhite.png" alt=""></a>
-                                </div>
-                                <p>Hedatat non proident, sunt in culpa qui offic ia dolore eu fugiat nul lamco laboris nisi ut aliq uip ex ea commodo consequat. Duis aute irure dolor in reprehe fugiat </p>
-                                <div class="app-edu-footer-social">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-youtube"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3">
-                        <div class="app-edu-footer-widget app-edu-headline pera-content ul-li-block">
-                            <div class="app-edu-footer-menu">
-                                <h3 class="widget-title">Company</h3>
-                                <ul>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Our Story</a></li>
-                                    <li><a href="#">Career</a></li>
-                                    <li><a href="#">Special Offers</a></li>
-                                    <li><a href="#">Team Members</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3">
-                        <div class="app-edu-footer-widget app-edu-headline pera-content ul-li-block">
-                            <div class="app-edu-footer-menu">
-                                <h3 class="widget-title">Useful Links</h3>
-                                <ul>
-                                    <li><a href="#">Popular Courses</a></li>
-                                    <li><a href="#">Discounts</a></li>
-                                    <li><a href="#">Legal Advice</a></li>
-                                    <li><a href="#">Refunds</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="app-edu-footer-widget app-edu-headline pera-content ul-li-block">
-                            <div class="app-edu-twitter">
-                                <h3 class="widget-title">Recent Tweets</h3>
-                                <div class="app-edu-twitter-area">
-                                    <div class="app-edu-twitter-content">
-                                        <div class="app-edu-twitter-icon float-left">
-                                            <i class="fab fa-twitter"></i>
-                                        </div>
-                                        <div class="app-edu-twitter-text">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit <a href="#">bit.ly/43Esd</a></p>
-                                        </div>
-                                    </div>
-                                    <div class="app-edu-twitter-content">
-                                        <div class="app-edu-twitter-icon float-left">
-                                            <i class="fab fa-twitter"></i>
-                                        </div>
-                                        <div class="app-edu-twitter-text">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisi cing elit <a href="#">bit.ly/43Esd</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="app-edu-footer-copyright clearfix">
-                <div class="copyright-text float-left">
-                    <p>Developped By © 2022 <a href="https://www.mih.tn" target="_blank">MAKE IT HAPPEN</a></p>
-                </div>
-                <div class="copyright-menu float-right ul-li">
-                    <ul>
-                        <li><a href="#">Terms & Condition </a></li>
-                        <li><a href="#">Privacy Policy </a></li>
-                        <li><a href="#">Affiliated </a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+   
+        <div class="s2-copyright text-center">2021 © All rights reserved by <a href="#">Make IT HAPPEN</a></div>
+
+
     <!-- End of footer section
         ============================================= -->
 

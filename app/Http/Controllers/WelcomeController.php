@@ -14,8 +14,8 @@ class WelcomeController extends Controller
     {
         $question = Questions::inRandomOrder()->take(6)->get();
       $user = Auth::id();
-      $post = Post::inRandomOrder()->take(2)->get();
-
+      $post = Post::orderBy('created_at', 'DESC')->take(2)->get();
+      
         return view('welcome')->with(['question'=>$question, 'user' => $user, 'post'=>$post]);
        
     }

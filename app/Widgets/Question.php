@@ -21,16 +21,16 @@ class Question extends BaseDimmer
      */
     public function run()
     {
-        $count = Voyager::model('Post')->count();
-        $string = trans_choice('voyager::dimmer.post', $count);
+        $count = \App\Models\Questions::count();
+        $string = trans_choice('voyager::dimmer.question', $count);
 
         return view('voyager::dimmer', array_merge($this->config, [
             'icon'   => 'voyager-question',
             'title'  => "{$count} {$string}",
-            'text'   => __('voyager::dimmer.post_text', ['count' => $count, 'string' => Str::lower($string)]),
+            'text'   => __('voyager::dimmer.question_text', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
-                'text' => __('voyager::dimmer.post_link_text'),
-                'link' => route('voyager.posts.index'),
+                'text' => __('voyager::dimmer.question_link_text'),
+                'link' => route('voyager.questions.index'),
             ],
             'image' =>'5159502.jpg',
         ]));

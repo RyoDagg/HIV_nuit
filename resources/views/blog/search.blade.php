@@ -44,13 +44,8 @@
                      @endforeach
 
           <div class="saasio-pagination text-center ul-li">
-            <ul>
-              <li><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a class="active" href="#">3</a></li>
-              <li><a href="#">...</a></li>
-              <li><a href="#">10</a></li>
-            </ul>
+          {{ $post->links("pagination::bootstrap-4") }}
+
           </div>
         </div>
         <div class="col-md-4">

@@ -10,4 +10,10 @@ return [
     'user'           => 'User|Users',
     'user_link_text' => 'View all users',
     'user_text'      => 'You have :count :string in your database. Click on button below to view all users.',
+    'question'           => 'Question|Questions',
+    'question_link_text' => 'View all Questions',
+    'question_text'      => 'You have :count :string in your database. Click on button below to view all Questions.',
+    'result'           => 'Result|Results',
+    'result_link_text' => 'View all Results',
+    'result_text'      => 'You have :count :string in your database. Click on button below to view all Results.',
 ];

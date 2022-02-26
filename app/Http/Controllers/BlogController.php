@@ -11,20 +11,11 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $post = Post::orderBy('created_at', 'DESC')->get();
+        $post = Post::orderBy('created_at', 'DESC')->paginate(3);
         $category = Category::inRandomOrder()->get();
 
         return view('blog.index')->with(['post' => $post, 'category' => $category]);
     }
-
-
-
-
-
-
-
-
-
 
     
     public function show($slug)
@@ -50,7 +41,7 @@ class BlogController extends Controller
             ->orWhere('body', 'like', "%$q%")
             ->orWhere('excerpt', 'like', "%$q%")
             ->orWhere('meta_keywords', 'like', "%$q%")
-            ->paginate(6);
+            ->paginate(3);
             
         return view('blog.search')->with(['post' => $post, 'category' => $category]);
     }
