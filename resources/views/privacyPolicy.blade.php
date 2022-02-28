@@ -141,7 +141,7 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
     <!-- Start of footer section
         ============================================= -->
 
-    <div class="s2-copyright text-center">2021 © All rights reserved by <a href="#">Make IT HAPPEN</a></div>
+    <div class="s2-copyright text-center">2022 © All rights reserved by <a href="#">Make IT HAPPEN</a></div>
 
 
     <!-- End of footer section
