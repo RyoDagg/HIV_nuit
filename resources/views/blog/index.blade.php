@@ -9,6 +9,9 @@
 <!-- Start of blog page section
         ============================================= -->
 <section id="news-feed" class="news-feed-section">
+  <script>
+    console.log("here");
+  </script>
   <div class="container">
     <div class="blog-feed-content">
       <div class="row">
@@ -61,12 +64,12 @@
               </div>
             </div>
             <div class="side-bar-widget">
-              <div class="category-widget dia-headline ul-li-block" hidden>
+              <div class="category-widget dia-headline ul-li-block" >
                 <h3 class="widget-title-2">Category</h3>
                 <ul>
                 <?php $i = 0; ?>
                 @foreach ($category as $categorys)
-                  <li><a href="#">{{$category[$i]->name }}</a></li>
+                  <li><a href="/blog?category={{$category[$i]->slug}}">{{$category[$i]->name }}</a></li>
                   <?php $i++; ?>
                      @endforeach
                 </ul>

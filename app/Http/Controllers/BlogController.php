@@ -9,15 +9,20 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $post = Post::orderBy('created_at', 'DESC')->paginate(3);
+        if ($request->query('category')) {
+            $category = Category::where('slug',$request->query('category'))->first();
+            $post = Post::where('category_id', $category->id)->orderBy('created_at', 'DESC')->paginate(3);
+        } else {
+            $post = Post::orderBy('created_at', 'DESC')->paginate(3);
+        }
         $category = Category::inRandomOrder()->get();
 
         return view('blog.index')->with(['post' => $post, 'category' => $category]);
     }
 
-    
+
     public function show($slug)
     {
         $post = Post::where('slug', $slug)->firstOrFail();
@@ -42,7 +47,7 @@ class BlogController extends Controller
             ->orWhere('excerpt', 'like', "%$q%")
             ->orWhere('meta_keywords', 'like', "%$q%")
             ->paginate(3);
-            
+
         return view('blog.search')->with(['post' => $post, 'category' => $category]);
     }
 }
