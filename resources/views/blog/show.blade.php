@@ -139,7 +139,7 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                                     ?>
 
                                 </div>
-                                <div class="blog-feed-share float-right" >
+                                <div class="blog-feed-share float-right" hidden>
                                     <span>Share:</span>
                                     <a href="#"><i class="fb-bg fab fa-facebook-f "></i></a>
                                     <a href="#"><i class="bh-bg fab fa-behance"></i></a>
