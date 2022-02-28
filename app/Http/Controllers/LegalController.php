@@ -16,7 +16,7 @@ class LegalController extends Controller
 
     $privacy = PrivacyPolicy::with('translations')->orderBy('created_at', 'DESC')->take(1)->get();
 
-    return view('privacyPolicy')->with('privacy', $privacy);
+    return view('privacyPolicy')->with('privacy', $privacy->translate(session("lang"),"en"));
   }
   public function terms()
   {

@@ -4,8 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use TCG\Voyager\Traits\Translatable;
 
 class About extends Model
 {
     use HasFactory;
+    use Translatable;
+    protected $translatable = ["purpleTitle","title","body","item1","item2","item3","item4"];
 }

@@ -28,11 +28,11 @@
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12">
                   <div class="saasio-blog-text">
-                    <h3><a href="{{ route('blog.show', $post[$i]->id) }}#">{{$post[$i]->title}}</a></h3>
+                    <h3><a href="{{ route('blog.show', $post[$i]->id) }}#">{{$post[$i]->translate(session("lang"),"en")->title}}</a></h3>
                     <div class="saasio-post-meta">
                       <a href="#"><i class="fas fa-calendar-alt"></i> {{$post[$i]->created_at}}</a>
                     </div>
-                    <p>{{$post[$i]->excerpt }}</p>
+                    <p>{{$post[$i]->translate(session("lang"),"en")->excerpt }}</p>
                     <a class="blog-read-more" href="{{ route('blog.show', $post[$i]->id) }}">Read More</a>
                   </div>
                 </div>
