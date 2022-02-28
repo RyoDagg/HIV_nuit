@@ -37,3 +37,5 @@ Route::get('/myresults', [App\Http\Controllers\ResultsController::class, 'index'
 
 Route::get('/privacy-policy', [App\Http\Controllers\LegalController::class, 'privacy'])->name('privacy');
 Route::get('/terms-conditions', [App\Http\Controllers\LegalController::class, 'terms'])->name('terms');
+
+Route::get('/change-language/{lang}', [App\Http\Controllers\LanguageController::class, 'changeLang'])->name('changeLang');

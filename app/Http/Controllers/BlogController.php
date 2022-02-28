@@ -12,8 +12,8 @@ class BlogController extends Controller
     public function index(Request $request)
     {
         if ($request->query('category')) {
-            $category = Category::where('slug',$request->query('category'))->first();
-            $post = Post::where('category_id', $category->id)->orderBy('created_at', 'DESC')->paginate(3);
+            // $category = Category::where('slug', $request->query('category'))->first();
+            $post = Post::where('category_id', $request->query('category'))->orderBy('created_at', 'DESC')->paginate(3);
         } else {
             $post = Post::orderBy('created_at', 'DESC')->paginate(3);
         }
@@ -25,29 +25,30 @@ class BlogController extends Controller
 
     public function show($slug)
     {
-        $post = Post::where('slug', $slug)->firstOrFail();
+        $post = Post::with("translations")->where('slug', $slug)->firstOrFail();
 
-        $Recpost = Post::orderBy('created_at', 'DESC')->take(3)->get();
+        $Recpost = Post::with("translations")->orderBy('created_at', 'DESC')->take(3)->get();
 
-        $category = Category::inRandomOrder()->get();
+        $category = Category::with("translations")->inRandomOrder()->get();
 
-        return view('blog.show')->with(['post' => $post, 'recpost' => $Recpost,  'category' => $category]);
+        return view('blog.show')->with(['post' => $post->translate(session("lang"), "en"), 'recpost' => $Recpost->translate(session("lang"), "en"),  'category' => $category->translate(session("lang"), "en")]);
     }
     public function search()
     {
-        $category = Category::inRandomOrder()->get();
+        $category = Category::with("translations")->inRandomOrder()->get();
 
         request()->validate([
             'q' => 'required|min:3'
         ]);
 
         $q = request()->input('q');
-        $post = Post::where('title', 'like', "%$q%")
+        $post = Post::with("translations")
+            ->where('title', 'like', "%$q%")
             ->orWhere('body', 'like', "%$q%")
             ->orWhere('excerpt', 'like', "%$q%")
             ->orWhere('meta_keywords', 'like', "%$q%")
             ->paginate(3);
 
-        return view('blog.search')->with(['post' => $post, 'category' => $category]);
+        return view('blog.search')->with(['post' => $post, 'category' => $category->translate(session("lang"),"en")]);
     }
 }

@@ -170,7 +170,7 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                                     <ul>
                                         <?php $i = 0; ?>
                                         @foreach ($category as $categorys)
-                                        <li><a href="/blog?category={{$category[$i]->slug}}">{{$category[$i]->name }}</a></li>
+                                        <li><a href="/blog?category={{$category[$i]->id}}">{{$category[$i]->name }}</a></li>
                                         <?php $i++; ?>
                                         @endforeach
                                     </ul>
@@ -189,7 +189,7 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                                             </div>
                                             <div class="recent-post-text dia-headline">
                                                 <h3><a href="#">{{$recpost[$i]->title}}</a></h3>
-                                                <span class="rec-post-meta"><a href="../{{ route('blog.show', $recpost[$i]->slug) }}">{{$recpost[$i]->created_at}}</a></span>
+                                                <span class="rec-post-meta"><a href="../{{ route('blog.show', $recpost[$i]->id) }}">{{$recpost[$i]->created_at}}</a></span>
                                             </div>
                                         </div>
                                         <?php $i++; ?>

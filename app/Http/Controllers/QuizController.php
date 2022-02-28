@@ -10,10 +10,10 @@ class QuizController extends Controller
 {
     public function index()
     {
-        $question = Questions::orderBy('type', 'DESC')->get();
+        $question = Questions::with("translations")->orderBy('type', 'DESC')->get();
       $user = Auth::id();
 
-        return view('quizz')->with(['question'=>$question, 'user' => $user]);
+        return view('quizz')->with(['question'=>$question->translate(session("lang"),"en"), 'user' => $user]);
        
     }
 }

@@ -278,7 +278,7 @@
     <header id="app-edu-main-header" class="app-edu-header-main">
         <div class="container">
             <div class="app-edu-logo float-left">
-                <a href="#"><img src="logowhite.png" alt="" style="height: 100px; width: 150px;"></a>
+                <a href="{{route('welcome')}}"><img src="logowhite.png" alt="" style="height: 100px; width: 150px;"></a>
             </div>
             <div class="app-edu-main-header-menu clearfix">
 

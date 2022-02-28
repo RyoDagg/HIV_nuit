@@ -28,12 +28,12 @@
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12">
                   <div class="saasio-blog-text">
-                    <h3><a href="{{ route('blog.show', $post[$i]->slug) }}#">{{$post[$i]->title}}</a></h3>
+                    <h3><a href="{{ route('blog.show', $post[$i]->id) }}#">{{$post[$i]->title}}</a></h3>
                     <div class="saasio-post-meta">
                       <a href="#"><i class="fas fa-calendar-alt"></i> {{$post[$i]->created_at}}</a>
                     </div>
                     <p>{{$post[$i]->excerpt }}</p>
-                    <a class="blog-read-more" href="{{ route('blog.show', $post[$i]->slug) }}">Read More</a>
+                    <a class="blog-read-more" href="{{ route('blog.show', $post[$i]->id) }}">Read More</a>
                   </div>
                 </div>
               </div>
@@ -68,7 +68,7 @@
                 <ul>
                 <?php $i = 0; ?>
                 @foreach ($category as $categorys)
-                <li><a href="/blog?category={{$category[$i]->slug}}">{{$category[$i]->name }}</a></li>
+                <li><a href="/blog?category={{$category[$i]->id}}">{{$category[$i]->name }}</a></li>
                   <?php $i++; ?>
                      @endforeach
                 </ul>
@@ -85,8 +85,8 @@
                       <img src="{{ asset('storage/' . $post[$i]->image) }}" alt="">
                     </div>
                     <div class="recent-post-text dia-headline">
-                      <h3><a href="#">{{$post[$i]->title}}</a></h3>
-                      <span class="rec-post-meta"><a href="#">{{$post[$i]->created_at}}</a></span>
+                      <h3><a href="#">{{$post[$i]->translate(session("lang"),"en")->title}}</a></h3>
+                      <span class="rec-post-meta"><a href="#">{{$post[$i]->translate(session("lang"),"en")->created_at}}</a></span>
                     </div>
                   </div>
                
