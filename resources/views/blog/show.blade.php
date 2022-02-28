@@ -139,7 +139,7 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                                     ?>
 
                                 </div>
-                                <div class="blog-feed-share float-right" hidden>
+                                <div class="blog-feed-share float-right" >
                                     <span>Share:</span>
                                     <a href="#"><i class="fb-bg fab fa-facebook-f "></i></a>
                                     <a href="#"><i class="bh-bg fab fa-behance"></i></a>
@@ -165,12 +165,12 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                                 </div>
                             </div>
                             <div class="side-bar-widget">
-                                <div class="category-widget dia-headline ul-li-block" hidden>
+                                <div class="category-widget dia-headline ul-li-block" >
                                     <h3 class="widget-title-2">Category</h3>
                                     <ul>
                                         <?php $i = 0; ?>
                                         @foreach ($category as $categorys)
-                                        <li><a href="#">{{$category[$i]->name }}</a></li>
+                                        <li><a href="/blog?category={{$category[$i]->slug}}">{{$category[$i]->name }}</a></li>
                                         <?php $i++; ?>
                                         @endforeach
                                     </ul>
