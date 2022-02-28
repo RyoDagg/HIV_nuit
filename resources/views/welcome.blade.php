@@ -76,7 +76,7 @@
 
 
                             <?php if( $R ==1 || $R ==3 ){
-                                echo '<li><a  href="./admin">Admin Dashboard</a></li>';
+                                echo '<li><a  href="./admin" target="_blank">Admin Dashboard</a></li>';
                             }
 
                             ?>
@@ -798,8 +798,8 @@
                 </div>
                 <div class="copyright-menu float-right ul-li">
                     <ul>
-                        <li><a href="{{ route('terms')}}">Terms & Condition </a></li>
-                        <li><a href="{{ route('privacy')}}">Privacy Policy </a></li>
+                        <li><a href="{{ route('terms')}}" target="_blank">Terms & Condition </a></li>
+                        <li><a href="{{ route('privacy')}}" target="_blank">Privacy Policy </a></li>
                     </ul>
                 </div>
             </div>

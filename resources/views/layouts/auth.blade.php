@@ -89,7 +89,7 @@
              <div class="breadcurmb-item-list text-center ul-li">
                  <ul class="saasio-page-breadcurmb">
                      <li><a href="#">Home</a></li>
-                     <li><a href="#">Rest Password</a></li>
+                     <li><a href="#">Auth</a></li>
                  </ul>
              </div>
          </div>

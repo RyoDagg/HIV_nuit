@@ -75,15 +75,7 @@
                         <li><a class="nav-link" href="{{ route('blog.index') }}">Blog</a></li>
                         @if (Route::has('login'))
                         <li class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                            @auth
-                        <li class="dropdown">
-                            <a href="#">My Results</a>
-                            <ul class="dropdown-menu clearfix">
-                                <li><a href="#app-edu-course">Detailed Results</a></li>
-                                <li><a href="#app-edu-category">Global Results</a></li>
-                            </ul>
-                        </li>
-                        @endauth
+                    
                         </li>
                         @endif
                     </ul>
