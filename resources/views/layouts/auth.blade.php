@@ -103,7 +103,7 @@
      <!-- Start of footer section
         ============================================= -->
 
-     <div class="s2-copyright text-center">2021 © All rights reserved by <a href="#">Make IT HAPPEN</a></div>
+     <div class="s2-copyright text-center">2022 © All rights reserved by <a href="#">Make IT HAPPEN</a></div>
      <!-- End of footer section 
         ============================================= -->
 
