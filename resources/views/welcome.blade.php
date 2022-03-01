@@ -19,6 +19,7 @@
 
 <body class="app-edu" data-spy="scroll" data-target=".app-edu-main-navigation" data-offset="80">
     <!-- preloader - start -->
+    <h1></h1>
     <div id="app-edu-preloader"></div>
     <div class="up">
         <a href="#" class="app-edu-scrollup text-center"><i class="fas fa-angle-up"></i></a>
@@ -48,6 +49,14 @@
                         <li><a class="nav-link" href="#app-edu-about">About</a></li>
                         <li><a class="nav-link" href="#app-edu-testimonial">4 Elements</a></li>
                         <li><a class="nav-link" href="#app-edu-blog">Blog</a></li>
+                        <li class="dropdown">
+                            <a href="#">Languages</a>
+                            <ul class="dropdown-menu clearfix">
+                                <li><a href="/change-language/en">English</a></li>
+                                <li><a href="/change-language/fr">French</a></li>
+                                <li><a href="/change-language/ar">العربيّة</a></li>
+                            </ul>
+                        </li>
 
 
                         @guest
@@ -71,15 +80,15 @@
                                 {{ Auth::user()->name }}
                             </a>
                             <ul class="dropdown-menu clearfix">
-                            <?php                               
-                               $R = Auth::user()->role_id ; ?>
+                                <?php
+                                $R = Auth::user()->role_id; ?>
 
 
-                            <?php if( $R ==1 || $R ==3 ){
-                                echo '<li><a  href="./admin" target="_blank">Admin Dashboard</a></li>';
-                            }
+                                <?php if ($R == 1 || $R == 3) {
+                                    echo '<li><a  href="./admin" target="_blank">Admin Dashboard</a></li>';
+                                }
 
-                            ?>
+                                ?>
                                 <li><a target="_blank" href="{{ url('/myresults') }}">My Results</a></li>
                                 <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -88,7 +97,7 @@
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
-                        
+
                             </ul>
 
             </div>
@@ -138,7 +147,7 @@
         <div class="container">
             <div class="app-edu-banner-content position-relative">
                 <div class="app-edu-banner-text app-edu-headline pera-content wow fadeFromLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                @foreach( $banner as $banners)
+                    @foreach( $banner as $banners)
                     <h1>{{($banner[0]->title)}}</h1>
                     <p>{{($banner[0]->subTitle)}}</p>
                     <a class="banner-btn text-center" href="{{($banner[0]->buttonLink)}}">{{($banner[0]->buttonName)}}</a>
@@ -157,7 +166,7 @@
         ============================================= -->
     <section id="app-edu-intro" class="app-edu-intro-section">
         <div class="container">
-        @foreach( $element as $elements)
+            @foreach( $element as $elements)
 
             <div class="app-edu-intro-content">
                 <div class="row justify-content-center">
@@ -207,7 +216,7 @@
                     </div>
                 </div>
             </div>
-        @endforeach
+            @endforeach
         </div>
     </section>
     <!-- End of intro section
@@ -229,8 +238,8 @@
                     <div class="col-lg-5">
                         <div class="app-edu-about-text">
                             <div class="app-edu-section-title app-edu-headline pera-content wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            @foreach( $about as $abouts)
-  
+                                @foreach( $about as $abouts)
+
                                 <span>{{($about[0]->purpleTitle)}}</span>
                                 <h2>{{($about[0]->title)}}</h2>
                                 <p>{{($about[0]->body)}}</p>
@@ -241,7 +250,7 @@
                                     <li>{{($about[0]->item2)}} </li>
                                     <li>{{($about[0]->item3)}} </li>
                                     <li>{{($about[0]->item4)}} </li>
-                                    
+
                                 </ul>
                             </div>
                             @endforeach
@@ -298,7 +307,7 @@
                                 </div>
                             </div>
                             <div class="app-edu-testimonial-text pera-content">
-                            <p>{{($belement[0]->elem2body)}}</p>
+                                <p>{{($belement[0]->elem2body)}}</p>
 
                             </div>
                         </div>
@@ -315,7 +324,7 @@
                                 </div>
                             </div>
                             <div class="app-edu-testimonial-text pera-content">
-                            <p>{{($belement[0]->elem3body)}}</p>
+                                <p>{{($belement[0]->elem3body)}}</p>
 
                             </div>
                         </div>
@@ -332,7 +341,7 @@
                                 </div>
                             </div>
                             <div class="app-edu-testimonial-text pera-content">
-                            <p>{{($belement[0]->elem4body)}}</p>
+                                <p>{{($belement[0]->elem4body)}}</p>
 
                             </div>
                         </div>
@@ -350,12 +359,12 @@
         ============================================= -->
     <section id="app-edu-counter" class="app-edu-counter-section">
         <div class="app-edu-counter-content">
-        @foreach( $counter as $counters)
+            @foreach( $counter as $counters)
             <div class="row">
                 <div class="col-lg-4">
                     <div class="app-edu-counter-innerbox d-flex justify-content-center position-relative">
                         <div class="app-edu-counter-icon">
-                        <img src="{{ asset('storage/' . $counter[0]->firstIcon) }}" alt="" style="width: 70px; height:70px;">
+                            <img src="{{ asset('storage/' . $counter[0]->firstIcon) }}" alt="" style="width: 70px; height:70px;">
                         </div>
                         <div class="app-edu-counter-text align-items-center d-flex app-edu-headline">
                             <h3 class="odometer" data-count="{{($counter[0]->firstNumber)}}"></h3>
@@ -378,7 +387,7 @@
                 <div class="col-lg-4">
                     <div class="app-edu-counter-innerbox d-flex justify-content-center position-relative">
                         <div class="app-edu-counter-icon">
-                        <img src="{{ asset('storage/' . $counter[0]->thirdIcon) }}" alt="" style="width: 70px; height:70px;">
+                            <img src="{{ asset('storage/' . $counter[0]->thirdIcon) }}" alt="" style="width: 70px; height:70px;">
                         </div>
                         <div class="app-edu-counter-text align-items-center d-flex app-edu-headline">
                             <h3 class="odometer" data-count="{{($counter[0]->thirdNumber)}}"></h3>
@@ -387,7 +396,7 @@
                     </div>
                 </div>
             </div>
-        @endforeach
+            @endforeach
         </div>
     </section>
     <!-- End of counter section
@@ -402,7 +411,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="app-edu-section-title app-edu-headline pera-content">
-                    @foreach( $bh as $bhs)
+                        @foreach( $bh as $bhs)
 
                         <span>{{$bh[0]->purpleTitle }}</span>
                         <h2>{{$bh[0]->title }}</h2>
@@ -445,7 +454,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="app-edu-section-title app-edu-headline pera-content">
-                        @foreach( $footer as $footers)
+                            @foreach( $footer as $footers)
 
                             <span>{{$footer[0]->newsletterTitle }}</span>
                             <h2>{{$footer[0]->newsletterSubTitle }}</h2>
@@ -457,7 +466,7 @@
                         <div class="app-edu-newslatter-form position-relative">
                             <form action="{{ route('newsletter.store') }}" method="post">
                                 {{csrf_field()}}
-                                <input type="text"  name="email" placeholder="Your email address">
+                                <input type="text" name="email" placeholder="Your email address">
                                 <button>Subscribe</button>
                             </form>
                         </div>
@@ -517,19 +526,19 @@
                             <div class="app-edu-twitter">
                                 <h3 class="widget-title">Recent Blogs</h3>
                                 <div class="app-edu-twitter-area">
-                                <?php $i = 0; ?>
-                                 @foreach ($post as $posts)
+                                    <?php $i = 0; ?>
+                                    @foreach ($post as $posts)
                                     <div class="app-edu-twitter-content">
                                         <div class="app-edu-twitter-icon float-left">
                                             <i class="far fa-paper-plane"></i>
-                                          
+
                                         </div>
                                         <div class="app-edu-twitter-text">
                                             <p>{{$post[$i]->title}} <a href="{{ route('blog.show', $post[$i]->slug) }}">{{ route('blog.show', $post[$i]->slug) }}</a></p>
                                         </div>
                                     </div>
                                     <?php $i++; ?>
-                                 @endforeach
+                                    @endforeach
                                 </div>
                             </div>
                         </div>

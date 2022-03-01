@@ -288,6 +288,14 @@
                         <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
                         <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
                         <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-blog">Blog</a></li>
+                        <li class="dropdown">
+                            <a href="#">Languages</a>
+                            <ul class="dropdown-menu clearfix">
+                                <li><a href="/change-language/en">English</a></li>
+                                <li><a href="/change-language/fr">French</a></li>
+                                <li><a href="/change-language/ar">العربيّة</a></li>
+                            </ul>
+                        </li>
 
 
                     </ul>

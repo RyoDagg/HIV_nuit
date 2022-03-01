@@ -62,7 +62,7 @@
                     @if (Route::has('login'))
                     @auth
                     <a href="{{ route('welcome') }}" class="show-modal">Home</a>
-                   
+
                     @endauth
                     </li>
                     @endif
@@ -73,9 +73,17 @@
                         <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
                         <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
                         <li><a class="nav-link" href="{{ route('blog.index') }}">Blog</a></li>
+                        <li class="dropdown">
+                            <a href="#">Languages</a>
+                            <ul class="dropdown-menu clearfix">
+                                <li><a href="/change-language/en">English</a></li>
+                                <li><a href="/change-language/fr">French</a></li>
+                                <li><a href="/change-language/ar">العربيّة</a></li>
+                            </ul>
+                        </li>
                         @if (Route::has('login'))
                         <li class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    
+
                         </li>
                         @endif
                     </ul>
@@ -118,18 +126,20 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
         ============================================= -->
 
     <section>
-    <center>  <div>
-            <h2> Privacy Policy</h2> <br> <br> 
+        <center>
+            <div>
+                <h2> Privacy Policy</h2> <br> <br>
 
-            @foreach ($privacy as $privacys)
-            
-            <article class="card" style="margin-left: 15%; margin-right: 15%; margin-bottom: 15%; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                @foreach ($privacy as $privacys)
+
+                <article class="card" style="margin-left: 15%; margin-right: 15%; margin-bottom: 15%; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;">
-            {!!$privacy[0]->body!!}
-            </article>
+                    {!!$privacy[0]->body!!}
+                </article>
 
-            @endforeach
-        </div></center>  
+                @endforeach
+            </div>
+        </center>
     </section>
 
 

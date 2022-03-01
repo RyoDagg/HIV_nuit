@@ -42,6 +42,14 @@
                                      <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
                                      <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
                                      <li><a class="nav-link" href="{{ route('blog.index') }}">Blog</a></li>
+                                     <li class="dropdown">
+                                         <a href="#">Languages</a>
+                                         <ul class="dropdown-menu clearfix">
+                                             <li><a href="/change-language/en">English</a></li>
+                                             <li><a href="/change-language/fr">French</a></li>
+                                             <li><a href="/change-language/ar">العربيّة</a></li>
+                                         </ul>
+                                     </li>
                                  </ul>
                              </nav>
                          </div>
@@ -53,7 +61,7 @@
                  <div class="s2-mobile_menu_button s2-open_mobile_menu">
                      <i class="fas fa-bars"></i>
                  </div>
-                 <div class="s2-mobile_menu_wrap" >
+                 <div class="s2-mobile_menu_wrap">
                      <div class="mobile_menu_overlay s2-open_mobile_menu"></div>
                      <div class="s2-mobile_menu_content">
                          <div class="s2-mobile_menu_close s2-open_mobile_menu">
@@ -68,7 +76,7 @@
                                  <li><a href="{{ route('welcome') }}#app-edu-about">About</a></li>
                                  <li><a href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
                                  <li><a href="#">Blog</a></li>
-                                
+
                              </ul>
                          </nav>
                      </div>
@@ -96,15 +104,15 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
      </section>
      <!-- End of breadcurmb section
         ============================================= -->
-        @if (count($errors) > 0)
-      <div class="alert alert-danger">
-        <ul class="mb-0 mt-0">
-          @foreach ($errors->all() as $error)
-          <li>{{ $error }}</li>
-          @endforeach
-        </ul>
-      </div>
-  @endif
+     @if (count($errors) > 0)
+     <div class="alert alert-danger">
+         <ul class="mb-0 mt-0">
+             @foreach ($errors->all() as $error)
+             <li>{{ $error }}</li>
+             @endforeach
+         </ul>
+     </div>
+     @endif
 
      @yield('content')
 

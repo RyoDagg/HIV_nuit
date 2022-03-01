@@ -11,6 +11,6 @@ class LanguageController extends Controller
     public function changeLang(Request $request, $lang)
     {
         session(["lang" => $lang]);
-        return redirect(route("welcome"));
+        return back();
     }
 }

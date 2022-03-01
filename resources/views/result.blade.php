@@ -19,18 +19,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
 
 
-<style>
-.s2-copyright {
-  color: #fff;
-  padding: 18px 0px;
-  font-size: 14px;
-  font-family: "Poppins";
-  background-color: #000000;
-}
+    <style>
+        .s2-copyright {
+            color: #fff;
+            padding: 18px 0px;
+            font-size: 14px;
+            font-family: "Poppins";
+            background-color: #000000;
+        }
 
-.s2-copyright a {
-  color: #d772fe;
-}</style>
+        .s2-copyright a {
+            color: #d772fe;
+        }
+    </style>
 
 </head>
 
@@ -45,46 +46,54 @@
         <a href="#" class="app-edu-scrollup text-center"><i class="fas fa-angle-up"></i></a>
     </div>
 
-          
+
 
 
 
     <!-- Start of header section
         ============================================= -->
-    <header id="app-edu-main-header" class="app-edu-header-main" >
-        <div class="container"  >
+    <header id="app-edu-main-header" class="app-edu-header-main">
+        <div class="container">
             <div class="app-edu-logo float-left">
                 <a href="#"><img src="logowhite.png" alt="" style="height: 100px; width: 150px;"></a>
             </div>
             <div class="app-edu-main-header-menu clearfix">
                 <div class="header-dia-cta-btn text-center float-right">
-                @if (Route::has('login'))
-                            @auth
-                            <a href="{{ route('welcome') }}" class="show-modal">Home</a>
-                            @else
-                            <a href="#" class="show-modal" data-toggle="modal" data-target="#myModal">Take Quizz</a>
-                            @endauth
-                        </li>
-                        @endif
+                    @if (Route::has('login'))
+                    @auth
+                    <a href="{{ route('welcome') }}" class="show-modal">Home</a>
+                    @else
+                    <a href="#" class="show-modal" data-toggle="modal" data-target="#myModal">Take Quizz</a>
+                    @endauth
+                    </li>
+                    @endif
                 </div>
                 <nav class="app-edu-main-navigation float-right clearfix ul-li" style="display: hidden;">
                     <ul id="app-edu-main-nav" class="nav navbar-nav clearfix">
-                    <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-banner">Home</a></li>
-                    <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
-                    <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
-                    <li><a class="nav-link" href="{{ route('blog.index') }}">Blog</a></li>
-                       @if (Route::has('login'))
+                        <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-banner">Home</a></li>
+                        <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
+                        <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
+                        <li><a class="nav-link" href="{{ route('blog.index') }}">Blog</a></li>
+                        <li class="dropdown">
+                            <a href="#">Languages</a>
+                            <ul class="dropdown-menu clearfix">
+                                <li><a href="/change-language/en">English</a></li>
+                                <li><a href="/change-language/fr">French</a></li>
+                                <li><a href="/change-language/ar">العربيّة</a></li>
+                            </ul>
+                        </li>
+                        @if (Route::has('login'))
                         <li class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                             @auth
-                            <li class="dropdown">
-                                    <a href="#">My Results</a>
-                                    <ul class="dropdown-menu clearfix">
-                                        <li><a  href="#app-edu-course">Detailed Results</a></li>
-                                        <li><a href="#app-edu-category">Global Results</a></li>
-                                    </ul>
-                                </li>                            @else
-                            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-                            @endauth
+                        <li class="dropdown">
+                            <a href="#">My Results</a>
+                            <ul class="dropdown-menu clearfix">
+                                <li><a href="#app-edu-course">Detailed Results</a></li>
+                                <li><a href="#app-edu-category">Global Results</a></li>
+                            </ul>
+                        </li> @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                        @endauth
                         </li>
                         @endif
                     </ul>
@@ -103,7 +112,7 @@
                         <div class="m-brand-logo text-center">
                             <a href="!#"><img src="logo.png" alt=""></a>
                         </div>
-                        
+
                     </div>
                 </div>
                 <!-- /Mobile-Menu -->
@@ -115,13 +124,13 @@
     <!-- Start of banner section
         ============================================= -->
     <section style="background: rgb(95,190,193);
-background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27%, rgba(108,198,189,1) 66%, rgba(124,212,178,1) 100%); height: 150px; margin-bottom: 50px;  " >
-            <div class="app-edu-logo float-left">
-        <div class="container">
-            <div class="app-edu-banner-content position-relative">
-             
+background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27%, rgba(108,198,189,1) 66%, rgba(124,212,178,1) 100%); height: 150px; margin-bottom: 50px;  ">
+        <div class="app-edu-logo float-left">
+            <div class="container">
+                <div class="app-edu-banner-content position-relative">
+
+                </div>
             </div>
-        </div>
     </section>
     <!-- End of banner section
         ============================================= -->
@@ -130,72 +139,72 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
 
 
 
-        @foreach ($result as $result)
+    @foreach ($result as $result)
 
-        <?php 
-        
-        $hProgress =  ($result->hearts) / ($result->hTotal) * 100 ; 
-        $mProgress =  ($result->minds) / ($result->mTotal) * 100 ; 
-        $sProgress =  ($result->souls) / ($result->sTotal) * 100 ; 
-        $bProgress =  ($result->bodies) / ($result->bTotal) * 100 ; 
-        $bProgress = round( $bProgress);
-        $hProgress = round( $hProgress);
-        $mProgress = round( $mProgress);
-        $sProgress = round( $sProgress);
+    <?php
 
-        $bgProgHeart = 'bg-info';
-        $bgProgBody = 'bg-info';
-        $bgProgMind = 'bg-info';
-        $bgProgSoul = 'bg-info';
+    $hProgress =  ($result->hearts) / ($result->hTotal) * 100;
+    $mProgress =  ($result->minds) / ($result->mTotal) * 100;
+    $sProgress =  ($result->souls) / ($result->sTotal) * 100;
+    $bProgress =  ($result->bodies) / ($result->bTotal) * 100;
+    $bProgress = round($bProgress);
+    $hProgress = round($hProgress);
+    $mProgress = round($mProgress);
+    $sProgress = round($sProgress);
 
-        //progress bar color for body
-        
-            if($bProgress>= 0 && $bProgress< 25)
-                $bgProgBody = 'bg-danger';
-            elseif($bProgress>= 25 && $bProgress< 50)
-            $bgProgBody = 'bg-warning';
-            elseif($bProgress>= 50 && $bProgress< 75)
-            $bgProgBody = 'bg-success';
-            elseif($bProgress>= 75 )
-            $bgProgBody = 'bg-primary';
+    $bgProgHeart = 'bg-info';
+    $bgProgBody = 'bg-info';
+    $bgProgMind = 'bg-info';
+    $bgProgSoul = 'bg-info';
 
-            //progress bar color for heart
+    //progress bar color for body
 
-            if($hProgress>= 0 && $hProgress< 25)
-                $bgProgHeart = 'bg-danger';
-            elseif($hProgress>= 25 && $hProgress< 50)
-            $bgProgHeart = 'bg-warning';
-            elseif($hProgress>= 50 && $hProgress< 75)
-            $bgProgHeart = 'bg-success';
-            elseif($hProgress>= 75 )
-            $bgProgHeart = 'bg-primary';
+    if ($bProgress >= 0 && $bProgress < 25)
+        $bgProgBody = 'bg-danger';
+    elseif ($bProgress >= 25 && $bProgress < 50)
+        $bgProgBody = 'bg-warning';
+    elseif ($bProgress >= 50 && $bProgress < 75)
+        $bgProgBody = 'bg-success';
+    elseif ($bProgress >= 75)
+        $bgProgBody = 'bg-primary';
 
-                        //progress bar color for Soul
+    //progress bar color for heart
 
-            
-            if($sProgress>= 0 && $sProgress< 25)
-                $bgProgSoul = 'bg-danger';
-            elseif($sProgress>= 25 && $sProgress< 50)
-            $bgProgSoul = 'bg-warning';
-            elseif($sProgress>= 50 && $sProgress< 75)
-            $bgProgSoul = 'bg-success';
-            elseif($sProgress>= 75 )
-            $bgProgSoul = 'bg-primary';
+    if ($hProgress >= 0 && $hProgress < 25)
+        $bgProgHeart = 'bg-danger';
+    elseif ($hProgress >= 25 && $hProgress < 50)
+        $bgProgHeart = 'bg-warning';
+    elseif ($hProgress >= 50 && $hProgress < 75)
+        $bgProgHeart = 'bg-success';
+    elseif ($hProgress >= 75)
+        $bgProgHeart = 'bg-primary';
 
-                        //progress bar color for Mind
+    //progress bar color for Soul
 
-            
-            if($mProgress>= 0 && $mProgress< 25)
-                $bgProgMind = 'bg-danger';
-            elseif($mProgress>= 25 && $mProgress< 50)
-            $bgProgMind = 'bg-warning';
-            elseif($mProgress>= 50 && $mProgress< 75)
-            $bgProgMind = 'bg-success';
-            elseif($mProgress>= 75 )
-            $bgProgMind = 'bg-primary';
-            
-        
-        ?>
+
+    if ($sProgress >= 0 && $sProgress < 25)
+        $bgProgSoul = 'bg-danger';
+    elseif ($sProgress >= 25 && $sProgress < 50)
+        $bgProgSoul = 'bg-warning';
+    elseif ($sProgress >= 50 && $sProgress < 75)
+        $bgProgSoul = 'bg-success';
+    elseif ($sProgress >= 75)
+        $bgProgSoul = 'bg-primary';
+
+    //progress bar color for Mind
+
+
+    if ($mProgress >= 0 && $mProgress < 25)
+        $bgProgMind = 'bg-danger';
+    elseif ($mProgress >= 25 && $mProgress < 50)
+        $bgProgMind = 'bg-warning';
+    elseif ($mProgress >= 50 && $mProgress < 75)
+        $bgProgMind = 'bg-success';
+    elseif ($mProgress >= 75)
+        $bgProgMind = 'bg-primary';
+
+
+    ?>
 
 
 
@@ -215,7 +224,7 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                             </div>
                             <div class="app-edu-course-text text-center app-edu-headline position-relative">
                                 <span class="course-cat text-uppercase"><a href="#">Heart</a></span>
-                                <h3><a href="#"> Your Heart Result is  {{ $hProgress }}%</a></h3>
+                                <h3><a href="#"> Your Heart Result is {{ $hProgress }}%</a></h3>
                                 <div class="app-edu-course-rate-price  clearfix">
                                     <div class="progress" style="margin-top: 10%;">
                                         <div class="progress-bar progress-bar-striped progress-bar-animated {{ $bgProgHeart }}" role="progressbar" aria-valuenow="{{$result->hearts}}" aria-valuemin="0" aria-valuemax="{{$result->hTotal}}" style="width: {{ $hProgress }}%"></div>
@@ -234,10 +243,10 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                             </div>
                             <div class="app-edu-course-text text-center app-edu-headline position-relative">
                                 <span class="course-cat text-uppercase"><a href="#">Mind</a></span>
-                                <h3><a href="#"> Your Mind Result is  {{ $mProgress }}%</a></h3>
+                                <h3><a href="#"> Your Mind Result is {{ $mProgress }}%</a></h3>
                                 <div class="app-edu-course-rate-price  clearfix">
                                     <div class="progress" style="margin-top: 10%;">
-                                    <div class="progress-bar progress-bar-striped progress-bar-animated {{ $bgProgMind }}" role="progressbar" aria-valuenow="{{$result->minds}}" aria-valuemin="0" aria-valuemax="{{$result->mTotal}}" style="width: {{ $mProgress }}%"></div>
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated {{ $bgProgMind }}" role="progressbar" aria-valuenow="{{$result->minds}}" aria-valuemin="0" aria-valuemax="{{$result->mTotal}}" style="width: {{ $mProgress }}%"></div>
                                     </div>
                                     <div class="app-edu-course-price float-right">
                                     </div>
@@ -252,10 +261,10 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                             </div>
                             <div class="app-edu-course-text text-center app-edu-headline position-relative">
                                 <span class="course-cat text-uppercase"><a href="#">Body</a></span>
-                                <h3><a href="#"> Your Body Result is  {{ $bProgress }}%</a></h3>
+                                <h3><a href="#"> Your Body Result is {{ $bProgress }}%</a></h3>
                                 <div class="app-edu-course-rate-price  clearfix">
                                     <div class="progress" style="margin-top: 10%;">
-                                    <div class="progress-bar progress-bar-striped progress-bar-animated {{ $bgProgBody }}" role="progressbar" aria-valuenow="{{$result->bodies}}" aria-valuemin="0" aria-valuemax="{{$result->bTotal}}" style="width: {{ $bProgress }}%"></div>
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated {{ $bgProgBody }}" role="progressbar" aria-valuenow="{{$result->bodies}}" aria-valuemin="0" aria-valuemax="{{$result->bTotal}}" style="width: {{ $bProgress }}%"></div>
                                     </div>
                                     <div class="app-edu-course-price float-right">
                                     </div>
@@ -270,10 +279,10 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                             </div>
                             <div class="app-edu-course-text text-center app-edu-headline position-relative">
                                 <span class="course-cat text-uppercase"><a href="#">Soul</a></span>
-                                <h3><a href="#"> Your Soul Result is  {{ $sProgress }}%</a></h3>
+                                <h3><a href="#"> Your Soul Result is {{ $sProgress }}%</a></h3>
                                 <div class="app-edu-course-rate-price  clearfix">
                                     <div class="progress" style="margin-top: 10%;">
-                                    <div class="progress-bar progress-bar-striped progress-bar-animated {{ $bgProgSoul }}" role="progressbar" aria-valuenow="{{$result->souls}}" aria-valuemin="0" aria-valuemax="{{$result->sTotal}}" style="width: {{ $sProgress }}%"></div>
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated {{ $bgProgSoul }}" role="progressbar" aria-valuenow="{{$result->souls}}" aria-valuemin="0" aria-valuemax="{{$result->sTotal}}" style="width: {{ $sProgress }}%"></div>
                                     </div>
                                     <div class="app-edu-course-price float-right">
                                     </div>
@@ -303,9 +312,9 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                         <canvas id="myChart"></canvas>
                     </div>
                 </div>
-                
+
                 <div style="width: 500px; height:500px; position:relative; margin-left: 65%; margin-top: -40%">
-                <div class="ei-app-mockup-img  wow fadeFromRight" data-wow-delay="300ms" data-wow-duration="1500ms">
+                    <div class="ei-app-mockup-img  wow fadeFromRight" data-wow-delay="300ms" data-wow-duration="1500ms">
                         <img src="4elogo.png" alt="">
                     </div>
                 </div>
@@ -320,7 +329,23 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                         ],
                         datasets: [{
                             label: 'My First Dataset',
-                            data: [{{ $hProgress }}, {{ $bProgress }},{{ $mProgress }}, {{ $sProgress }}],
+                            data: [{
+                                {
+                                    $hProgress
+                                }
+                            }, {
+                                {
+                                    $bProgress
+                                }
+                            }, {
+                                {
+                                    $mProgress
+                                }
+                            }, {
+                                {
+                                    $sProgress
+                                }
+                            }],
                             backgroundColor: [
                                 'rgb(255, 99, 132)',
                                 'rgb(54, 162, 235)',
@@ -351,28 +376,28 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
 
 
 
-        @endforeach
+    @endforeach
 
-        @if($result->count() == 0)
+    @if($result->count() == 0)
 
 
-        <center> 
+    <center>
         <div class="app-edu-banner-content position-relative">
-                <div class="app-edu-banner-text app-edu-headline pera-content wow fadeFromLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-               <img src="takequiz.gif" href="{{ route('quiz') }}" alt=""> <br> 
-            <a class="banner-btn text-center" href="{{ route('quiz') }}">Take the Quiz First</a> 
-                </div>
-                </center>
+            <div class="app-edu-banner-text app-edu-headline pera-content wow fadeFromLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                <img src="takequiz.gif" href="{{ route('quiz') }}" alt=""> <br>
+                <a class="banner-btn text-center" href="{{ route('quiz') }}">Take the Quiz First</a>
+            </div>
+    </center>
 
 
-        @endif
+    @endif
 
 
 
     <!-- Start of footer section
         ============================================= -->
-   
-        <div class="s2-copyright text-center">2022 © All rights reserved by <a href="#">Make IT HAPPEN</a></div>
+
+    <div class="s2-copyright text-center">2022 © All rights reserved by <a href="#">Make IT HAPPEN</a></div>
 
 
     <!-- End of footer section

@@ -42,6 +42,14 @@
                                      <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
                                      <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
                                      <li><a class="nav-link" href="{{route('blog.index')}}">Blog</a></li>
+                                     <li class="dropdown">
+                                         <a href="#">Languages</a>
+                                         <ul class="dropdown-menu clearfix">
+                                             <li><a href="/change-language/en">English</a></li>
+                                             <li><a href="/change-language/fr">French</a></li>
+                                             <li><a href="/change-language/ar">العربيّة</a></li>
+                                         </ul>
+                                     </li>
                                  </ul>
                              </nav>
 
@@ -54,7 +62,7 @@
                  <div class="s2-mobile_menu_button s2-open_mobile_menu">
                      <i class="fas fa-bars"></i>
                  </div>
-                 <div class="s2-mobile_menu_wrap" >
+                 <div class="s2-mobile_menu_wrap">
                      <div class="mobile_menu_overlay s2-open_mobile_menu"></div>
                      <div class="s2-mobile_menu_content">
                          <div class="s2-mobile_menu_close s2-open_mobile_menu">
@@ -69,7 +77,7 @@
                                  <li><a href="{{ route('welcome') }}#app-edu-about">About</a></li>
                                  <li><a href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
                                  <li><a href="{{route('blog.index')}}">Blog</a></li>
-                                
+
                              </ul>
                          </nav>
                      </div>
@@ -81,7 +89,7 @@
         ============================================= -->
      <!-- Start of breadcurmb section
         ============================================= -->
-        <section id="saasio-breadcurmb" class="saasio-breadcurmb-section" style="background: rgb(95,190,193);  background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27%, rgba(108,198,189,1) 66%, rgba(124,212,178,1) 100%); height: 150px; margin-bottom: 50px;  ">
+     <section id="saasio-breadcurmb" class="saasio-breadcurmb-section" style="background: rgb(95,190,193);  background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27%, rgba(108,198,189,1) 66%, rgba(124,212,178,1) 100%); height: 150px; margin-bottom: 50px;  ">
          <div class="container">
              <div class="breadcurmb-title text-center">
                  <h2>Authentication</h2>

@@ -19,18 +19,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
 
 
-<style>
-.s2-copyright {
-  color: #fff;
-  padding: 18px 0px;
-  font-size: 14px;
-  font-family: "Poppins";
-  background-color: #000000;
-}
+    <style>
+        .s2-copyright {
+            color: #fff;
+            padding: 18px 0px;
+            font-size: 14px;
+            font-family: "Poppins";
+            background-color: #000000;
+        }
 
-.s2-copyright a {
-  color: #d772fe;
-}</style>
+        .s2-copyright a {
+            color: #d772fe;
+        }
+    </style>
 
 </head>
 
@@ -45,36 +46,44 @@
         <a href="#" class="app-edu-scrollup text-center"><i class="fas fa-angle-up"></i></a>
     </div>
 
-          
+
 
 
 
     <!-- Start of header section
         ============================================= -->
-    <header id="app-edu-main-header" class="app-edu-header-main" >
-        <div class="container"  >
+    <header id="app-edu-main-header" class="app-edu-header-main">
+        <div class="container">
             <div class="app-edu-logo float-left">
                 <a href="#"><img src="logowhite.png" alt="" style="height: 100px; width: 150px;"></a>
             </div>
             <div class="app-edu-main-header-menu clearfix">
                 <div class="header-dia-cta-btn text-center float-right">
-                @if (Route::has('login'))
-                            @auth
-                            <a href="{{ route('welcome') }}" class="show-modal">Home</a>
-                        
-                            @endauth
-                        </li>
-                        @endif
+                    @if (Route::has('login'))
+                    @auth
+                    <a href="{{ route('welcome') }}" class="show-modal">Home</a>
+
+                    @endauth
+                    </li>
+                    @endif
                 </div>
                 <nav class="app-edu-main-navigation float-right clearfix ul-li" style="display: hidden;">
                     <ul id="app-edu-main-nav" class="nav navbar-nav clearfix">
-                    <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-banner">Home</a></li>
-                    <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
-                    <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
-                    <li><a class="nav-link" href="{{ route('blog.index') }}">Blog</a></li>
-                       @if (Route::has('login'))
+                        <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-banner">Home</a></li>
+                        <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
+                        <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
+                        <li><a class="nav-link" href="{{ route('blog.index') }}">Blog</a></li>
+                        <li class="dropdown">
+                            <a href="#">Languages</a>
+                            <ul class="dropdown-menu clearfix">
+                                <li><a href="/change-language/en">English</a></li>
+                                <li><a href="/change-language/fr">French</a></li>
+                                <li><a href="/change-language/ar">العربيّة</a></li>
+                            </ul>
+                        </li>
+                        @if (Route::has('login'))
                         <li class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                   
+
                         </li>
                         @endif
                     </ul>
@@ -93,7 +102,7 @@
                         <div class="m-brand-logo text-center">
                             <a href="!#"><img src="logo.png" alt=""></a>
                         </div>
-                        
+
                     </div>
                 </div>
                 <!-- /Mobile-Menu -->
@@ -105,39 +114,41 @@
     <!-- Start of banner section
         ============================================= -->
     <section style="background: rgb(95,190,193);
-background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27%, rgba(108,198,189,1) 66%, rgba(124,212,178,1) 100%); height: 150px; margin-bottom: 50px;  " >
-            <div class="app-edu-logo float-left">
-        <div class="container">
-            <div class="app-edu-banner-content position-relative">
-             
+background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27%, rgba(108,198,189,1) 66%, rgba(124,212,178,1) 100%); height: 150px; margin-bottom: 50px;  ">
+        <div class="app-edu-logo float-left">
+            <div class="container">
+                <div class="app-edu-banner-content position-relative">
+
+                </div>
             </div>
-        </div>
     </section>
     <!-- End of banner section
         ============================================= -->
 
 
 
-        <section>
-    <center>  <div>
-            <h2> Terms And Contions</h2> <br> <br> 
+    <section>
+        <center>
+            <div>
+                <h2> Terms And Contions</h2> <br> <br>
 
-            @foreach ($term as $terms)
-            
-            <article class="card" style="margin-left: 15%; margin-right: 15%; margin-bottom: 15%; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                @foreach ($term as $terms)
+
+                <article class="card" style="margin-left: 15%; margin-right: 15%; margin-bottom: 15%; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;">
-            {!!$term[0]->body!!}
-            </article>
+                    {!!$term[0]->body!!}
+                </article>
 
-            @endforeach
-        </div></center>  
+                @endforeach
+            </div>
+        </center>
     </section>
 
 
     <!-- Start of footer section
         ============================================= -->
-   
-        <div class="s2-copyright text-center">2022 © All rights reserved by <a href="#">Make IT HAPPEN</a></div>
+
+    <div class="s2-copyright text-center">2022 © All rights reserved by <a href="#">Make IT HAPPEN</a></div>
 
 
     <!-- End of footer section

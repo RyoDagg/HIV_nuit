@@ -41,6 +41,14 @@
                                     <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
                                     <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
                                     <li><a class="nav-link" href="{{ route('blog.index') }}">Blog</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">Languages</a>
+                                        <ul class="dropdown-menu clearfix">
+                                            <li><a href="/change-language/en">English</a></li>
+                                            <li><a href="/change-language/fr">French</a></li>
+                                            <li><a href="/change-language/ar">العربيّة</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </nav>
 
@@ -68,6 +76,14 @@
                                 <li><a href="{{ route('welcome') }}#app-edu-about">About</a></li>
                                 <li><a href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
                                 <li><a href="{{ route('blog.index') }}">Blog</a></li>
+                                <li class="dropdown">
+                                    <a href="#">Languages</a>
+                                    <ul class="dropdown-menu clearfix">
+                                        <li><a href="/change-language/en">English</a></li>
+                                        <li><a href="/change-language/fr">French</a></li>
+                                        <li><a href="/change-language/ar">العربيّة</a></li>
+                                    </ul>
+                                </li>
 
                             </ul>
                         </nav>
@@ -165,7 +181,7 @@ background: linear-gradient(53deg, rgba(95,190,193,1) 0%, rgba(106,197,189,1) 27
                                 </div>
                             </div>
                             <div class="side-bar-widget">
-                                <div class="category-widget dia-headline ul-li-block" >
+                                <div class="category-widget dia-headline ul-li-block">
                                     <h3 class="widget-title-2">Category</h3>
                                     <ul>
                                         <?php $i = 0; ?>
