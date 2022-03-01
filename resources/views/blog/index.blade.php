@@ -33,7 +33,7 @@
                       <a href="#"><i class="fas fa-calendar-alt"></i> {{$post[$i]->created_at}}</a>
                     </div>
                     <p>{{$post[$i]->translate(session("lang"),"en")->excerpt }}</p>
-                    <a class="blog-read-more" href="{{ route('blog.show', $post[$i]->id) }}">Read More</a>
+                    <a class="blog-read-more" href="{{ route('blog.show', $post[$i]->slug) }}">Read More</a>
                   </div>
                 </div>
               </div>
