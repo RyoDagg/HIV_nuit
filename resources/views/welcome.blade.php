@@ -240,7 +240,7 @@
                                     <li>{{($about[0]->item1)}} </li>
                                     <li>{{($about[0]->item2)}} </li>
                                     <li>{{($about[0]->item3)}} </li>
-                                    <li>{{($about[0]->item)}} </li>
+                                    <li>{{($about[0]->item4)}} </li>
                                     
                                 </ul>
                             </div>

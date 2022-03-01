@@ -27,7 +27,7 @@ Route::post('/newsletter', [App\Http\Controllers\MailListController::class, 'sto
 
 Route::get('/quiz', [App\Http\Controllers\QuizController::class, 'index'])->name('quiz')->middleware('auth');;
 Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog.index');
-Route::get('/blog/{id}', [App\Http\Controllers\BlogController::class, 'show'])->name('blog.show');
+Route::get('/blog/{slug}', [App\Http\Controllers\BlogController::class, 'show'])->name('blog.show');
 Route::get('/search', [App\Http\Controllers\BlogController::class, 'search'])->name('blog.search');
 
 

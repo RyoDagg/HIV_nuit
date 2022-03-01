@@ -23,9 +23,9 @@ class BlogController extends Controller
     }
 
 
-    public function show($id)
+    public function show($slug)
     {
-        $post = Post::with("translations")->where('id', $id)->firstOrFail();
+        $post = Post::with("translations")->where('slug', $slug)->firstOrFail();
 
         $Recpost = Post::with("translations")->orderBy('created_at', 'DESC')->take(3)->get();
 
