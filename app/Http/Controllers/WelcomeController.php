@@ -14,6 +14,7 @@ use TCG\Voyager\Models\Post;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 
 class WelcomeController extends Controller
@@ -30,6 +31,9 @@ class WelcomeController extends Controller
     $about = About::with("translations")->orderBy('created_at', 'DESC')->take(1)->get();
     $bh = BlogHome::with("translations")->orderBy('created_at', 'DESC')->take(1)->get();
     $footer = Footer::with("translations")->orderBy('created_at', 'DESC')->take(1)->get();
+
+
+    App::setLocale(session("lang"));
 
     return view('welcome')->with([
       'question' => $question->translate(session("lang"), "en"),

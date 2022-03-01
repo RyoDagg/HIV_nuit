@@ -19,7 +19,6 @@
 
 <body class="app-edu" data-spy="scroll" data-target=".app-edu-main-navigation" data-offset="80">
     <!-- preloader - start -->
-    <h1></h1>
     <div id="app-edu-preloader"></div>
     <div class="up">
         <a href="#" class="app-edu-scrollup text-center"><i class="fas fa-angle-up"></i></a>
@@ -45,7 +44,7 @@
                 </div>
                 <nav class="app-edu-main-navigation float-right clearfix ul-li">
                     <ul id="app-edu-main-nav" class="nav navbar-nav clearfix">
-                        <li><a class="nav-link" href="#app-edu-banner">Home</a></li>
+                        <li><a class="nav-link" href="#app-edu-banner">{{__('app.home')}}</a></li>
                         <li><a class="nav-link" href="#app-edu-about">About</a></li>
                         <li><a class="nav-link" href="#app-edu-testimonial">4 Elements</a></li>
                         <li><a class="nav-link" href="#app-edu-blog">Blog</a></li>
