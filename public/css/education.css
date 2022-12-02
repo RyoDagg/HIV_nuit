@@ -207,7 +207,7 @@ select:visited {
   position: fixed;
   line-height: 55px;
   border-radius: 100%;
-  background-color: #930ce8;
+  background-color: #a14f67;
 }
 .app-edu-scrollup i {
   color: #fff;
@@ -216,7 +216,7 @@ select:visited {
 
 .app-edu-section-title span {
   font-weight: 700;
-  color: #930ce8;
+  color: #a14f67;
   font-family: "Poppins";
 }
 .app-edu-section-title h2 {
@@ -259,7 +259,7 @@ select:visited {
   padding-bottom: 30px;
 }
 .app-edu-main-navigation li a.active {
-  color: #930ce8;
+  color: #a14f67;
 }
 .app-edu-main-navigation .dropdown {
   position: relative;
@@ -368,7 +368,7 @@ select:visited {
   animation-name: fadeInDown;
   animation-timing-function: ease;
   transition: 0.3s all ease-in-out;
-  background-image: linear-gradient(90deg, #5fbec1 0%, #66c2c1 50%, #7dd5b1 100%);
+  background-image: linear-gradient(90deg, #ffffff 0%, #ec6f8b 50%, #a14f67 100%);
 }
 .app-edu-sticky-on .app-edu-main-navigation {
   padding-top: 10px;
@@ -551,19 +551,22 @@ select:visited {
   padding-bottom: 40px;
 }
 .app-edu-banner-text .banner-btn {
-  width: 200px;
-  height: 65px;
-  font-weight: 700;
-  line-height: 65px;
+  
+  height: 50px;
+  width: 170px;
+  line-height: 45px;
+  margin-left: 45px;
+  border-radius: 40px;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 16px;
   display: inline-block;
-  font-family: "Poppins";
-  border-radius: 45px;
-  background-size: 200%, 1px;
-  transition: all 200ms linear 0ms;
-  background-image: linear-gradient(90deg, #9851fe 0%, #e77fff 50%, #9851fe);
+  font-weight: 700;
+  transition: 500ms all ease-in-out;
 }
 .app-edu-banner-text .banner-btn:hover {
-  background-position: 120%;
+  color: #000000;
+  background-color: #fff;
 }
 
 .app-edu-banner-img {
@@ -648,9 +651,9 @@ select:visited {
   left: 0;
   content: "";
   font-weight: 900;
-  color: #930ce8;
+  color: #a14f67;
   position: absolute;
-  font-family: "Font Awesome 5 Free";
+  font-family: "";
 }
 
 /*---------------------------------------------------- */
@@ -962,7 +965,7 @@ select:visited {
 /*----------------------------------------------------*/
 .app-edu-counter-section {
   padding: 110px 0px 95px;
-  background: linear-gradient(45deg, #aa00f1 0%, #6722d6 100%);
+  background: linear-gradient(45deg, #ec6f8b 0%, #a14f67 100%);
 }
 
 .app-edu-counter-content .col-lg-4:last-child .app-edu-counter-innerbox:after {
@@ -978,7 +981,7 @@ select:visited {
   color: #fff;
 }
 .app-edu-counter-innerbox .app-edu-counter-text h3 {
-  font-size: 72px;
+  font-size: 60px;
   font-weight: 700;
   margin-right: 20px;
 }

@@ -28,7 +28,7 @@
     <header id="app-edu-main-header" class="app-edu-header-main">
         <div class="container">
             <div class="app-edu-logo float-left">
-                <a href="#"><img src="logowhite.png" alt="" style="height: 100px; width: 150px;"></a>
+                <a href="#"><img src="HivShield.png" alt="" style="height: 100px;"></a>
             </div>
             <div class="app-edu-main-header-menu clearfix">
                 <div class="header-dia-cta-btn text-center float-right">
@@ -45,17 +45,8 @@
                 <nav class="app-edu-main-navigation float-right clearfix ul-li">
                     <ul id="app-edu-main-nav" class="nav navbar-nav clearfix">
                         <li><a class="nav-link" href="#app-edu-banner">{{__('app.home')}}</a></li>
-                        <li><a class="nav-link" href="#app-edu-about">About</a></li>
-                        <li><a class="nav-link" href="#app-edu-testimonial">4 Elements</a></li>
+                        <li><a class="nav-link" href="#app-edu-about">Pretection</a></li>
                         <li><a class="nav-link" href="#app-edu-blog">Blog</a></li>
-                        <li class="dropdown">
-                            <a href="#">Languages</a>
-                            <ul class="dropdown-menu clearfix">
-                                <li><a href="/change-language/en">English</a></li>
-                                <li><a href="/change-language/fr">French</a></li>
-                                <li><a href="/change-language/ar">العربيّة</a></li>
-                            </ul>
-                        </li>
 
 
                         @guest
@@ -125,8 +116,7 @@
 
                             </li>
 
-                            <li><a class="nav-link" href="#app-edu-about">About</a></li>
-                            <li><a class="nav-link" href="#app-edu-testimonial">4 Elements</a></li>
+                            <li><a class="nav-link" href="#app-edu-about">Protection</a></li>
                             <li><a class="nav-link" href="#app-edu-blog">Blog</a></li>
 
                             <li><a href="{{ route('login') }}">Login</a> </li>
@@ -153,7 +143,7 @@
                     @endforeach
                 </div>
                 <div class="app-edu-banner-img">
-                    <img src="yoga.png" alt="" width="669" height="651">
+                    <img src="condomworld.png" alt="" width="669" height="651">
                 </div>
             </div>
         </div>
@@ -172,7 +162,7 @@
                     <div class="col-lg-3 col-md-6 wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
                         <div class="app-edu-intro-innerbox text-center">
                             <div class="app-edu-intro-icon">
-                                <img src="wind.png" alt="">
+                                <img src="coronavirus.png" alt="">
                             </div>
                             <div class="app-edu-intro-text app-edu-headline pera-content">
                                 <h3><a href="#">{{($element[0]->windTitle)}}</a></h3>
@@ -183,7 +173,7 @@
                     <div class="col-lg-3 col-md-6 wow fadeFromUp" data-wow-delay="300ms" data-wow-duration="1500ms">
                         <div class="app-edu-intro-innerbox text-center">
                             <div class="app-edu-intro-icon">
-                                <img src="fire.png" alt="">
+                                <img src="blood-test.png" alt="">
                             </div>
                             <div class="app-edu-intro-text app-edu-headline pera-content">
                                 <h3><a href="#">{{($element[0]->fireTitle)}}</a></h3>
@@ -194,7 +184,7 @@
                     <div class="col-lg-3 col-md-6 wow fadeFromUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                         <div class="app-edu-intro-innerbox text-center">
                             <div class="app-edu-intro-icon">
-                                <img src="earth.png" alt="">
+                                <img src="diagnosis.png" alt="">
                             </div>
                             <div class="app-edu-intro-text app-edu-headline pera-content">
                                 <h3><a href="#">{{($element[0]->earthTitle)}}</a></h3>
@@ -205,7 +195,7 @@
                     <div class="col-lg-3 col-md-6 wow fadeFromUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                         <div class="app-edu-intro-innerbox text-center">
                             <div class="app-edu-intro-icon">
-                                <img src="water.png" alt="">
+                                <img src="condom.png" alt="">
                             </div>
                             <div class="app-edu-intro-text app-edu-headline pera-content">
                                 <h3><a href="#">{{($element[0]->waterTitle)}}</a></h3>
@@ -223,46 +213,6 @@
 
     <!-- Start of about section
         ============================================= -->
-    <section id="app-edu-about" class="app-edu-about-section position-relative">
-        <span class="app-edu-about-shape position-absolute"><img src="img/education/ab-shape1.png" alt=""></span>
-        <span class="app-edu-about-shape2 position-absolute"><img src="img/education/ab-shape2.png" alt=""></span>
-        <div class="container">
-            <div class="app-edu-about-content">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <div class="app-edu-about-img">
-                            <img src="Healthy.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="app-edu-about-text">
-                            <div class="app-edu-section-title app-edu-headline pera-content wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                @foreach( $about as $abouts)
-
-                                <span>{{($about[0]->purpleTitle)}}</span>
-                                <h2>{{($about[0]->title)}}</h2>
-                                <p>{{($about[0]->body)}}</p>
-                            </div>
-                            <div class="app-edu-about-list ul-li-block wow fadeFromUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                                <ul>
-                                    <li>{{($about[0]->item1)}} </li>
-                                    <li>{{($about[0]->item2)}} </li>
-                                    <li>{{($about[0]->item3)}} </li>
-                                    <li>{{($about[0]->item4)}} </li>
-
-                                </ul>
-                            </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End of about section
-        ============================================= -->
-
-
     <!-- Start of testimonial section
         ============================================= -->
     <section id="app-edu-testimonial" class="app-edu-testimonial-section position-relative">
@@ -478,7 +428,7 @@
                         <div class="app-edu-footer-widget  app-edu-headline pera-content ul-li-block">
                             <div class="app-edu-logo-widget">
                                 <div class="app-edu-footer-logo">
-                                    <a href="#"><img src="logowhite.png" alt=""></a>
+                                    <a href="#"><img src="HIVShield_white.png" alt=""></a>
                                 </div>
                                 @foreach( $footer as $footers)
 
@@ -891,7 +841,7 @@
 </div>
 
 <script>
-
+    <script src="js/education.js"></script>
 </script>
 
 </html>

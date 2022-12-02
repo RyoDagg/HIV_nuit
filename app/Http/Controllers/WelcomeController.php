@@ -36,16 +36,16 @@ class WelcomeController extends Controller
     App::setLocale(session("lang"));
 
     return view('welcome')->with([
-      'question' => $question->translate(session("lang"), "en"),
+      'question' => $question->translate(session("lang"), "fr"),
       'user' => $user,
-      'post' => $post->translate(session("lang"), "en"),
-      'banner' => $banner->translate(session("lang"), "en"),
-      'element' => $element->translate(session("lang"), "en"),
-      'belement' => $belement->translate(session("lang"), "en"),
-      'about' => $about->translate(session("lang"), "en"),
-      'bh' => $bh->translate(session("lang"), "en"),
-      'counter' => $counter->translate(session("lang"), "en"),
-      'footer' => $footer->translate(session("lang"), "en")
+      'post' => $post->translate(session("lang"), "fr"),
+      'banner' => $banner->translate(session("lang"), "fr"),
+      'element' => $element->translate(session("lang"), "fr"),
+      'belement' => $belement->translate(session("lang"), "fr"),
+      'about' => $about->translate(session("lang"), "fr"),
+      'bh' => $bh->translate(session("lang"), "fr"),
+      'counter' => $counter->translate(session("lang"), "fr"),
+      'footer' => $footer->translate(session("lang"), "fr")
     ]);
   }
 }

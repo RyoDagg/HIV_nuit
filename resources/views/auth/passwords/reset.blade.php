@@ -39,8 +39,7 @@
                             <nav class="s2-main-navigation  clearfix ul-li">
                                 <ul id="main-nav" class="navbar-nav text-capitalize clearfix">
                                     <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-banner">Home</a></li>
-                                    <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
-                                    <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
+                                    <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">Protection</a></li>
                                     <li><a class="nav-link" href="{{route('blog.index')}}">Blog</a></li>
                                 </ul>
                             </nav>
@@ -66,8 +65,7 @@
                         <nav class="s2-mobile-main-navigation  clearfix ul-li">
                             <ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
                                 <li><a href="{{ route('welcome') }}#app-edu-banner">Home</a></li>
-                                <li><a href="{{ route('welcome') }}#app-edu-about">About</a></li>
-                                <li><a href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
+                                <li><a href="{{ route('welcome') }}#app-edu-about">Protection</a></li>
                                 <li><a href="{{route('blog.index')}}">Blog</a></li>
 
                             </ul>

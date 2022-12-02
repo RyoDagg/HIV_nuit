@@ -278,24 +278,15 @@
     <header id="app-edu-main-header" class="app-edu-header-main">
         <div class="container">
             <div class="app-edu-logo float-left">
-                <a href="{{route('welcome')}}"><img src="logowhite.png" alt="" style="height: 100px; width: 150px;"></a>
+                <a href="{{route('welcome')}}"><img src="HivShield.png" alt="" style="height: 100px;"></a>
             </div>
             <div class="app-edu-main-header-menu clearfix">
 
                 <nav class="app-edu-main-navigation float-right clearfix ul-li" style="display: hidden;">
                     <ul id="app-edu-main-nav" class="nav navbar-nav clearfix">
                         <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-banner">Home</a></li>
-                        <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
-                        <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
+                        <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">Protection</a></li>
                         <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-blog">Blog</a></li>
-                        <li class="dropdown">
-                            <a href="#">Languages</a>
-                            <ul class="dropdown-menu clearfix">
-                                <li><a href="/change-language/en">English</a></li>
-                                <li><a href="/change-language/fr">French</a></li>
-                                <li><a href="/change-language/ar">العربيّة</a></li>
-                            </ul>
-                        </li>
 
 
                     </ul>
@@ -319,8 +310,7 @@
                              
 
                                 <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-banner">Home</a></li>
-                                <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
-                                <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
+                                <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">Protection</a></li>
                                 <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-blog">Blog</a></li>
                             </ul>
                         </nav>

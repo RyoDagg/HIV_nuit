@@ -38,17 +38,8 @@
                             <nav class="s2-main-navigation  clearfix ul-li">
                                 <ul id="main-nav" class="navbar-nav text-capitalize clearfix">
                                     <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-banner">Home</a></li>
-                                    <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">About</a></li>
-                                    <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
+                                    <li><a class="nav-link" href="{{ route('welcome') }}#app-edu-about">Protection</a></li>
                                     <li><a class="nav-link" href="{{ route('blog.index') }}">Blog</a></li>
-                                    <li class="dropdown">
-                                        <a href="#">Languages</a>
-                                        <ul class="dropdown-menu clearfix">
-                                            <li><a href="/change-language/en">English</a></li>
-                                            <li><a href="/change-language/fr">French</a></li>
-                                            <li><a href="/change-language/ar">العربيّة</a></li>
-                                        </ul>
-                                    </li>
                                 </ul>
                             </nav>
 
@@ -73,18 +64,8 @@
                         <nav class="s2-mobile-main-navigation  clearfix ul-li">
                             <ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
                                 <li><a href="{{ route('welcome') }}#app-edu-banner">Home</a></li>
-                                <li><a href="{{ route('welcome') }}#app-edu-about">About</a></li>
-                                <li><a href="{{ route('welcome') }}#app-edu-testimonial">4 Elements</a></li>
+                                <li><a href="{{ route('welcome') }}#app-edu-about">Protection</a></li>
                                 <li><a href="{{ route('blog.index') }}">Blog</a></li>
-                                <li class="dropdown">
-                                    <a href="#">Languages</a>
-                                    <ul class="dropdown-menu clearfix">
-                                        <li><a href="/change-language/en">English</a></li>
-                                        <li><a href="/change-language/fr">French</a></li>
-                                        <li><a href="/change-language/ar">العربيّة</a></li>
-                                    </ul>
-                                </li>
-
                             </ul>
                         </nav>
                     </div>

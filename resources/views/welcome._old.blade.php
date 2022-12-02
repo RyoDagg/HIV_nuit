@@ -283,10 +283,7 @@
                 <nav class="app-edu-main-navigation float-right clearfix ul-li">
                     <ul id="app-edu-main-nav" class="nav navbar-nav clearfix">
                         <li><a class="nav-link" href="#app-edu-banner">Home</a></li>
-                        <li><a class="nav-link" href="#app-edu-about">About</a></li>
-                        <li><a class="nav-link" href="#app-edu-course">Course</a></li>
-                        <li><a class="nav-link" href="#app-edu-category">Category</a></li>
-                        <li><a class="nav-link" href="#app-edu-testimonial">Testimonial</a></li>
+                        <li><a class="nav-link" href="#app-edu-about">Protection</a></li>
                         <li><a class="nav-link" href="#app-edu-blog">Blog</a></li>
 
                         @if (Route::has('login'))

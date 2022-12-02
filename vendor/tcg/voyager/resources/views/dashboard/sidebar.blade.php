@@ -32,7 +32,5 @@
         <div id="adminmenu">
             <admin-menu :items="{{ menu('admin', '_json') }}"></admin-menu>
         </div>
-        <div id="pichpawpaw" style="    margin-left: 3%; margin-top: 13%;">
-        </div>
     </nav>
 </div>
