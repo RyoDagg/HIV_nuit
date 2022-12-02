@@ -213,95 +213,48 @@
 
     <!-- Start of about section
         ============================================= -->
-    <!-- Start of testimonial section
-        ============================================= -->
-    <section id="app-edu-testimonial" class="app-edu-testimonial-section position-relative">
-        <span class="app-edu-testimonial-shape position-absolute"><img src="img/education/ts1.png" alt=""></span>
-        @foreach( $belement as $belements)
-
+    <section id="app-edu-about" class="app-edu-about-section position-relative">
+        <span class="app-edu-about-shape position-absolute"><img src="img/education/ab-shape1.png" alt=""></span>
+        <span class="app-edu-about-shape2 position-absolute"><img src="img/education/ab-shape2.png" alt=""></span>
         <div class="container">
-            <div class="app-edu-section-title app-edu-headline text-center center-align pera-content">
-                <span>{{($belement[0]->purpleTitle)}}</span>
-                <h2>{{($belement[0]->title)}}</h2>
-                <p>{{($belement[0]->subtitle)}}</p>
-            </div>
-            <div class="app-edu-testimonial-content">
+            <div class="app-edu-about-content">
                 <div class="row">
-                    <div class="col-lg-6 wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="app-edu-testimonial-innerbox">
-                            <div class="app-edu-testimonial-author clearfix">
-                                <div class="app-edu-testimonial-img float-left">
-                                    <img src="{{ asset('storage/' . $belement[0]->elem1picture) }}" alt="">
-                                </div>
-                                <div class="app-edu-testimonial-author-text app-edu-headline">
-                                    <h3><a href="#">{{($belement[0]->elem1title)}}</a></h3>
-                                    <span>{{($belement[0]->elem1subtitle)}}</span>
-                                </div>
-                            </div>
-                            <div class="app-edu-testimonial-text pera-content">
-                                <p>{{($belement[0]->elem1body)}}</p>
-
-                            </div>
+                    <div class="col-lg-7">
+                        <div class="app-edu-about-img">
+                            <img src="HealthySex.png" alt="">
                         </div>
                     </div>
-                    <div class="col-lg-6 wow fadeFromUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                        <div class="app-edu-testimonial-innerbox">
-                            <div class="app-edu-testimonial-author clearfix">
-                                <div class="app-edu-testimonial-img float-left">
-                                    <img src="{{ asset('storage/' . $belement[0]->elem2picture) }}" alt="">
-                                </div>
-                                <div class="app-edu-testimonial-author-text app-edu-headline">
-                                    <h3><a href="#">{{($belement[0]->elem2title)}}</a></h3>
-                                    <span>{{($belement[0]->elem2subtitle)}}</span>
-                                </div>
-                            </div>
-                            <div class="app-edu-testimonial-text pera-content">
-                                <p>{{($belement[0]->elem2body)}}</p>
+                    <div class="col-lg-5">
+                        <div class="app-edu-about-text">
+                            <div class="app-edu-section-title app-edu-headline pera-content wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                @foreach( $about as $abouts)
 
+                                <span>{{($about[0]->purpleTitle)}}</span>
+                                <h2>{{($about[0]->title)}}</h2>
+                                <p>{{($about[0]->body)}}</p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeFromUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                        <div class="app-edu-testimonial-innerbox">
-                            <div class="app-edu-testimonial-author clearfix">
-                                <div class="app-edu-testimonial-img float-left">
-                                    <img src="{{ asset('storage/' . $belement[0]->elem3picture) }}" alt="">
-                                </div>
-                                <div class="app-edu-testimonial-author-text app-edu-headline">
-                                    <h3><a href="#">{{($belement[0]->elem3title)}}</a></h3>
-                                    <span>{{($belement[0]->elem3subtitle)}}</span>
-                                </div>
-                            </div>
-                            <div class="app-edu-testimonial-text pera-content">
-                                <p>{{($belement[0]->elem3body)}}</p>
+                            <div class="app-edu-about-list ul-li-block wow fadeFromUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                                <ul>
+                                    <li>{{($about[0]->item1)}} </li>
+                                    <li>{{($about[0]->item2)}} </li>
+                                    <li>{{($about[0]->item3)}} </li>
+                                    <li>{{($about[0]->item4)}} </li>
 
+                                </ul>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeFromUp" data-wow-delay="900ms" data-wow-duration="1500ms">
-                        <div class="app-edu-testimonial-innerbox">
-                            <div class="app-edu-testimonial-author clearfix">
-                                <div class="app-edu-testimonial-img float-left">
-                                    <img src="{{ asset('storage/' . $belement[0]->elem4picture) }}" alt="">
-                                </div>
-                                <div class="app-edu-testimonial-author-text app-edu-headline">
-                                    <h3><a href="#">{{($belement[0]->elem4title)}}</a></h3>
-                                    <span>{{($belement[0]->elem4subtitle)}}</span>
-                                </div>
-                            </div>
-                            <div class="app-edu-testimonial-text pera-content">
-                                <p>{{($belement[0]->elem4body)}}</p>
-
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
-        @endforeach
     </section>
+    <!-- End of about section
+        ============================================= -->
+
+
+    <!-- Start of testimonial section
+ 
     <!-- End of testimonial section
         ============================================= -->
     <!-- Start of counter section
@@ -353,45 +306,7 @@
 
 
     <!-- Start of blog section
-        ============================================= -->
-    <section id="app-edu-blog" class="app-edu-blog-section position-relative">
-        <span class="app-edu-blog-vector position-absolute"><img src="blog.png" alt="" style="margin-bottom: 400px;"></span>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="app-edu-section-title app-edu-headline pera-content">
-                        @foreach( $bh as $bhs)
 
-                        <span>{{$bh[0]->purpleTitle }}</span>
-                        <h2>{{$bh[0]->title }}</h2>
-                        <p>{{$bh[0]->subtitle }}</p>
-                        @endforeach
-                    </div>
-                    <?php $i = 0; ?>
-                    @foreach ($post as $posts)
-                    <div class="app-edu-blog-content">
-                        <div class="app-edu-blog-innerbox position-relative wow fadeFromUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="app-edu-blog-img position-absolute">
-                                <img src="{{ asset('storage/' . $post[$i]->image) }}" alt="">
-                            </div>
-                            <div class="app-edu-blog-text app-edu-headline">
-                                <div class="app-edu-blog-meta">
-                                    <span class="blog-ath text-uppercase"><a href="{{ route('blog.show', $post[$i]->slug) }}">{{$post[$i]->title}} </a></span>
-                                    <span class="blog-date"><a href="{{ route('blog.show', $post[$i]->slug) }}">{{$post[$i]->created_at}}</a></span>
-                                </div>
-                                <h3><a href="{{ route('blog.show', $post[$i]->slug) }}">{{$post[$i]->excerpt }}</a></h3>
-                            </div>
-                        </div>
-                        <?php $i++; ?>
-                        @endforeach
-                    </div>
-                    <div class="app-edu-blog-btn">
-                        <a href="{{route('blog.index')}}">Go To Blog</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- End of blog section
         ============================================= -->
 
